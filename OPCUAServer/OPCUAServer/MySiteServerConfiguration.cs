@@ -19,12 +19,8 @@ namespace OPCUAServer
         {
             Initialize();
         }
-
         private void Initialize()
         {
-
         }
-
-
     }
 }
