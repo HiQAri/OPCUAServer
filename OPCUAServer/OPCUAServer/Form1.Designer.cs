@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxNodes = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboBoxNodes
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(59, 26);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(595, 21);
-            this.comboBox1.TabIndex = 0;
+            this.comboBoxNodes.FormattingEnabled = true;
+            this.comboBoxNodes.Location = new System.Drawing.Point(59, 26);
+            this.comboBoxNodes.Name = "comboBoxNodes";
+            this.comboBoxNodes.Size = new System.Drawing.Size(595, 21);
+            this.comboBoxNodes.TabIndex = 0;
             // 
             // label1
             // 
@@ -55,7 +55,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(688, 75);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxNodes);
             this.Name = "Form1";
             this.Text = "OPC UA Server";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -66,7 +66,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxNodes;
         private System.Windows.Forms.Label label1;
     }
 }
