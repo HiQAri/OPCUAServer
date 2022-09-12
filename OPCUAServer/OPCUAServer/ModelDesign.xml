@@ -19,11 +19,6 @@ TargetNamespace="http://opcfoundation.org/OPCUAServer">
 			<opc:Variable SymbolicName="SerialNrIn" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
 			<opc:Variable SymbolicName="Drop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
 			<opc:Variable SymbolicName="Width" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-		</opc:Children>
-	</opc:ObjectType>
-	<opc:ObjectType SymbolicName="Output" BaseType="ua:BaseObjectType">
-		<opc:Description>Output node</opc:Description>
-		<opc:Children>
 			<opc:Variable SymbolicName="DateTime" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
 			<opc:Variable SymbolicName="SerialNrOut" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
 			<opc:Variable SymbolicName="MeasuredDropA" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
@@ -35,22 +30,17 @@ TargetNamespace="http://opcfoundation.org/OPCUAServer">
 		</opc:Children>
 	</opc:ObjectType>
 	
-	<opc:ObjectType SymbolicName="OPCUAServerType" BaseType="ua:BaseObjectType" SupportsEvents="true">
+	<opc:ObjectType SymbolicName="OPCUAServerType" BaseType="ua:FolderType" SupportsEvents="true">
 		<opc:Description>My Site.</opc:Description>
 		<opc:Children>
 			<opc:Object SymbolicName="InputNode" TypeDefinition="Input" SupportsEvents="true">
-				<opc:BrowseName>InputInfo</opc:BrowseName>
-			</opc:Object>
-		</opc:Children>
-		<opc:Children>
-			<opc:Object SymbolicName="OutputNode" TypeDefinition="Output" SupportsEvents="true">
-				<opc:BrowseName>OutputInfo</opc:BrowseName>
+				<opc:BrowseName>My tags.</opc:BrowseName>
 			</opc:Object>
 		</opc:Children>
 	</opc:ObjectType>
 		
 	<opc:Object SymbolicName="OPCUAServer1" TypeDefinition="OPCUAServerType" SupportsEvents="true">
-		<opc:BrowseName>Line</opc:BrowseName>
+		<opc:BrowseName>MySite</opc:BrowseName>
 		<opc:References>
 			<opc:Reference IsInverse="true">
 				<opc:ReferenceType>ua:Organizes</opc:ReferenceType>

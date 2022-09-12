@@ -49,21 +49,12 @@ namespace OPCUAServer
                 mysite_OPCUAServer1.Create(SystemContext, passiveNode);
                 AddPredefinedNode(SystemContext, mysite_OPCUAServer1);
                 //For simulation only
-                //simulationTimer = new System.Threading.Timer(DoSimulationWork, null, 1000, 1000);
+                simulationTimer = new System.Threading.Timer(DoSimulationWork, null, 100, 100);
             }
         }
         public void DoSimulationWork(object state)
         {
-            //mysite_OPCUAServer1.
-        }
-
-        private ServiceResult OnStartProcess(ISystemContext context, MethodState metod, IList<object> inputArguments, IList<object> outputArguments)
-        {
-            return ServiceResult.Good;
-        }
-        private ServiceResult OnStopProcess(ISystemContext context, MethodState metod, IList<object> inputArguments, IList<object> outputArguments)
-        {
-            return ServiceResult.Good;
+            mysite_OPCUAServer1.InputNode.DateTime.Value = "2022-09-12 13:12:10";
         }
     }
 }

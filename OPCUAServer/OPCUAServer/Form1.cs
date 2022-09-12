@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static OPCUAServer.MySiteNodeManager;
 
 namespace OPCUAServer
 {
@@ -23,16 +24,13 @@ namespace OPCUAServer
         {
             InitializeComponent();
         }
-
         public Form1(ApplicationInstance application)
         {
             InitializeComponent();
             mysite_application = application;
             mysite_server = application.Server as StandardServer;
             mysite_configuration = application.ApplicationConfiguration;
-
             comboBoxNodes.Items.Clear();
-
             foreach (EndpointDescription endpoint in mysite_server.GetEndpoints())
             {
                 if (comboBoxNodes.FindStringExact(endpoint.EndpointUrl) == -1)
@@ -44,16 +42,6 @@ namespace OPCUAServer
             {
                 comboBoxNodes.SelectedIndex = 0;
             }
-
-
-
-        }
-
-
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

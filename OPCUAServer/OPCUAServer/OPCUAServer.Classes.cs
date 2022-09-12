@@ -47,17 +47,17 @@ namespace OPCUAServer
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode Object.
         /// </summary>
-        public const uint OPCUAServerType_InputNode = 15070;
+        public const uint OPCUAServerType_InputNode = 15069;
 
         /// <summary>
         /// The identifier for the OPCUAServer1 Object.
         /// </summary>
-        public const uint OPCUAServer1 = 15089;
+        public const uint OPCUAServer1 = 15136;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode Object.
         /// </summary>
-        public const uint OPCUAServer1_InputNode = 15090;
+        public const uint OPCUAServer1_InputNode = 15137;
     }
     #endregion
 
@@ -75,14 +75,9 @@ namespace OPCUAServer
         public const uint Input = 15001;
 
         /// <summary>
-        /// The identifier for the Output ObjectType.
-        /// </summary>
-        public const uint Output = 15020;
-
-        /// <summary>
         /// The identifier for the OPCUAServerType ObjectType.
         /// </summary>
-        public const uint OPCUAServerType = 15069;
+        public const uint OPCUAServerType = 15068;
     }
     #endregion
 
@@ -125,144 +120,304 @@ namespace OPCUAServer
         public const uint Input_Width_EURange = 15018;
 
         /// <summary>
-        /// The identifier for the Output_DateTime Variable.
+        /// The identifier for the Input_DateTime Variable.
         /// </summary>
-        public const uint Output_DateTime = 15021;
+        public const uint Input_DateTime = 15020;
 
         /// <summary>
-        /// The identifier for the Output_DateTime_EURange Variable.
+        /// The identifier for the Input_DateTime_EURange Variable.
         /// </summary>
-        public const uint Output_DateTime_EURange = 15025;
+        public const uint Input_DateTime_EURange = 15024;
 
         /// <summary>
-        /// The identifier for the Output_SerialNrOut Variable.
+        /// The identifier for the Input_SerialNrOut Variable.
         /// </summary>
-        public const uint Output_SerialNrOut = 15027;
+        public const uint Input_SerialNrOut = 15026;
 
         /// <summary>
-        /// The identifier for the Output_SerialNrOut_EURange Variable.
+        /// The identifier for the Input_SerialNrOut_EURange Variable.
         /// </summary>
-        public const uint Output_SerialNrOut_EURange = 15031;
+        public const uint Input_SerialNrOut_EURange = 15030;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropA Variable.
+        /// The identifier for the Input_MeasuredDropA Variable.
         /// </summary>
-        public const uint Output_MeasuredDropA = 15033;
+        public const uint Input_MeasuredDropA = 15032;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropA_EURange Variable.
+        /// The identifier for the Input_MeasuredDropA_EURange Variable.
         /// </summary>
-        public const uint Output_MeasuredDropA_EURange = 15037;
+        public const uint Input_MeasuredDropA_EURange = 15036;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropB Variable.
+        /// The identifier for the Input_MeasuredDropB Variable.
         /// </summary>
-        public const uint Output_MeasuredDropB = 15039;
+        public const uint Input_MeasuredDropB = 15038;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropB_EURange Variable.
+        /// The identifier for the Input_MeasuredDropB_EURange Variable.
         /// </summary>
-        public const uint Output_MeasuredDropB_EURange = 15043;
+        public const uint Input_MeasuredDropB_EURange = 15042;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropC Variable.
+        /// The identifier for the Input_MeasuredDropC Variable.
         /// </summary>
-        public const uint Output_MeasuredDropC = 15045;
+        public const uint Input_MeasuredDropC = 15044;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropC_EURange Variable.
+        /// The identifier for the Input_MeasuredDropC_EURange Variable.
         /// </summary>
-        public const uint Output_MeasuredDropC_EURange = 15049;
+        public const uint Input_MeasuredDropC_EURange = 15048;
 
         /// <summary>
-        /// The identifier for the Output_DeltaDrop Variable.
+        /// The identifier for the Input_DeltaDrop Variable.
         /// </summary>
-        public const uint Output_DeltaDrop = 15051;
+        public const uint Input_DeltaDrop = 15050;
 
         /// <summary>
-        /// The identifier for the Output_DeltaDrop_EURange Variable.
+        /// The identifier for the Input_DeltaDrop_EURange Variable.
         /// </summary>
-        public const uint Output_DeltaDrop_EURange = 15055;
+        public const uint Input_DeltaDrop_EURange = 15054;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredWidth Variable.
+        /// The identifier for the Input_MeasuredWidth Variable.
         /// </summary>
-        public const uint Output_MeasuredWidth = 15057;
+        public const uint Input_MeasuredWidth = 15056;
 
         /// <summary>
-        /// The identifier for the Output_MeasuredWidth_EURange Variable.
+        /// The identifier for the Input_MeasuredWidth_EURange Variable.
         /// </summary>
-        public const uint Output_MeasuredWidth_EURange = 15061;
+        public const uint Input_MeasuredWidth_EURange = 15060;
 
         /// <summary>
-        /// The identifier for the Output_Approved Variable.
+        /// The identifier for the Input_Approved Variable.
         /// </summary>
-        public const uint Output_Approved = 15063;
+        public const uint Input_Approved = 15062;
 
         /// <summary>
-        /// The identifier for the Output_Approved_EURange Variable.
+        /// The identifier for the Input_Approved_EURange Variable.
         /// </summary>
-        public const uint Output_Approved_EURange = 15067;
+        public const uint Input_Approved_EURange = 15066;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrIn Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_SerialNrIn = 15071;
+        public const uint OPCUAServerType_InputNode_SerialNrIn = 15070;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrIn_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_SerialNrIn_EURange = 15075;
+        public const uint OPCUAServerType_InputNode_SerialNrIn_EURange = 15074;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Drop Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Drop = 15077;
+        public const uint OPCUAServerType_InputNode_Drop = 15076;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Drop_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Drop_EURange = 15081;
+        public const uint OPCUAServerType_InputNode_Drop_EURange = 15080;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Width Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Width = 15083;
+        public const uint OPCUAServerType_InputNode_Width = 15082;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Width_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Width_EURange = 15087;
+        public const uint OPCUAServerType_InputNode_Width_EURange = 15086;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_DateTime = 15088;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_DateTime_EURange = 15092;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_SerialNrOut = 15094;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_SerialNrOut_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_SerialNrOut_EURange = 15098;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropA Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredDropA = 15100;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropA_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredDropA_EURange = 15104;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropB Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredDropB = 15106;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropB_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredDropB_EURange = 15110;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropC Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredDropC = 15112;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropC_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredDropC_EURange = 15116;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DeltaDrop Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_DeltaDrop = 15118;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DeltaDrop_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_DeltaDrop_EURange = 15122;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredWidth Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredWidth = 15124;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredWidth_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasuredWidth_EURange = 15128;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Approved Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_Approved = 15130;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Approved_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_Approved_EURange = 15134;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrIn Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_SerialNrIn = 15091;
+        public const uint OPCUAServer1_InputNode_SerialNrIn = 15138;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrIn_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_SerialNrIn_EURange = 15095;
+        public const uint OPCUAServer1_InputNode_SerialNrIn_EURange = 15142;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Drop Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Drop = 15097;
+        public const uint OPCUAServer1_InputNode_Drop = 15144;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Drop_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Drop_EURange = 15101;
+        public const uint OPCUAServer1_InputNode_Drop_EURange = 15148;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Width Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Width = 15103;
+        public const uint OPCUAServer1_InputNode_Width = 15150;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Width_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Width_EURange = 15107;
+        public const uint OPCUAServer1_InputNode_Width_EURange = 15154;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_DateTime = 15156;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_DateTime_EURange = 15160;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_SerialNrOut = 15162;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_SerialNrOut_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_SerialNrOut_EURange = 15166;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropA Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredDropA = 15168;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropA_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredDropA_EURange = 15172;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropB Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredDropB = 15174;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropB_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredDropB_EURange = 15178;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropC Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredDropC = 15180;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropC_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredDropC_EURange = 15184;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DeltaDrop Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_DeltaDrop = 15186;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DeltaDrop_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_DeltaDrop_EURange = 15190;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredWidth Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredWidth = 15192;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredWidth_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasuredWidth_EURange = 15196;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Approved Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_Approved = 15198;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Approved_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_Approved_EURange = 15202;
     }
     #endregion
 
@@ -303,11 +458,6 @@ namespace OPCUAServer
         /// The identifier for the Input ObjectType.
         /// </summary>
         public static readonly ExpandedNodeId Input = new ExpandedNodeId(OPCUAServer.ObjectTypes.Input, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Output ObjectType.
-        /// </summary>
-        public static readonly ExpandedNodeId Output = new ExpandedNodeId(OPCUAServer.ObjectTypes.Output, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServerType ObjectType.
@@ -355,84 +505,84 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId Input_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_DateTime Variable.
+        /// The identifier for the Input_DateTime Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_DateTime = new ExpandedNodeId(OPCUAServer.Variables.Output_DateTime, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_DateTime = new ExpandedNodeId(OPCUAServer.Variables.Input_DateTime, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_DateTime_EURange Variable.
+        /// The identifier for the Input_DateTime_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_SerialNrOut Variable.
+        /// The identifier for the Input_SerialNrOut Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_SerialNrOut = new ExpandedNodeId(OPCUAServer.Variables.Output_SerialNrOut, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_SerialNrOut = new ExpandedNodeId(OPCUAServer.Variables.Input_SerialNrOut, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_SerialNrOut_EURange Variable.
+        /// The identifier for the Input_SerialNrOut_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_SerialNrOut_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_SerialNrOut_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_SerialNrOut_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_SerialNrOut_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropA Variable.
+        /// The identifier for the Input_MeasuredDropA Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredDropA = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredDropA, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredDropA = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredDropA, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropA_EURange Variable.
+        /// The identifier for the Input_MeasuredDropA_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredDropA_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredDropA_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredDropA_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredDropA_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropB Variable.
+        /// The identifier for the Input_MeasuredDropB Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredDropB = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredDropB, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredDropB = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredDropB, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropB_EURange Variable.
+        /// The identifier for the Input_MeasuredDropB_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredDropB_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredDropB_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredDropB_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredDropB_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropC Variable.
+        /// The identifier for the Input_MeasuredDropC Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredDropC = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredDropC, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredDropC = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredDropC, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredDropC_EURange Variable.
+        /// The identifier for the Input_MeasuredDropC_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredDropC_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredDropC_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredDropC_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredDropC_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_DeltaDrop Variable.
+        /// The identifier for the Input_DeltaDrop Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_DeltaDrop = new ExpandedNodeId(OPCUAServer.Variables.Output_DeltaDrop, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_DeltaDrop = new ExpandedNodeId(OPCUAServer.Variables.Input_DeltaDrop, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_DeltaDrop_EURange Variable.
+        /// The identifier for the Input_DeltaDrop_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_DeltaDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_DeltaDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_DeltaDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_DeltaDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredWidth Variable.
+        /// The identifier for the Input_MeasuredWidth Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredWidth = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredWidth, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredWidth = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredWidth, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_MeasuredWidth_EURange Variable.
+        /// The identifier for the Input_MeasuredWidth_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_Approved Variable.
+        /// The identifier for the Input_Approved Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_Approved = new ExpandedNodeId(OPCUAServer.Variables.Output_Approved, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_Approved = new ExpandedNodeId(OPCUAServer.Variables.Input_Approved, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Output_Approved_EURange Variable.
+        /// The identifier for the Input_Approved_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Output_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.Output_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrIn Variable.
@@ -465,6 +615,86 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServerType_InputNode_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DateTime = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DateTime, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_SerialNrOut = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_SerialNrOut, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_SerialNrOut_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_SerialNrOut_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_SerialNrOut_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropA Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredDropA = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredDropA, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropA_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredDropA_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredDropA_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropB Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredDropB = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredDropB, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropB_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredDropB_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredDropB_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropC Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredDropC = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredDropC, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredDropC_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredDropC_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredDropC_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DeltaDrop Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DeltaDrop = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DeltaDrop, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_DeltaDrop_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DeltaDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DeltaDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredWidth Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredWidth = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredWidth, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasuredWidth_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Approved Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Approved = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Approved, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Approved_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrIn Variable.
         /// </summary>
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_SerialNrIn = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_SerialNrIn, OPCUAServer.Namespaces.OPCUAServer);
@@ -493,6 +723,86 @@ namespace OPCUAServer
         /// The identifier for the OPCUAServer1_InputNode_Width_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DateTime = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DateTime, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_SerialNrOut = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_SerialNrOut, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_SerialNrOut_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_SerialNrOut_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_SerialNrOut_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropA Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredDropA = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredDropA, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropA_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredDropA_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredDropA_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropB Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredDropB = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredDropB, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropB_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredDropB_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredDropB_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropC Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredDropC = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredDropC, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredDropC_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredDropC_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredDropC_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DeltaDrop Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DeltaDrop = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DeltaDrop, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_DeltaDrop_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DeltaDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DeltaDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredWidth Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredWidth = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredWidth, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasuredWidth_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Approved Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Approved = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Approved, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Approved_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
     }
     #endregion
 
@@ -530,7 +840,7 @@ namespace OPCUAServer
         /// <summary>
         /// The BrowseName for the InputNode component.
         /// </summary>
-        public const string InputNode = "InputInfo";
+        public const string InputNode = "My tags.";
 
         /// <summary>
         /// The BrowseName for the MeasuredDropA component.
@@ -555,17 +865,12 @@ namespace OPCUAServer
         /// <summary>
         /// The BrowseName for the OPCUAServer1 component.
         /// </summary>
-        public const string OPCUAServer1 = "Line";
+        public const string OPCUAServer1 = "MySite";
 
         /// <summary>
         /// The BrowseName for the OPCUAServerType component.
         /// </summary>
         public const string OPCUAServerType = "OPCUAServerType";
-
-        /// <summary>
-        /// The BrowseName for the Output component.
-        /// </summary>
-        public const string Output = "Output";
 
         /// <summary>
         /// The BrowseName for the SerialNrIn component.
@@ -662,12 +967,26 @@ namespace OPCUAServer
         #region Initialization String
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////BGCAAAEAAAABAA0A" +
-           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////AwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
+           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////CwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
            "LwEAQAmaOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBnjoALgBEnjoAAAEA" +
            "dAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEBoDoALwEAQAmgOgAAAAv/////AwP/////" +
            "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBpDoALgBEpDoAAAEAdAP/////AQH/////AAAAABVgiQoC" +
            "AAAAAQAFAAAAV2lkdGgBAaY6AC8BAEAJpjoAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVV" +
-           "UmFuZ2UBAao6AC4ARKo6AAABAHQD/////wEB/////wAAAAA=";
+           "UmFuZ2UBAao6AC4ARKo6AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAERhdGVUaW1lAQGs" +
+           "OgAvAQBACaw6AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGwOgAuAESwOgAA" +
+           "AQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEBsjoALwEAQAmyOgAAAAz/" +
+           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBtjoALgBEtjoAAAEAdAP/////AQH/////" +
+           "AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEBuDoALwEAQAm4OgAAAAv/////AwP/////AQAA" +
+           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBvDoALgBEvDoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAA" +
+           "AQANAAAATWVhc3VyZWREcm9wQgEBvjoALwEAQAm+OgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAH" +
+           "AAAARVVSYW5nZQEBwjoALgBEwjoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3Vy" +
+           "ZWREcm9wQwEBxDoALwEAQAnEOgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB" +
+           "yDoALgBEyDoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9wAQHKOgAvAQBA" +
+           "Cco6AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHOOgAuAETOOgAAAQB0A///" +
+           "//8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQHQOgAvAQBACdA6AAAAC/////8D" +
+           "A/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHUOgAuAETUOgAAAQB0A/////8BAf////8AAAAA" +
+           "FWCJCgIAAAABAAgAAABBcHByb3ZlZAEB1joALwEAQAnWOgAAAAH/////AwP/////AQAAABVgiQoCAAAA" +
+           "AAAHAAAARVVSYW5nZQEB2joALgBE2joAAAEAdAP/////AQH/////AAAAAA==";
         #endregion
         #endif
         #endregion
@@ -735,211 +1054,7 @@ namespace OPCUAServer
                 m_width = value;
             }
         }
-        #endregion
 
-        #region Overridden Methods
-        /// <summary>
-        /// Populates a list with the children that belong to the node.
-        /// </summary>
-        /// <param name="context">The context for the system being accessed.</param>
-        /// <param name="children">The list of children to populate.</param>
-        public override void GetChildren(
-            ISystemContext context,
-            IList<BaseInstanceState> children)
-        {
-            if (m_serialNrIn != null)
-            {
-                children.Add(m_serialNrIn);
-            }
-
-            if (m_drop != null)
-            {
-                children.Add(m_drop);
-            }
-
-            if (m_width != null)
-            {
-                children.Add(m_width);
-            }
-
-            base.GetChildren(context, children);
-        }
-
-        /// <summary>
-        /// Finds the child with the specified browse name.
-        /// </summary>
-        protected override BaseInstanceState FindChild(
-            ISystemContext context,
-            QualifiedName browseName,
-            bool createOrReplace,
-            BaseInstanceState replacement)
-        {
-            if (QualifiedName.IsNull(browseName))
-            {
-                return null;
-            }
-
-            BaseInstanceState instance = null;
-
-            switch (browseName.Name)
-            {
-                case OPCUAServer.BrowseNames.SerialNrIn:
-                {
-                    if (createOrReplace)
-                    {
-                        if (SerialNrIn == null)
-                        {
-                            if (replacement == null)
-                            {
-                                SerialNrIn = new AnalogItemState<string>(this);
-                            }
-                            else
-                            {
-                                SerialNrIn = (AnalogItemState<string>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = SerialNrIn;
-                    break;
-                }
-
-                case OPCUAServer.BrowseNames.Drop:
-                {
-                    if (createOrReplace)
-                    {
-                        if (Drop == null)
-                        {
-                            if (replacement == null)
-                            {
-                                Drop = new AnalogItemState<double>(this);
-                            }
-                            else
-                            {
-                                Drop = (AnalogItemState<double>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = Drop;
-                    break;
-                }
-
-                case OPCUAServer.BrowseNames.Width:
-                {
-                    if (createOrReplace)
-                    {
-                        if (Width == null)
-                        {
-                            if (replacement == null)
-                            {
-                                Width = new AnalogItemState<double>(this);
-                            }
-                            else
-                            {
-                                Width = (AnalogItemState<double>)replacement;
-                            }
-                        }
-                    }
-
-                    instance = Width;
-                    break;
-                }
-            }
-
-            if (instance != null)
-            {
-                return instance;
-            }
-
-            return base.FindChild(context, browseName, createOrReplace, replacement);
-        }
-        #endregion
-
-        #region Private Fields
-        private AnalogItemState<string> m_serialNrIn;
-        private AnalogItemState<double> m_drop;
-        private AnalogItemState<double> m_width;
-        #endregion
-    }
-    #endif
-    #endregion
-
-    #region OutputState Class
-    #if (!OPCUA_EXCLUDE_OutputState)
-    /// <summary>
-    /// Stores an instance of the Output ObjectType.
-    /// </summary>
-    /// <exclude />
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    public partial class OutputState : BaseObjectState
-    {
-        #region Constructors
-        /// <summary>
-        /// Initializes the type with its default attribute values.
-        /// </summary>
-        public OutputState(NodeState parent) : base(parent)
-        {
-        }
-
-        /// <summary>
-        /// Returns the id of the default type definition node for the instance.
-        /// </summary>
-        protected override NodeId GetDefaultTypeDefinitionId(NamespaceTable namespaceUris)
-        {
-            return Opc.Ua.NodeId.Create(OPCUAServer.ObjectTypes.Output, OPCUAServer.Namespaces.OPCUAServer, namespaceUris);
-        }
-
-        #if (!OPCUA_EXCLUDE_InitializationStrings)
-        /// <summary>
-        /// Initializes the instance.
-        /// </summary>
-        protected override void Initialize(ISystemContext context)
-        {
-            Initialize(context, InitializationString);
-            InitializeOptionalChildren(context);
-        }
-
-        /// <summary>
-        /// Initializes the instance with a node.
-        /// </summary>
-        protected override void Initialize(ISystemContext context, NodeState source)
-        {
-            InitializeOptionalChildren(context);
-            base.Initialize(context, source);
-        }
-
-        /// <summary>
-        /// Initializes the any option children defined for the instance.
-        /// </summary>
-        protected override void InitializeOptionalChildren(ISystemContext context)
-        {
-            base.InitializeOptionalChildren(context);
-        }
-
-        #region Initialization String
-        private const string InitializationString =
-           "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////BGCAAAEAAAABAA4A" +
-           "AABPdXRwdXRJbnN0YW5jZQEBrDoBAaw6/////wgAAAAVYIkKAgAAAAEACAAAAERhdGVUaW1lAQGtOgAv" +
-           "AQBACa06AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGxOgAuAESxOgAAAQB0" +
-           "A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEBszoALwEAQAmzOgAAAAz/////" +
-           "AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBtzoALgBEtzoAAAEAdAP/////AQH/////AAAA" +
-           "ABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEBuToALwEAQAm5OgAAAAv/////AwP/////AQAAABVg" +
-           "iQoCAAAAAAAHAAAARVVSYW5nZQEBvToALgBEvToAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAN" +
-           "AAAATWVhc3VyZWREcm9wQgEBvzoALwEAQAm/OgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
-           "RVVSYW5nZQEBwzoALgBEwzoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWRE" +
-           "cm9wQwEBxToALwEAQAnFOgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEByToA" +
-           "LgBEyToAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9wAQHLOgAvAQBACcs6" +
-           "AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHPOgAuAETPOgAAAQB0A/////8B" +
-           "Af////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQHROgAvAQBACdE6AAAAC/////8DA///" +
-           "//8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHVOgAuAETVOgAAAQB0A/////8BAf////8AAAAAFWCJ" +
-           "CgIAAAABAAgAAABBcHByb3ZlZAEB1zoALwEAQAnXOgAAAAH/////AwP/////AQAAABVgiQoCAAAAAAAH" +
-           "AAAARVVSYW5nZQEB2zoALgBE2zoAAAEAdAP/////AQH/////AAAAAA==";
-        #endregion
-        #endif
-        #endregion
-
-        #region Public Properties
         /// <summary>
         /// A description for the DateTime Variable.
         /// </summary>
@@ -1119,6 +1234,21 @@ namespace OPCUAServer
             ISystemContext context,
             IList<BaseInstanceState> children)
         {
+            if (m_serialNrIn != null)
+            {
+                children.Add(m_serialNrIn);
+            }
+
+            if (m_drop != null)
+            {
+                children.Add(m_drop);
+            }
+
+            if (m_width != null)
+            {
+                children.Add(m_width);
+            }
+
             if (m_dateTime != null)
             {
                 children.Add(m_dateTime);
@@ -1180,6 +1310,69 @@ namespace OPCUAServer
 
             switch (browseName.Name)
             {
+                case OPCUAServer.BrowseNames.SerialNrIn:
+                {
+                    if (createOrReplace)
+                    {
+                        if (SerialNrIn == null)
+                        {
+                            if (replacement == null)
+                            {
+                                SerialNrIn = new AnalogItemState<string>(this);
+                            }
+                            else
+                            {
+                                SerialNrIn = (AnalogItemState<string>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = SerialNrIn;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.Drop:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Drop == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Drop = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                Drop = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Drop;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.Width:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Width == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Width = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                Width = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Width;
+                    break;
+                }
+
                 case OPCUAServer.BrowseNames.DateTime:
                 {
                     if (createOrReplace)
@@ -1359,6 +1552,9 @@ namespace OPCUAServer
         #endregion
 
         #region Private Fields
+        private AnalogItemState<string> m_serialNrIn;
+        private AnalogItemState<double> m_drop;
+        private AnalogItemState<double> m_width;
         private AnalogItemState<string> m_dateTime;
         private AnalogItemState<string> m_serialNrOut;
         private AnalogItemState<double> m_measuredDropA;
@@ -1379,7 +1575,7 @@ namespace OPCUAServer
     /// </summary>
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    public partial class OPCUAServerState : BaseObjectState
+    public partial class OPCUAServerState : FolderState
     {
         #region Constructors
         /// <summary>
@@ -1427,20 +1623,34 @@ namespace OPCUAServer
         #region Initialization String
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////hGCAAAEAAAABABcA" +
-           "AABPUENVQVNlcnZlclR5cGVJbnN0YW5jZQEB3ToBAd06Af////8BAAAAhGDACgEAAAAJAAAASW5wdXRO" +
-           "b2RlAQAJAAAASW5wdXRJbmZvAQHeOgAvAQGZOt46AAAB/////wMAAAAVYIkKAgAAAAEACgAAAFNlcmlh" +
-           "bE5ySW4BAd86AC8BAEAJ3zoAAAAM/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAeM6" +
-           "AC4AROM6AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEABAAAAERyb3ABAeU6AC8BAEAJ5ToAAAAL" +
-           "/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAek6AC4AROk6AAABAHQD/////wEB////" +
-           "/wAAAAAVYIkKAgAAAAEABQAAAFdpZHRoAQHrOgAvAQBACes6AAAAC/////8DA/////8BAAAAFWCJCgIA" +
-           "AAAAAAcAAABFVVJhbmdlAQHvOgAuAETvOgAAAQB0A/////8BAf////8AAAAA";
+           "AABPUENVQVNlcnZlclR5cGVJbnN0YW5jZQEB3DoBAdw6Af////8BAAAAhGDACgEAAAAJAAAASW5wdXRO" +
+           "b2RlAQAIAAAATXkgdGFncy4BAd06AC8BAZk63ToAAAH/////CwAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
+           "TnJJbgEB3joALwEAQAneOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB4joA" +
+           "LgBE4joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEB5DoALwEAQAnkOgAAAAv/" +
+           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB6DoALgBE6DoAAAEAdAP/////AQH/////" +
+           "AAAAABVgiQoCAAAAAQAFAAAAV2lkdGgBAeo6AC8BAEAJ6joAAAAL/////wMD/////wEAAAAVYIkKAgAA" +
+           "AAAABwAAAEVVUmFuZ2UBAe46AC4ARO46AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAERh" +
+           "dGVUaW1lAQHwOgAvAQBACfA6AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQH0" +
+           "OgAuAET0OgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEB9joALwEA" +
+           "QAn2OgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB+joALgBE+joAAAEAdAP/" +
+           "////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEB/DoALwEAQAn8OgAAAAv/////" +
+           "AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBADsALgBEADsAAAEAdAP/////AQH/////AAAA" +
+           "ABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQgEBAjsALwEAQAkCOwAAAAv/////AwP/////AQAAABVg" +
+           "iQoCAAAAAAAHAAAARVVSYW5nZQEBBjsALgBEBjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAN" +
+           "AAAATWVhc3VyZWREcm9wQwEBCDsALwEAQAkIOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
+           "RVVSYW5nZQEBDDsALgBEDDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9w" +
+           "AQEOOwAvAQBACQ47AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQESOwAuAEQS" +
+           "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQEUOwAvAQBACRQ7" +
+           "AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEYOwAuAEQYOwAAAQB0A/////8B" +
+           "Af////8AAAAAFWCJCgIAAAABAAgAAABBcHByb3ZlZAEBGjsALwEAQAkaOwAAAAH/////AwP/////AQAA" +
+           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBHjsALgBEHjsAAAEAdAP/////AQH/////AAAAAA==";
         #endregion
         #endif
         #endregion
 
         #region Public Properties
         /// <summary>
-        /// A description for the InputInfo Object.
+        /// A description for the My tags. Object.
         /// </summary>
         public InputState InputNode
         {
