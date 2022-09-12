@@ -49,12 +49,12 @@ namespace OPCUAServer
                 mysite_OPCUAServer1.Create(SystemContext, passiveNode);
                 AddPredefinedNode(SystemContext, mysite_OPCUAServer1);
                 //For simulation only
-                simulationTimer = new System.Threading.Timer(DoSimulationWork, null, 100, 100);
+                //simulationTimer = new System.Threading.Timer(DoSimulationWork, null, 100, 100);
             }
         }
-        public void DoSimulationWork(object state)
-        {
-            mysite_OPCUAServer1.InputNode.DateTime.Value = "2022-09-12 13:12:10";
-        }
+        //public void DoSimulationWork(object state)
+        //{
+        //    mysite_OPCUAServer1.InputNode.DateTime.Value = "2022-09-12 13:12:10";
+        //}
     }
 }

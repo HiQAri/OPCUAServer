@@ -37,7 +37,7 @@
             this.comboBoxNodes.FormattingEnabled = true;
             this.comboBoxNodes.Location = new System.Drawing.Point(59, 26);
             this.comboBoxNodes.Name = "comboBoxNodes";
-            this.comboBoxNodes.Size = new System.Drawing.Size(595, 21);
+            this.comboBoxNodes.Size = new System.Drawing.Size(316, 21);
             this.comboBoxNodes.TabIndex = 0;
             // 
             // label1
@@ -53,7 +53,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 72);
+            this.ClientSize = new System.Drawing.Size(398, 72);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxNodes);
             this.Name = "Form1";
