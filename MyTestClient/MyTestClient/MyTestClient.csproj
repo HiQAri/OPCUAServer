@@ -34,17 +34,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Opc.Ua.Client">
-      <HintPath>..\..\UA-.NETStandard-Samples\Samples\Client.Net4\bin\Debug\Opc.Ua.Client.dll</HintPath>
+    <Reference Include="Opc.Ua.Client, Version=1.4.369.0, Culture=neutral, PublicKeyToken=bfa7a73c5cf4b6e8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Opc.Ua.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Opc.Ua.ClientControls">
-      <HintPath>..\..\UA-.NETStandard-Samples\Samples\Client.Net4\bin\Debug\Opc.Ua.ClientControls.dll</HintPath>
+    <Reference Include="Opc.Ua.ClientControls, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Opc.Ua.ClientControls.dll</HintPath>
     </Reference>
-    <Reference Include="Opc.Ua.Configuration">
-      <HintPath>..\..\UA-.NETStandard-Samples\Samples\Client.Net4\bin\Debug\Opc.Ua.Configuration.dll</HintPath>
+    <Reference Include="Opc.Ua.Configuration, Version=1.4.369.0, Culture=neutral, PublicKeyToken=bfa7a73c5cf4b6e8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Opc.Ua.Configuration.dll</HintPath>
     </Reference>
-    <Reference Include="Opc.Ua.Core">
-      <HintPath>..\..\UA-.NETStandard-Samples\Samples\Client.Net4\bin\Debug\Opc.Ua.Core.dll</HintPath>
+    <Reference Include="Opc.Ua.Core, Version=1.4.369.0, Culture=neutral, PublicKeyToken=bfa7a73c5cf4b6e8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Opc.Ua.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
