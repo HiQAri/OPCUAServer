@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPCUAServer", "OPCUAServer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UA Client Controls", "ClientControls.Net4\UA Client Controls.csproj", "{A247D2EE-14FC-463D-A9BA-6CFF1EF22B7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoistOpcServer", "HoistOpcServer\HoistOpcServer.csproj", "{544B319B-2A2A-4D37-98E2-3FB79F961B83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A247D2EE-14FC-463D-A9BA-6CFF1EF22B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A247D2EE-14FC-463D-A9BA-6CFF1EF22B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A247D2EE-14FC-463D-A9BA-6CFF1EF22B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
