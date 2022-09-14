@@ -71,11 +71,9 @@ namespace MyTestClient
                 monitoredItem.AttributeId = Attributes.Value;
                 monitoredItem.Notification += MonitoredItem_Notification;
                 subscription.AddItem(monitoredItem);
+                DateTimeTag = monitoredItem;
+
                 subscription.ApplyChanges();
-
-
-
-
             }
             catch (Exception ex)
             {
@@ -91,9 +89,6 @@ namespace MyTestClient
                 return;
             }
             this.lblDateTime.Text = ((MonitoredItemNotification)e.NotificationValue).Value.WrappedValue.ToString();
-
-
-            //throw new NotImplementedException();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -128,8 +123,8 @@ namespace MyTestClient
                         StorePath = @"%CommonApplicationData%\OPC Foundation\CertificateStores\RejectedCertificates"
                     },
                     AutoAcceptUntrustedCertificates = true,
-                    AddAppCertToTrustedStore = false,
-                    RejectSHA1SignedCertificates = false
+                    AddAppCertToTrustedStore = false, //Ändra detta senare.
+                    RejectSHA1SignedCertificates = false //Ändra detta senare.
                 },
                 TransportConfigurations = new TransportConfigurationCollection(),
                 TransportQuotas = new TransportQuotas { OperationTimeout = 15000 },
@@ -153,13 +148,90 @@ namespace MyTestClient
             };
             Opc.Ua.Utils.SetTraceMask(0);
             application.CheckApplicationInstanceCertificate(true, 2048).GetAwaiter().GetResult();
-
-
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.connectServerCtrl1.Disconnect();
         }
+
+        private void btnWriteToTag_Click(object sender, EventArgs e)
+        {
+            bool Empty = txtBoxWriteToTag.Text != null;
+            this.WriteToTag(this.connectServerCtrl1.Session, this.DateTimeTag, Empty);
+           
+        }
+        MonitoredItem DateTimeTag;
+        bool WriteToTag(Session session, MonitoredItem tag, Object obj) 
+        {
+            Opc.Ua.WriteValue writeValue = new Opc.Ua.WriteValue();
+            writeValue.AttributeId = Attributes.Value;
+
+            string sType = ((MonitoredItemNotification)tag.LastValue).Value.WrappedValue.TypeInfo.BuiltInType.ToString();
+            string tagID = tag.ResolvedNodeId.Identifier.ToString();
+            return WriteToTag(session, tagID, sType, obj);
+        }
+
+        bool WriteToTag(Session session, string tag, string sType, object obj) 
+        {
+            Opc.Ua.WriteValue writeValue = new Opc.Ua.WriteValue();
+            writeValue.AttributeId = Attributes.Value;
+            writeValue.NodeId = new NodeId("ns=2;i=15156"); // tag, 2
+            writeValue.Value.Value = GetValue(obj, sType);
+            writeValue.Value.ServerTimestamp = DateTime.MinValue;
+            writeValue.Value.StatusCode = StatusCodes.Good;
+
+            WriteValueCollection toWrite = new WriteValueCollection();
+            toWrite.Add(writeValue);
+
+            StatusCodeCollection toWrite2 = new StatusCodeCollection();
+            toWrite.Add(writeValue);
+
+            StatusCodeCollection result = null;
+            DiagnosticInfoCollection diagnostics = null;
+            session.Write(null, toWrite, out result, out diagnostics);
+
+            ClientBase.ValidateResponse(result, toWrite);
+            if (StatusCode.IsBad(result[0]))
+            {
+                return false;
+            }
+            return true;
+        }
+
+
+        private object GetValue(Object obj, string sType) 
+        {
+            switch (sType)
+            {
+                case "Boolean":
+                    return Convert.ToBoolean(obj);
+                case "Byte":
+                    return Convert.ToByte(obj);
+                case "SByte":
+                    return Convert.ToSByte(obj);
+                case "UInt16":
+                    return Convert.ToInt16(obj);
+                case "UInt32":
+                    return Convert.ToInt32(obj);
+                case "UInt64":
+                    return Convert.ToUInt64(obj);
+                case "Int64":
+                    return Convert.ToInt64(obj);
+                case "Double":
+                    return Convert.ToDouble(obj);
+                case "Float":
+                    return Convert.ToDateTime(obj);
+                case "DateTime":
+                    return Convert.ToDateTime(obj);
+            }
+            return obj;
+        }
+
+
+
+
+
+
     }
 }
