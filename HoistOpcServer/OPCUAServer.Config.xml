@@ -4,7 +4,7 @@
   xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
   xmlns="http://opcfoundation.org/UA/SDK/Configuration.xsd"
 >
-  <ApplicationName>OPCUAServer</ApplicationName>
+  <ApplicationName>HoistOPCUAServer</ApplicationName>
   <ApplicationUri>urn:localhost:OPCUAServer</ApplicationUri>
   <ProductUri>http://opcfoundation.org/OPCUAServer</ProductUri>
   <ApplicationType>Server_0</ApplicationType>
@@ -55,7 +55,7 @@
   </TransportQuotas>
   <ServerConfiguration>
     <BaseAddresses>
-      <ua:String>opc.tcp://localhost:26543/OPCUAServer</ua:String>
+      <ua:String>opc.tcp://localhost:48030/OPCUAServer</ua:String>
      </BaseAddresses>
     <SecurityPolicies>
       <ServerSecurityPolicy>

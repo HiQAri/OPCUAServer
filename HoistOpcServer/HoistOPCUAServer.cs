@@ -1,4 +1,5 @@
-﻿using Opc.Ua;
+﻿using HoistOpcServer;
+using Opc.Ua;
 using Opc.Ua.Configuration;
 using Opc.Ua.Server;
 using System;
@@ -9,8 +10,9 @@ using System.Threading.Tasks;
 
 namespace OPCUAServer
 {
-    public class HoistOPCUAServer
+    public class HoistOPCUAServer : IDisposable
     {
+        private bool isDisposed;
         private ApplicationInstance application;
         private StandardServer server;
         private ApplicationConfiguration configuration;
@@ -39,6 +41,29 @@ namespace OPCUAServer
                     endpoints.Add(endpoint.EndpointUrl);
                 }
             }
+
+            Signals = new AllSignals(server);
         }
+
+        public AllSignals Signals { get; set; }
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        private void Dispose(bool disposing)
+        {
+            if (isDisposed)
+                return;
+
+            if (disposing)
+            {
+                application?.Stop();
+            }
+
+            isDisposed = true;
+        }
+
     }
 }

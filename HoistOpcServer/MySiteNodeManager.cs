@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace OPCUAServer
@@ -14,6 +15,7 @@ namespace OPCUAServer
         private MySiteServerConfiguration mysite_configuration;
         private static OPCUAServerState mysite_OPCUAServer1;
         private System.Threading.Timer simulationTimer;
+        private InputState inputstate;
 
         public MySiteNodeManager(IServerInternal server, ApplicationConfiguration configuration)
         :
@@ -39,6 +41,9 @@ namespace OPCUAServer
                 true);
             return predefinedNodes;
         }
+
+        InputState inputNode;
+
         public override void CreateAddressSpace(IDictionary<NodeId, IList<IReference>> externalReferences)
         {
             lock (Lock)
@@ -49,12 +54,23 @@ namespace OPCUAServer
                 mysite_OPCUAServer1.Create(SystemContext, passiveNode);
                 AddPredefinedNode(SystemContext, mysite_OPCUAServer1);
                 //For simulation only
-                //simulationTimer = new System.Threading.Timer(DoSimulationWork, null, 100, 100);
+                var input = (BaseObjectState)FindPredefinedNode(new NodeId(OPCUAServer.Objects.OPCUAServer1_InputNode, NamespaceIndexes[0]), typeof(BaseObjectState));
+                if (input is InputState s)
+                {
+                    inputNode = s;
+                }
+                //simulationTimer = new Timer(DoSimulationWork, null, 100, 100);
+
+
             }
         }
-        //public void DoSimulationWork(object state)
-        //{
-        //    mysite_OPCUAServer1.InputNode.DateTime.Value = "2022-09-12 13:12:10";
-        //}
+        public void DoSimulationWork(object state)
+        {
+            if (inputNode != null)
+            {
+                inputNode.MeasuredDropA.Value = new Random().NextDouble() * 100;
+            }
+            //mysite_opcuaserver1.inputnode.datetime.value = "2022-09-12 13:12:10";
+        }
     }
 }
