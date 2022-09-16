@@ -1,4 +1,5 @@
 ﻿Imports System.Data.OleDb
+Imports GL_HoistControl
 
 Public Class ModelFiles
     Public Structure tModelDat   ' info from modelfiles
@@ -60,7 +61,7 @@ Public Class ModelFiles
 
         GridView.DataSource = vbNull ' empty the grid 
         GridView.Refresh()
-       
+
 
 
         GridView.DataSource = ModelData.Tables(0)
@@ -79,6 +80,40 @@ Public Class ModelFiles
     End Function
 
     Public Function OpenReadModelFile(ByVal aName As String, ByRef aModelDatSet As tModelDat) As Boolean
+        Dim Ok = True
+        If MainForm.ManualEdit = 1 Then
+            Ok = OpenReadModelAsFile(aName, aModelDatSet)
+        Else
+            Ok = ReadModelFromOpc(aModelDatSet)
+        End If
+        Return Ok
+    End Function
+
+    Private Function ReadModelFromOpc(ByRef aModelDatSet As tModelDat) As Boolean
+        Dim Ok = True
+        Dim signals As HoistOpcServer.AllSignals
+        signals = MainForm.OpcSignals
+
+        '/////////////////////
+        aModelDatSet.MountOffSetVert = signals.MountOffSetVert
+        aModelDatSet.OffsetLaserOnProd = signals.OffsetLaserOnProd
+        aModelDatSet.BottomBarRadius = signals.BottomBarRadius
+        aModelDatSet.ToleranceWidthPlus = signals.ToleranceWidthPlus
+        aModelDatSet.ToleranceWidthMinus = signals.ToleranceWidthMinus
+        aModelDatSet.ToleranceDropPlus = signals.ToleranceDropPlus
+        aModelDatSet.ToleranceDropMinus = signals.ToleranceDropMinus
+        aModelDatSet.PrefMeasDist = signals.PrefMeasDist
+        aModelDatSet.Endcapcompensation = signals.Endcapcompensation
+        aModelDatSet.ToleranceDropDiff = signals.ToleranceDropDiff
+        aModelDatSet.MeasureWidth = signals.MeasureWidth
+        aModelDatSet.MeasureDrop = signals.MeasureDrop
+        aModelDatSet.MeasureSquareness = signals.MeasureSquareness
+        aModelDatSet.HasCords = signals.HasCords
+
+        Return Ok
+    End Function
+
+    Public Function OpenReadModelAsFile(ByVal aName As String, ByRef aModelDatSet As tModelDat) As Boolean
         Dim Ok = True
         ModelFileName = aName
         connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source= " & ModelFileName & " ;" & "Extended Properties=Excel 12.0;"
@@ -230,7 +265,7 @@ Public Class ModelFiles
             aModelDatSet.PrefMeasDist = 0
             MsgBox("ModelParam " + "PrefMeasDist" + " not found")
         End If
-        
+
         '/////////////////////
         i = 0
         FoundOK = False
@@ -338,8 +373,6 @@ Public Class ModelFiles
         End If
         Return Ok
     End Function
-
-
 
 
     Public Function OpenReadHasCordsModelFile(ByVal aName As String, ByRef HasCords As Double) As Boolean

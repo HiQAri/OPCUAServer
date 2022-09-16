@@ -59,16 +59,14 @@ namespace OPCUAServer
                 {
                     inputNode = s;
                 }
-                //simulationTimer = new Timer(DoSimulationWork, null, 100, 100);
-
-
+                // simulationTimer = new Timer(DoSimulationWork, null, 100, 5000);
             }
         }
         public void DoSimulationWork(object state)
         {
             if (inputNode != null)
             {
-                inputNode.MeasuredDropA.Value = new Random().NextDouble() * 100;
+                inputNode.Drop.Value = new Random().NextDouble() * 100;
             }
             //mysite_opcuaserver1.inputnode.datetime.value = "2022-09-12 13:12:10";
         }

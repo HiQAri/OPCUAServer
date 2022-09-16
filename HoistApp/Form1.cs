@@ -22,7 +22,7 @@ namespace HoistApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            server?.Signals.DropB();
+            // server?.Signals.MeasuredDropB = 0;
         }
     }
 }

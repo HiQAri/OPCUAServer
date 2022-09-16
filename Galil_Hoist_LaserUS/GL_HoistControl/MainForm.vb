@@ -1,4 +1,6 @@
-﻿Public Class MainForm
+﻿Imports HoistOpcServer
+
+Public Class MainForm
     Public WithEvents galil As New Galil.Galil
 
 
@@ -8,6 +10,9 @@
     Dim MemUSSensorsOn As Boolean
 
     Dim linerFlag As Boolean
+
+    Dim OpcServer As OPCUAServer.HoistOPCUAServer
+    Public OpcSignals As AllSignals
 
     Public GoPosUpStat As Integer = 0
     Public GoPosPosition As Double = 0
@@ -31,6 +36,7 @@
     Dim MeasureDrop As Double = 1.0        'values from the parameter file. These will be combined with similar values from the model files.
     Dim MeasureWidth As Double = 1.0
     Dim MeasureSquareness As Double = 1.0
+    Public ManualEdit As Integer = 0
 
     Dim HasCords As Double = 1
 
@@ -342,13 +348,13 @@
     End Sub
 
     Private Sub CloseDownGalil()
-        galil.command("AB")
-        galil.command("MOA")
-        galil.command("CB 0")
-
-        homestatus = "off"
-        Index = "off"
         Try
+            galil.command("AB")
+            galil.command("MOA")
+            galil.command("CB 0")
+
+            homestatus = "off"
+            Index = "off"
             galil.address = "OFFLINE" 'OFFLINE causes the destructor to run, disconecting from the controller
         Catch ex As Exception 'OFFLINE throws an error so catch and ignore it
 
@@ -448,6 +454,7 @@
         Me.OrdersTableAdapter1.Fill(Me.HoistOrders1DataSet.Orders)
 
         LoadGenSettingsParams()
+        StartOpcServer()
 
         If ProductionType > 0 Then
 
@@ -530,10 +537,21 @@
 
     End Sub
 
+    Private Sub StartOpcServer()
+        If ManualEdit = 0 Then
+            OpcServer = New OPCUAServer.HoistOPCUAServer()
+            OpcServer.Initialize()
+            OpcSignals = OpcServer.Signals
+            BlockInputFields(True)
+        End If
+    End Sub
+
     Private Sub cmdQuit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdQuit.Click
         System_Label.Visible = True
         Me.Update()
         CloseDownGalil()
+        OpcServer?.Dispose()
+
         If Not debugmode Then
 
             System.Diagnostics.Process.Start("ShutDown", "/s /t 00")
@@ -542,8 +560,8 @@
     End Sub
 
     Private Function BlockInputFields(ByVal aBlock As Boolean) As Boolean
-        txtDrop.ReadOnly = aBlock
-        TxtWidth.ReadOnly = aBlock
+        txtDrop.ReadOnly = aBlock Or (ManualEdit = 0)
+        TxtWidth.ReadOnly = aBlock Or (ManualEdit = 0)
         ComboBoxModel.Enabled = Not aBlock
         Return (True)
     End Function
@@ -569,6 +587,16 @@
         Me.OrdersResultTableAdapter1.Update(Me.HoistOrdersResultDataSet1)
     End Sub
 
+    Public Sub ResultToOpc(ByVal DateStr As String, ByVal TimeStr As String, ByVal OrderNr As String, ByVal Theodrop As String, ByVal TheoWidth As String, ByVal DropA As String, ByVal DropB As String, ByVal DropC As String, ByVal Width As String, ByVal Skew As String)
+        OpcSignals.DateTime = DateStr + " - " + TimeStr
+        OpcSignals.SerialNumberOut = OrderNr
+        OpcSignals.MeasuredDropA = Val(DropA)
+        OpcSignals.MeasuredDropB = Val(DropB)
+        OpcSignals.MeasuredDropC = Val(DropC)
+        OpcSignals.DeltaDrop = Val(Skew)
+        OpcSignals.MeasuredWidth = Val(Width)
+    End Sub
+
 
     '////////////////////////////all things for the production cycle
 
@@ -591,7 +619,7 @@
                             txtDrop.BackColor = Color.White
                             TxtWidth.BackColor = Color.White
 
-                            ModelFiles.OpenReadHasCordsModelFile("..\ModelFiles\" + ComboBoxModel.SelectedItem.ToString(), HasCords)
+                            CheckHasCords()
                             If (HasCords = 1) Then
                                 txtCLO.Visible = True
                                 LabelCordLength.Visible = True
@@ -786,7 +814,6 @@
         DoGoBack = False
     End Sub
 
-
     Private Sub ProductionCycleOrg()         ' original production cycle without measurements in it
 
         Select Case SeqStep
@@ -804,12 +831,12 @@
                         SeqStep += 1
                     End If
                 End If
-                If (NextStep()) Then
+                If (nextstep()) Then
                     MsgBox("Enter Shade Info, then hit START")
                 End If
 
             Case 1 'data entered: check it 
-                If (NextStep()) Then
+                If (nextstep()) Then
                     If (CorrectDataAvailable()) Then
                         lastposition = txtPosition.Text
                         txtPosition.Text = Val(txtDrop.Text) + Eye_Level ' was 11 inch
@@ -997,7 +1024,7 @@
     End Sub
     Private Sub ComboBoxModel_SelectionChangeCommitted(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboBoxModel.SelectionChangeCommitted
         Modelentered = True
-        ModelFiles.OpenReadHasCordsModelFile("..\ModelFiles\" + ComboBoxModel.SelectedItem.ToString(), HasCords)
+        CheckHasCords()
         If (HasCords = 1) Then
             txtCLO.Visible = True
             LabelCordLength.Visible = True
@@ -1033,6 +1060,7 @@
 
     Private Sub TimerCyclicWork_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TimerCyclicWork.Tick
         TimerCyclicWork.Enabled = False
+        UpdateOpcTags()
         If (ProductionType > 0) Then
             ProductionCycleWithMeasurement()
             Inspection.InspectionCycle()
@@ -1087,6 +1115,8 @@
         ParamFiles.OpenReadParamFile(ParamFileName, "MeasureDrop", MeasureDrop)
         ParamFiles.OpenReadParamFile(ParamFileName, "MeasureWidth", MeasureWidth)
         ParamFiles.OpenReadParamFile(ParamFileName, "MeasureSquareness", MeasureSquareness)
+        ParamFiles.OpenReadParamFile(ParamFileName, "ManualEdit", ManualEdit)
+
 
         Return (True)
     End Function
@@ -1148,7 +1178,7 @@
                     ComboBoxModel.SelectedIndex = itemind
                     ComboBoxModel.Refresh()
                     Modelentered = True
-                    ModelFiles.OpenReadHasCordsModelFile("..\ModelFiles\" + ComboBoxModel.SelectedItem.ToString(), HasCords)
+                    CheckHasCords()
                     If (HasCords = 1) Then
                         txtCLO.Visible = True
                         LabelCordLength.Visible = True
@@ -1165,7 +1195,7 @@
     End Sub
 
 
-   
+
     Private Sub DataGridViewRollUpDist_SelectionChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DataGridViewRollUpDist.SelectionChanged
         Dim value As Object = DataGridViewRollUpDist.CurrentRow.Cells(1).Value.ToString
 
@@ -1185,13 +1215,35 @@
     End Sub
 
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbHem.SelectedIndexChanged
-        nextButton.Focus()
+        NextButton.Focus()
     End Sub
 
     Dim dt As Date = Today
 
-   
+
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         ResultTodatabase(dt.ToShortDateString, TimeOfDay.ToShortTimeString, "12345", "20", "40", "202", "203", "204", "205", "300")
+        ResultToOpc(dt.ToShortDateString, TimeOfDay.ToShortTimeString, "12345", "20", "40", "202", "203", "204", "205", "300")
+    End Sub
+
+    Private Function CheckHasCords() As Boolean
+        Dim Ok = True
+        If ManualEdit = 1 Then
+            Ok = ModelFiles.OpenReadHasCordsModelFile("..\ModelFiles\" + ComboBoxModel.SelectedItem.ToString(), HasCords)
+        Else
+            HasCords = OpcSignals.HasCords
+        End If
+        Return Ok
+
+    End Function
+
+
+    Private Sub UpdateOpcTags()
+        If ManualEdit = 0 Then
+            TextBoxOrderNr.Text = OpcSignals.SerialNumber
+            txtDrop.Text = Format(OpcSignals.Drop, "####.000")
+            TxtWidth.Text = Format(OpcSignals.Width, "####.000")
+            OpcSignals.MeasuredDropA = OpcSignals.MeasuredDropA + 1
+        End If
     End Sub
 End Class

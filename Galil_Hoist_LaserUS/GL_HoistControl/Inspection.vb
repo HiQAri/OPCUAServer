@@ -367,6 +367,7 @@
                 TextBoxLog.AppendText("width   " + MeasuredWidth.ToString("####.000") + vbCrLf)
                 myLogFile.Setfilename("Inspect" + TextBoxCnt.Text + ".txt ")
                 MainForm.ResultTodatabase(TimeOfDay.ToShortDateString, TimeOfDay.ToShortTimeString, OrderNrStr, InspectionDat.Drop.ToString("####.000"), InspectionDat.Width.ToString("####.000"), MeasuredDrop(0).ToString("####.000"), MeasuredDrop(1).ToString("####.000"), MeasuredDrop(2).ToString("####.000"), MeasuredWidth.ToString("####.000"), MeasuredDrop(0).ToString("####.000"))
+                MainForm.ResultToOpc(TimeOfDay.ToShortDateString, TimeOfDay.ToShortTimeString, OrderNrStr, InspectionDat.Drop.ToString("####.000"), InspectionDat.Width.ToString("####.000"), MeasuredDrop(0).ToString("####.000"), MeasuredDrop(1).ToString("####.000"), MeasuredDrop(2).ToString("####.000"), MeasuredWidth.ToString("####.000"), MeasuredDrop(0).ToString("####.000"))
 
                 Integer.TryParse(TextBoxCnt.Text, cnt)
                 cnt += 1
