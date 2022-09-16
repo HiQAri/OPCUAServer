@@ -47,17 +47,17 @@ namespace OPCUAServer
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode Object.
         /// </summary>
-        public const uint OPCUAServerType_InputNode = 15069;
+        public const uint OPCUAServerType_InputNode = 15165;
 
         /// <summary>
         /// The identifier for the OPCUAServer1 Object.
         /// </summary>
-        public const uint OPCUAServer1 = 15136;
+        public const uint OPCUAServer1 = 15328;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode Object.
         /// </summary>
-        public const uint OPCUAServer1_InputNode = 15137;
+        public const uint OPCUAServer1_InputNode = 15329;
     }
     #endregion
 
@@ -77,7 +77,7 @@ namespace OPCUAServer
         /// <summary>
         /// The identifier for the OPCUAServerType ObjectType.
         /// </summary>
-        public const uint OPCUAServerType = 15068;
+        public const uint OPCUAServerType = 15164;
     }
     #endregion
 
@@ -200,224 +200,704 @@ namespace OPCUAServer
         public const uint Input_Approved_EURange = 15066;
 
         /// <summary>
+        /// The identifier for the Input_MountOffSetVert Variable.
+        /// </summary>
+        public const uint Input_MountOffSetVert = 15068;
+
+        /// <summary>
+        /// The identifier for the Input_MountOffSetVert_EURange Variable.
+        /// </summary>
+        public const uint Input_MountOffSetVert_EURange = 15072;
+
+        /// <summary>
+        /// The identifier for the Input_OffsetLaserOnProd Variable.
+        /// </summary>
+        public const uint Input_OffsetLaserOnProd = 15074;
+
+        /// <summary>
+        /// The identifier for the Input_OffsetLaserOnProd_EURange Variable.
+        /// </summary>
+        public const uint Input_OffsetLaserOnProd_EURange = 15078;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthPlus Variable.
+        /// </summary>
+        public const uint Input_ToleranceWidthPlus = 15080;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthPlus_EURange Variable.
+        /// </summary>
+        public const uint Input_ToleranceWidthPlus_EURange = 15084;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropPlus Variable.
+        /// </summary>
+        public const uint Input_ToleranceDropPlus = 15086;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropPlus_EURange Variable.
+        /// </summary>
+        public const uint Input_ToleranceDropPlus_EURange = 15090;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthMinus Variable.
+        /// </summary>
+        public const uint Input_ToleranceWidthMinus = 15092;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthMinus_EURange Variable.
+        /// </summary>
+        public const uint Input_ToleranceWidthMinus_EURange = 15096;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropMinus Variable.
+        /// </summary>
+        public const uint Input_ToleranceDropMinus = 15098;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropMinus_EURange Variable.
+        /// </summary>
+        public const uint Input_ToleranceDropMinus_EURange = 15102;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropDiff Variable.
+        /// </summary>
+        public const uint Input_ToleranceDropDiff = 15104;
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropDiff_EURange Variable.
+        /// </summary>
+        public const uint Input_ToleranceDropDiff_EURange = 15108;
+
+        /// <summary>
+        /// The identifier for the Input_BottomBarRadius Variable.
+        /// </summary>
+        public const uint Input_BottomBarRadius = 15110;
+
+        /// <summary>
+        /// The identifier for the Input_BottomBarRadius_EURange Variable.
+        /// </summary>
+        public const uint Input_BottomBarRadius_EURange = 15114;
+
+        /// <summary>
+        /// The identifier for the Input_PrefMeasDist Variable.
+        /// </summary>
+        public const uint Input_PrefMeasDist = 15116;
+
+        /// <summary>
+        /// The identifier for the Input_PrefMeasDist_EURange Variable.
+        /// </summary>
+        public const uint Input_PrefMeasDist_EURange = 15120;
+
+        /// <summary>
+        /// The identifier for the Input_Endcapcompensation Variable.
+        /// </summary>
+        public const uint Input_Endcapcompensation = 15122;
+
+        /// <summary>
+        /// The identifier for the Input_Endcapcompensation_EURange Variable.
+        /// </summary>
+        public const uint Input_Endcapcompensation_EURange = 15126;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureDrop Variable.
+        /// </summary>
+        public const uint Input_MeasureDrop = 15128;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureDrop_EURange Variable.
+        /// </summary>
+        public const uint Input_MeasureDrop_EURange = 15132;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureWidth Variable.
+        /// </summary>
+        public const uint Input_MeasureWidth = 15134;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureWidth_EURange Variable.
+        /// </summary>
+        public const uint Input_MeasureWidth_EURange = 15138;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureSquareness Variable.
+        /// </summary>
+        public const uint Input_MeasureSquareness = 15140;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureSquareness_EURange Variable.
+        /// </summary>
+        public const uint Input_MeasureSquareness_EURange = 15144;
+
+        /// <summary>
+        /// The identifier for the Input_HasCords Variable.
+        /// </summary>
+        public const uint Input_HasCords = 15146;
+
+        /// <summary>
+        /// The identifier for the Input_HasCords_EURange Variable.
+        /// </summary>
+        public const uint Input_HasCords_EURange = 15150;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureMethod Variable.
+        /// </summary>
+        public const uint Input_MeasureMethod = 15152;
+
+        /// <summary>
+        /// The identifier for the Input_MeasureMethod_EURange Variable.
+        /// </summary>
+        public const uint Input_MeasureMethod_EURange = 15156;
+
+        /// <summary>
+        /// The identifier for the Input_StartMeasure Variable.
+        /// </summary>
+        public const uint Input_StartMeasure = 15158;
+
+        /// <summary>
+        /// The identifier for the Input_StartMeasure_EURange Variable.
+        /// </summary>
+        public const uint Input_StartMeasure_EURange = 15162;
+
+        /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrIn Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_SerialNrIn = 15070;
+        public const uint OPCUAServerType_InputNode_SerialNrIn = 15166;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrIn_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_SerialNrIn_EURange = 15074;
+        public const uint OPCUAServerType_InputNode_SerialNrIn_EURange = 15170;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Drop Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Drop = 15076;
+        public const uint OPCUAServerType_InputNode_Drop = 15172;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Drop_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Drop_EURange = 15080;
+        public const uint OPCUAServerType_InputNode_Drop_EURange = 15176;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Width Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Width = 15082;
+        public const uint OPCUAServerType_InputNode_Width = 15178;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Width_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Width_EURange = 15086;
+        public const uint OPCUAServerType_InputNode_Width_EURange = 15182;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_DateTime = 15088;
+        public const uint OPCUAServerType_InputNode_DateTime = 15184;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_DateTime_EURange = 15092;
+        public const uint OPCUAServerType_InputNode_DateTime_EURange = 15188;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_SerialNrOut = 15094;
+        public const uint OPCUAServerType_InputNode_SerialNrOut = 15190;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrOut_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_SerialNrOut_EURange = 15098;
+        public const uint OPCUAServerType_InputNode_SerialNrOut_EURange = 15194;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredDropA Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredDropA = 15100;
+        public const uint OPCUAServerType_InputNode_MeasuredDropA = 15196;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredDropA_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredDropA_EURange = 15104;
+        public const uint OPCUAServerType_InputNode_MeasuredDropA_EURange = 15200;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredDropB Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredDropB = 15106;
+        public const uint OPCUAServerType_InputNode_MeasuredDropB = 15202;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredDropB_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredDropB_EURange = 15110;
+        public const uint OPCUAServerType_InputNode_MeasuredDropB_EURange = 15206;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredDropC Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredDropC = 15112;
+        public const uint OPCUAServerType_InputNode_MeasuredDropC = 15208;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredDropC_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredDropC_EURange = 15116;
+        public const uint OPCUAServerType_InputNode_MeasuredDropC_EURange = 15212;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_DeltaDrop Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_DeltaDrop = 15118;
+        public const uint OPCUAServerType_InputNode_DeltaDrop = 15214;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_DeltaDrop_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_DeltaDrop_EURange = 15122;
+        public const uint OPCUAServerType_InputNode_DeltaDrop_EURange = 15218;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredWidth Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredWidth = 15124;
+        public const uint OPCUAServerType_InputNode_MeasuredWidth = 15220;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MeasuredWidth_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_MeasuredWidth_EURange = 15128;
+        public const uint OPCUAServerType_InputNode_MeasuredWidth_EURange = 15224;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Approved Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Approved = 15130;
+        public const uint OPCUAServerType_InputNode_Approved = 15226;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_Approved_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Approved_EURange = 15134;
+        public const uint OPCUAServerType_InputNode_Approved_EURange = 15230;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MountOffSetVert Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MountOffSetVert = 15232;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MountOffSetVert_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MountOffSetVert_EURange = 15236;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_OffsetLaserOnProd Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_OffsetLaserOnProd = 15238;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_OffsetLaserOnProd_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_OffsetLaserOnProd_EURange = 15242;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthPlus Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceWidthPlus = 15244;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthPlus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceWidthPlus_EURange = 15248;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropPlus Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceDropPlus = 15250;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropPlus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceDropPlus_EURange = 15254;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthMinus Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceWidthMinus = 15256;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthMinus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceWidthMinus_EURange = 15260;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropMinus Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceDropMinus = 15262;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropMinus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceDropMinus_EURange = 15266;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropDiff Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceDropDiff = 15268;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropDiff_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_ToleranceDropDiff_EURange = 15272;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_BottomBarRadius Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_BottomBarRadius = 15274;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_BottomBarRadius_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_BottomBarRadius_EURange = 15278;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_PrefMeasDist Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_PrefMeasDist = 15280;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_PrefMeasDist_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_PrefMeasDist_EURange = 15284;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Endcapcompensation Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_Endcapcompensation = 15286;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Endcapcompensation_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_Endcapcompensation_EURange = 15290;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureDrop Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureDrop = 15292;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureDrop_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureDrop_EURange = 15296;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureWidth Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureWidth = 15298;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureWidth_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureWidth_EURange = 15302;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureSquareness Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureSquareness = 15304;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureSquareness_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureSquareness_EURange = 15308;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_HasCords Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_HasCords = 15310;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_HasCords_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_HasCords_EURange = 15314;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureMethod Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureMethod = 15316;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureMethod_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_MeasureMethod_EURange = 15320;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_StartMeasure Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_StartMeasure = 15322;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_StartMeasure_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_StartMeasure_EURange = 15326;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrIn Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_SerialNrIn = 15138;
+        public const uint OPCUAServer1_InputNode_SerialNrIn = 15330;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrIn_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_SerialNrIn_EURange = 15142;
+        public const uint OPCUAServer1_InputNode_SerialNrIn_EURange = 15334;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Drop Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Drop = 15144;
+        public const uint OPCUAServer1_InputNode_Drop = 15336;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Drop_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Drop_EURange = 15148;
+        public const uint OPCUAServer1_InputNode_Drop_EURange = 15340;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Width Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Width = 15150;
+        public const uint OPCUAServer1_InputNode_Width = 15342;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Width_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Width_EURange = 15154;
+        public const uint OPCUAServer1_InputNode_Width_EURange = 15346;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_DateTime = 15156;
+        public const uint OPCUAServer1_InputNode_DateTime = 15348;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_DateTime_EURange = 15160;
+        public const uint OPCUAServer1_InputNode_DateTime_EURange = 15352;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_SerialNrOut = 15162;
+        public const uint OPCUAServer1_InputNode_SerialNrOut = 15354;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrOut_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_SerialNrOut_EURange = 15166;
+        public const uint OPCUAServer1_InputNode_SerialNrOut_EURange = 15358;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredDropA Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredDropA = 15168;
+        public const uint OPCUAServer1_InputNode_MeasuredDropA = 15360;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredDropA_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredDropA_EURange = 15172;
+        public const uint OPCUAServer1_InputNode_MeasuredDropA_EURange = 15364;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredDropB Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredDropB = 15174;
+        public const uint OPCUAServer1_InputNode_MeasuredDropB = 15366;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredDropB_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredDropB_EURange = 15178;
+        public const uint OPCUAServer1_InputNode_MeasuredDropB_EURange = 15370;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredDropC Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredDropC = 15180;
+        public const uint OPCUAServer1_InputNode_MeasuredDropC = 15372;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredDropC_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredDropC_EURange = 15184;
+        public const uint OPCUAServer1_InputNode_MeasuredDropC_EURange = 15376;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_DeltaDrop Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_DeltaDrop = 15186;
+        public const uint OPCUAServer1_InputNode_DeltaDrop = 15378;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_DeltaDrop_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_DeltaDrop_EURange = 15190;
+        public const uint OPCUAServer1_InputNode_DeltaDrop_EURange = 15382;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredWidth Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredWidth = 15192;
+        public const uint OPCUAServer1_InputNode_MeasuredWidth = 15384;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MeasuredWidth_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_MeasuredWidth_EURange = 15196;
+        public const uint OPCUAServer1_InputNode_MeasuredWidth_EURange = 15388;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Approved Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Approved = 15198;
+        public const uint OPCUAServer1_InputNode_Approved = 15390;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_Approved_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Approved_EURange = 15202;
+        public const uint OPCUAServer1_InputNode_Approved_EURange = 15394;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MountOffSetVert Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MountOffSetVert = 15396;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MountOffSetVert_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MountOffSetVert_EURange = 15400;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_OffsetLaserOnProd Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_OffsetLaserOnProd = 15402;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_OffsetLaserOnProd_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_OffsetLaserOnProd_EURange = 15406;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthPlus Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceWidthPlus = 15408;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthPlus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceWidthPlus_EURange = 15412;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropPlus Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceDropPlus = 15414;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropPlus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceDropPlus_EURange = 15418;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthMinus Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceWidthMinus = 15420;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthMinus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceWidthMinus_EURange = 15424;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropMinus Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceDropMinus = 15426;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropMinus_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceDropMinus_EURange = 15430;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropDiff Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceDropDiff = 15432;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropDiff_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_ToleranceDropDiff_EURange = 15436;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_BottomBarRadius Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_BottomBarRadius = 15438;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_BottomBarRadius_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_BottomBarRadius_EURange = 15442;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_PrefMeasDist Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_PrefMeasDist = 15444;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_PrefMeasDist_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_PrefMeasDist_EURange = 15448;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Endcapcompensation Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_Endcapcompensation = 15450;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Endcapcompensation_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_Endcapcompensation_EURange = 15454;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureDrop Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureDrop = 15456;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureDrop_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureDrop_EURange = 15460;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureWidth Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureWidth = 15462;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureWidth_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureWidth_EURange = 15466;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureSquareness Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureSquareness = 15468;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureSquareness_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureSquareness_EURange = 15472;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_HasCords Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_HasCords = 15474;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_HasCords_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_HasCords_EURange = 15478;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureMethod Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureMethod = 15480;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureMethod_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_MeasureMethod_EURange = 15484;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_StartMeasure Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_StartMeasure = 15486;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_StartMeasure_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_StartMeasure_EURange = 15490;
     }
     #endregion
 
@@ -585,6 +1065,166 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId Input_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
+        /// The identifier for the Input_MountOffSetVert Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MountOffSetVert = new ExpandedNodeId(OPCUAServer.Variables.Input_MountOffSetVert, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MountOffSetVert_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MountOffSetVert_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MountOffSetVert_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_OffsetLaserOnProd Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_OffsetLaserOnProd = new ExpandedNodeId(OPCUAServer.Variables.Input_OffsetLaserOnProd, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_OffsetLaserOnProd_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_OffsetLaserOnProd_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_OffsetLaserOnProd_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthPlus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceWidthPlus = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceWidthPlus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthPlus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceWidthPlus_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceWidthPlus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropPlus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceDropPlus = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceDropPlus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropPlus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceDropPlus_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceDropPlus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthMinus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceWidthMinus = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceWidthMinus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceWidthMinus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceWidthMinus_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceWidthMinus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropMinus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceDropMinus = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceDropMinus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropMinus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceDropMinus_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceDropMinus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropDiff Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceDropDiff = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceDropDiff, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_ToleranceDropDiff_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_ToleranceDropDiff_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_ToleranceDropDiff_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_BottomBarRadius Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_BottomBarRadius = new ExpandedNodeId(OPCUAServer.Variables.Input_BottomBarRadius, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_BottomBarRadius_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_BottomBarRadius_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_BottomBarRadius_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_PrefMeasDist Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_PrefMeasDist = new ExpandedNodeId(OPCUAServer.Variables.Input_PrefMeasDist, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_PrefMeasDist_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_PrefMeasDist_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_PrefMeasDist_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_Endcapcompensation Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_Endcapcompensation = new ExpandedNodeId(OPCUAServer.Variables.Input_Endcapcompensation, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_Endcapcompensation_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_Endcapcompensation_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Endcapcompensation_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureDrop Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureDrop = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureDrop, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureDrop_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureWidth Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureWidth = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureWidth, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureWidth_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureSquareness Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureSquareness = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureSquareness, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureSquareness_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureSquareness_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureSquareness_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_HasCords Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_HasCords = new ExpandedNodeId(OPCUAServer.Variables.Input_HasCords, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_HasCords_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_HasCords_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_HasCords_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureMethod Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureMethod = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureMethod, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_MeasureMethod_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_MeasureMethod_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasureMethod_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_StartMeasure Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_StartMeasure = new ExpandedNodeId(OPCUAServer.Variables.Input_StartMeasure, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_StartMeasure_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_StartMeasure_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_StartMeasure_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrIn Variable.
         /// </summary>
         public static readonly ExpandedNodeId OPCUAServerType_InputNode_SerialNrIn = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_SerialNrIn, OPCUAServer.Namespaces.OPCUAServer);
@@ -695,6 +1335,166 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServerType_InputNode_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MountOffSetVert Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MountOffSetVert = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MountOffSetVert, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MountOffSetVert_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MountOffSetVert_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MountOffSetVert_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_OffsetLaserOnProd Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_OffsetLaserOnProd = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_OffsetLaserOnProd, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_OffsetLaserOnProd_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_OffsetLaserOnProd_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_OffsetLaserOnProd_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthPlus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceWidthPlus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceWidthPlus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthPlus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceWidthPlus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceWidthPlus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropPlus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceDropPlus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceDropPlus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropPlus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceDropPlus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceDropPlus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthMinus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceWidthMinus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceWidthMinus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceWidthMinus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceWidthMinus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceWidthMinus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropMinus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceDropMinus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceDropMinus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropMinus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceDropMinus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceDropMinus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropDiff Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceDropDiff = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceDropDiff, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_ToleranceDropDiff_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ToleranceDropDiff_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ToleranceDropDiff_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_BottomBarRadius Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_BottomBarRadius = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_BottomBarRadius, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_BottomBarRadius_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_BottomBarRadius_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_BottomBarRadius_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_PrefMeasDist Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_PrefMeasDist = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_PrefMeasDist, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_PrefMeasDist_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_PrefMeasDist_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_PrefMeasDist_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Endcapcompensation Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Endcapcompensation = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Endcapcompensation, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Endcapcompensation_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Endcapcompensation_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Endcapcompensation_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureDrop Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureDrop = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureDrop, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureDrop_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureWidth Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureWidth = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureWidth, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureWidth_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureSquareness Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureSquareness = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureSquareness, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureSquareness_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureSquareness_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureSquareness_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_HasCords Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_HasCords = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_HasCords, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_HasCords_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_HasCords_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_HasCords_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureMethod Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureMethod = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureMethod, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_MeasureMethod_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasureMethod_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasureMethod_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_StartMeasure Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_StartMeasure = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_StartMeasure, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_StartMeasure_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_StartMeasure_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_StartMeasure_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrIn Variable.
         /// </summary>
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_SerialNrIn = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_SerialNrIn, OPCUAServer.Namespaces.OPCUAServer);
@@ -803,6 +1603,166 @@ namespace OPCUAServer
         /// The identifier for the OPCUAServer1_InputNode_Approved_EURange Variable.
         /// </summary>
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MountOffSetVert Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MountOffSetVert = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MountOffSetVert, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MountOffSetVert_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MountOffSetVert_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MountOffSetVert_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_OffsetLaserOnProd Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_OffsetLaserOnProd = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_OffsetLaserOnProd, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_OffsetLaserOnProd_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_OffsetLaserOnProd_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_OffsetLaserOnProd_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthPlus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceWidthPlus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceWidthPlus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthPlus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceWidthPlus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceWidthPlus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropPlus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceDropPlus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceDropPlus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropPlus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceDropPlus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceDropPlus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthMinus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceWidthMinus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceWidthMinus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceWidthMinus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceWidthMinus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceWidthMinus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropMinus Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceDropMinus = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceDropMinus, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropMinus_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceDropMinus_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceDropMinus_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropDiff Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceDropDiff = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceDropDiff, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_ToleranceDropDiff_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ToleranceDropDiff_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ToleranceDropDiff_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_BottomBarRadius Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_BottomBarRadius = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_BottomBarRadius, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_BottomBarRadius_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_BottomBarRadius_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_BottomBarRadius_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_PrefMeasDist Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_PrefMeasDist = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_PrefMeasDist, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_PrefMeasDist_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_PrefMeasDist_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_PrefMeasDist_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Endcapcompensation Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Endcapcompensation = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Endcapcompensation, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Endcapcompensation_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Endcapcompensation_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Endcapcompensation_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureDrop Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureDrop = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureDrop, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureDrop_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureDrop_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureDrop_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureWidth Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureWidth = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureWidth, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureWidth_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureSquareness Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureSquareness = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureSquareness, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureSquareness_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureSquareness_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureSquareness_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_HasCords Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_HasCords = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_HasCords, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_HasCords_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_HasCords_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_HasCords_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureMethod Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureMethod = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureMethod, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_MeasureMethod_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasureMethod_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasureMethod_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_StartMeasure Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_StartMeasure = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_StartMeasure, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_StartMeasure_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_StartMeasure_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_StartMeasure_EURange, OPCUAServer.Namespaces.OPCUAServer);
     }
     #endregion
 
@@ -816,6 +1776,11 @@ namespace OPCUAServer
         /// The BrowseName for the Approved component.
         /// </summary>
         public const string Approved = "Approved";
+
+        /// <summary>
+        /// The BrowseName for the BottomBarRadius component.
+        /// </summary>
+        public const string BottomBarRadius = "BottomBarRadius";
 
         /// <summary>
         /// The BrowseName for the DateTime component.
@@ -833,6 +1798,16 @@ namespace OPCUAServer
         public const string Drop = "Drop";
 
         /// <summary>
+        /// The BrowseName for the Endcapcompensation component.
+        /// </summary>
+        public const string Endcapcompensation = "Endcapcompensation";
+
+        /// <summary>
+        /// The BrowseName for the HasCords component.
+        /// </summary>
+        public const string HasCords = "HasCords";
+
+        /// <summary>
         /// The BrowseName for the Input component.
         /// </summary>
         public const string Input = "Input";
@@ -840,7 +1815,7 @@ namespace OPCUAServer
         /// <summary>
         /// The BrowseName for the InputNode component.
         /// </summary>
-        public const string InputNode = "My tags.";
+        public const string InputNode = "Station1";
 
         /// <summary>
         /// The BrowseName for the MeasuredDropA component.
@@ -858,19 +1833,54 @@ namespace OPCUAServer
         public const string MeasuredDropC = "MeasuredDropC";
 
         /// <summary>
+        /// The BrowseName for the MeasureDrop component.
+        /// </summary>
+        public const string MeasureDrop = "MeasureDrop";
+
+        /// <summary>
         /// The BrowseName for the MeasuredWidth component.
         /// </summary>
         public const string MeasuredWidth = "MeasuredWidth";
 
         /// <summary>
+        /// The BrowseName for the MeasureMethod component.
+        /// </summary>
+        public const string MeasureMethod = "MeasureMethod";
+
+        /// <summary>
+        /// The BrowseName for the MeasureSquareness component.
+        /// </summary>
+        public const string MeasureSquareness = "MeasureSquareness";
+
+        /// <summary>
+        /// The BrowseName for the MeasureWidth component.
+        /// </summary>
+        public const string MeasureWidth = "MeasureWidth";
+
+        /// <summary>
+        /// The BrowseName for the MountOffSetVert component.
+        /// </summary>
+        public const string MountOffSetVert = "MountOffSetVert";
+
+        /// <summary>
+        /// The BrowseName for the OffsetLaserOnProd component.
+        /// </summary>
+        public const string OffsetLaserOnProd = "OffsetLaserOnProd";
+
+        /// <summary>
         /// The BrowseName for the OPCUAServer1 component.
         /// </summary>
-        public const string OPCUAServer1 = "MySite";
+        public const string OPCUAServer1 = "Hoist";
 
         /// <summary>
         /// The BrowseName for the OPCUAServerType component.
         /// </summary>
         public const string OPCUAServerType = "OPCUAServerType";
+
+        /// <summary>
+        /// The BrowseName for the PrefMeasDist component.
+        /// </summary>
+        public const string PrefMeasDist = "PrefMeasDist";
 
         /// <summary>
         /// The BrowseName for the SerialNrIn component.
@@ -881,6 +1891,36 @@ namespace OPCUAServer
         /// The BrowseName for the SerialNrOut component.
         /// </summary>
         public const string SerialNrOut = "SerialNrOut";
+
+        /// <summary>
+        /// The BrowseName for the StartMeasure component.
+        /// </summary>
+        public const string StartMeasure = "StartMeasure";
+
+        /// <summary>
+        /// The BrowseName for the ToleranceDropDiff component.
+        /// </summary>
+        public const string ToleranceDropDiff = "ToleranceDropDiff";
+
+        /// <summary>
+        /// The BrowseName for the ToleranceDropMinus component.
+        /// </summary>
+        public const string ToleranceDropMinus = "ToleranceDropMinus";
+
+        /// <summary>
+        /// The BrowseName for the ToleranceDropPlus component.
+        /// </summary>
+        public const string ToleranceDropPlus = "ToleranceDropPlus";
+
+        /// <summary>
+        /// The BrowseName for the ToleranceWidthMinus component.
+        /// </summary>
+        public const string ToleranceWidthMinus = "ToleranceWidthMinus";
+
+        /// <summary>
+        /// The BrowseName for the ToleranceWidthPlus component.
+        /// </summary>
+        public const string ToleranceWidthPlus = "ToleranceWidthPlus";
 
         /// <summary>
         /// The BrowseName for the Width component.
@@ -967,7 +2007,7 @@ namespace OPCUAServer
         #region Initialization String
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////BGCAAAEAAAABAA0A" +
-           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////CwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
+           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////GwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
            "LwEAQAmaOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBnjoALgBEnjoAAAEA" +
            "dAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEBoDoALwEAQAmgOgAAAAv/////AwP/////" +
            "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBpDoALgBEpDoAAAEAdAP/////AQH/////AAAAABVgiQoC" +
@@ -986,7 +2026,37 @@ namespace OPCUAServer
            "//8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQHQOgAvAQBACdA6AAAAC/////8D" +
            "A/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHUOgAuAETUOgAAAQB0A/////8BAf////8AAAAA" +
            "FWCJCgIAAAABAAgAAABBcHByb3ZlZAEB1joALwEAQAnWOgAAAAH/////AwP/////AQAAABVgiQoCAAAA" +
-           "AAAHAAAARVVSYW5nZQEB2joALgBE2joAAAEAdAP/////AQH/////AAAAAA==";
+           "AAAHAAAARVVSYW5nZQEB2joALgBE2joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAPAAAATW91" +
+           "bnRPZmZTZXRWZXJ0AQHcOgAvAQBACdw6AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJh" +
+           "bmdlAQHgOgAuAETgOgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABPZmZzZXRMYXNlck9u" +
+           "UHJvZAEB4joALwEAQAniOgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB5joA" +
+           "LgBE5joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQASAAAAVG9sZXJhbmNlV2lkdGhQbHVzAQHo" +
+           "OgAvAQBACeg6AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHsOgAuAETsOgAA" +
+           "AQB0A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABUb2xlcmFuY2VEcm9wUGx1cwEB7joALwEAQAnu" +
+           "OgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB8joALgBE8joAAAEAdAP/////" +
+           "AQH/////AAAAABVgiQoCAAAAAQATAAAAVG9sZXJhbmNlV2lkdGhNaW51cwEB9DoALwEAQAn0OgAAAAv/" +
+           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB+DoALgBE+DoAAAEAdAP/////AQH/////" +
+           "AAAAABVgiQoCAAAAAQASAAAAVG9sZXJhbmNlRHJvcE1pbnVzAQH6OgAvAQBACfo6AAAAC/////8DA///" +
+           "//8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQH+OgAuAET+OgAAAQB0A/////8BAf////8AAAAAFWCJ" +
+           "CgIAAAABABEAAABUb2xlcmFuY2VEcm9wRGlmZgEBADsALwEAQAkAOwAAAAv/////AwP/////AQAAABVg" +
+           "iQoCAAAAAAAHAAAARVVSYW5nZQEBBDsALgBEBDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAP" +
+           "AAAAQm90dG9tQmFyUmFkaXVzAQEGOwAvAQBACQY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcA" +
+           "AABFVVJhbmdlAQEKOwAuAEQKOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAwAAABQcmVmTWVh" +
+           "c0Rpc3QBAQw7AC8BAEAJDDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBARA7" +
+           "AC4ARBA7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEgAAAEVuZGNhcGNvbXBlbnNhdGlvbgEB" +
+           "EjsALwEAQAkSOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBFjsALgBEFjsA" +
+           "AAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQALAAAATWVhc3VyZURyb3ABARg7AC8BAEAJGDsAAAAL" +
+           "/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBARw7AC4ARBw7AAABAHQD/////wEB////" +
+           "/wAAAAAVYIkKAgAAAAEADAAAAE1lYXN1cmVXaWR0aAEBHjsALwEAQAkeOwAAAAv/////AwP/////AQAA" +
+           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBIjsALgBEIjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAA" +
+           "AQARAAAATWVhc3VyZVNxdWFyZW5lc3MBASQ7AC8BAEAJJDsAAAAL/////wMD/////wEAAAAVYIkKAgAA" +
+           "AAAABwAAAEVVUmFuZ2UBASg7AC4ARCg7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAEhh" +
+           "c0NvcmRzAQEqOwAvAQBACSo7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEu" +
+           "OwAuAEQuOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlTWV0aG9kAQEwOwAv" +
+           "AQBACTA7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQE0OwAuAEQ0OwAAAQB0" +
+           "A/////8BAf////8AAAAAFWCJCgIAAAABAAwAAABTdGFydE1lYXN1cmUBATY7AC8BAEAJNjsAAAAI////" +
+           "/wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBATo7AC4ARDo7AAABAHQD/////wEB/////wAA" +
+           "AAA=";
         #endregion
         #endif
         #endregion
@@ -1222,6 +2292,342 @@ namespace OPCUAServer
                 m_approved = value;
             }
         }
+
+        /// <summary>
+        /// A description for the MountOffSetVert Variable.
+        /// </summary>
+        public AnalogItemState<double> MountOffSetVert
+        {
+            get
+            {
+                return m_mountOffSetVert;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_mountOffSetVert, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_mountOffSetVert = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the OffsetLaserOnProd Variable.
+        /// </summary>
+        public AnalogItemState<double> OffsetLaserOnProd
+        {
+            get
+            {
+                return m_offsetLaserOnProd;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_offsetLaserOnProd, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_offsetLaserOnProd = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceWidthPlus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceWidthPlus
+        {
+            get
+            {
+                return m_toleranceWidthPlus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceWidthPlus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceWidthPlus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceDropPlus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceDropPlus
+        {
+            get
+            {
+                return m_toleranceDropPlus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceDropPlus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceDropPlus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceWidthMinus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceWidthMinus
+        {
+            get
+            {
+                return m_toleranceWidthMinus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceWidthMinus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceWidthMinus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceDropMinus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceDropMinus
+        {
+            get
+            {
+                return m_toleranceDropMinus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceDropMinus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceDropMinus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceDropDiff Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceDropDiff
+        {
+            get
+            {
+                return m_toleranceDropDiff;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceDropDiff, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceDropDiff = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the BottomBarRadius Variable.
+        /// </summary>
+        public AnalogItemState<double> BottomBarRadius
+        {
+            get
+            {
+                return m_bottomBarRadius;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_bottomBarRadius, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_bottomBarRadius = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the PrefMeasDist Variable.
+        /// </summary>
+        public AnalogItemState<double> PrefMeasDist
+        {
+            get
+            {
+                return m_prefMeasDist;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_prefMeasDist, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_prefMeasDist = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the Endcapcompensation Variable.
+        /// </summary>
+        public AnalogItemState<double> Endcapcompensation
+        {
+            get
+            {
+                return m_endcapcompensation;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_endcapcompensation, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_endcapcompensation = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureDrop Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureDrop
+        {
+            get
+            {
+                return m_measureDrop;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureDrop, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureDrop = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureWidth Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureWidth
+        {
+            get
+            {
+                return m_measureWidth;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureWidth, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureWidth = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureSquareness Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureSquareness
+        {
+            get
+            {
+                return m_measureSquareness;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureSquareness, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureSquareness = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the HasCords Variable.
+        /// </summary>
+        public AnalogItemState<double> HasCords
+        {
+            get
+            {
+                return m_hasCords;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_hasCords, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_hasCords = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureMethod Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureMethod
+        {
+            get
+            {
+                return m_measureMethod;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureMethod, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureMethod = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the StartMeasure Variable.
+        /// </summary>
+        public AnalogItemState<long> StartMeasure
+        {
+            get
+            {
+                return m_startMeasure;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_startMeasure, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_startMeasure = value;
+            }
+        }
         #endregion
 
         #region Overridden Methods
@@ -1287,6 +2693,86 @@ namespace OPCUAServer
             if (m_approved != null)
             {
                 children.Add(m_approved);
+            }
+
+            if (m_mountOffSetVert != null)
+            {
+                children.Add(m_mountOffSetVert);
+            }
+
+            if (m_offsetLaserOnProd != null)
+            {
+                children.Add(m_offsetLaserOnProd);
+            }
+
+            if (m_toleranceWidthPlus != null)
+            {
+                children.Add(m_toleranceWidthPlus);
+            }
+
+            if (m_toleranceDropPlus != null)
+            {
+                children.Add(m_toleranceDropPlus);
+            }
+
+            if (m_toleranceWidthMinus != null)
+            {
+                children.Add(m_toleranceWidthMinus);
+            }
+
+            if (m_toleranceDropMinus != null)
+            {
+                children.Add(m_toleranceDropMinus);
+            }
+
+            if (m_toleranceDropDiff != null)
+            {
+                children.Add(m_toleranceDropDiff);
+            }
+
+            if (m_bottomBarRadius != null)
+            {
+                children.Add(m_bottomBarRadius);
+            }
+
+            if (m_prefMeasDist != null)
+            {
+                children.Add(m_prefMeasDist);
+            }
+
+            if (m_endcapcompensation != null)
+            {
+                children.Add(m_endcapcompensation);
+            }
+
+            if (m_measureDrop != null)
+            {
+                children.Add(m_measureDrop);
+            }
+
+            if (m_measureWidth != null)
+            {
+                children.Add(m_measureWidth);
+            }
+
+            if (m_measureSquareness != null)
+            {
+                children.Add(m_measureSquareness);
+            }
+
+            if (m_hasCords != null)
+            {
+                children.Add(m_hasCords);
+            }
+
+            if (m_measureMethod != null)
+            {
+                children.Add(m_measureMethod);
+            }
+
+            if (m_startMeasure != null)
+            {
+                children.Add(m_startMeasure);
             }
 
             base.GetChildren(context, children);
@@ -1540,6 +3026,342 @@ namespace OPCUAServer
                     instance = Approved;
                     break;
                 }
+
+                case OPCUAServer.BrowseNames.MountOffSetVert:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MountOffSetVert == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MountOffSetVert = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MountOffSetVert = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MountOffSetVert;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.OffsetLaserOnProd:
+                {
+                    if (createOrReplace)
+                    {
+                        if (OffsetLaserOnProd == null)
+                        {
+                            if (replacement == null)
+                            {
+                                OffsetLaserOnProd = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                OffsetLaserOnProd = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = OffsetLaserOnProd;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceWidthPlus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceWidthPlus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceWidthPlus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceWidthPlus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceWidthPlus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceDropPlus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceDropPlus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceDropPlus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceDropPlus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceDropPlus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceWidthMinus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceWidthMinus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceWidthMinus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceWidthMinus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceWidthMinus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceDropMinus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceDropMinus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceDropMinus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceDropMinus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceDropMinus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceDropDiff:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceDropDiff == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceDropDiff = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceDropDiff = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceDropDiff;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.BottomBarRadius:
+                {
+                    if (createOrReplace)
+                    {
+                        if (BottomBarRadius == null)
+                        {
+                            if (replacement == null)
+                            {
+                                BottomBarRadius = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                BottomBarRadius = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = BottomBarRadius;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.PrefMeasDist:
+                {
+                    if (createOrReplace)
+                    {
+                        if (PrefMeasDist == null)
+                        {
+                            if (replacement == null)
+                            {
+                                PrefMeasDist = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                PrefMeasDist = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = PrefMeasDist;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.Endcapcompensation:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Endcapcompensation == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Endcapcompensation = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                Endcapcompensation = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Endcapcompensation;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureDrop:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureDrop == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureDrop = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureDrop = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureDrop;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureWidth:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureWidth == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureWidth = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureWidth = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureWidth;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureSquareness:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureSquareness == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureSquareness = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureSquareness = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureSquareness;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.HasCords:
+                {
+                    if (createOrReplace)
+                    {
+                        if (HasCords == null)
+                        {
+                            if (replacement == null)
+                            {
+                                HasCords = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                HasCords = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = HasCords;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureMethod:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureMethod == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureMethod = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureMethod = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureMethod;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.StartMeasure:
+                {
+                    if (createOrReplace)
+                    {
+                        if (StartMeasure == null)
+                        {
+                            if (replacement == null)
+                            {
+                                StartMeasure = new AnalogItemState<long>(this);
+                            }
+                            else
+                            {
+                                StartMeasure = (AnalogItemState<long>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = StartMeasure;
+                    break;
+                }
             }
 
             if (instance != null)
@@ -1563,6 +3385,22 @@ namespace OPCUAServer
         private AnalogItemState<double> m_deltaDrop;
         private AnalogItemState<double> m_measuredWidth;
         private AnalogItemState<bool> m_approved;
+        private AnalogItemState<double> m_mountOffSetVert;
+        private AnalogItemState<double> m_offsetLaserOnProd;
+        private AnalogItemState<double> m_toleranceWidthPlus;
+        private AnalogItemState<double> m_toleranceDropPlus;
+        private AnalogItemState<double> m_toleranceWidthMinus;
+        private AnalogItemState<double> m_toleranceDropMinus;
+        private AnalogItemState<double> m_toleranceDropDiff;
+        private AnalogItemState<double> m_bottomBarRadius;
+        private AnalogItemState<double> m_prefMeasDist;
+        private AnalogItemState<double> m_endcapcompensation;
+        private AnalogItemState<double> m_measureDrop;
+        private AnalogItemState<double> m_measureWidth;
+        private AnalogItemState<double> m_measureSquareness;
+        private AnalogItemState<double> m_hasCords;
+        private AnalogItemState<double> m_measureMethod;
+        private AnalogItemState<long> m_startMeasure;
         #endregion
     }
     #endif
@@ -1623,34 +3461,64 @@ namespace OPCUAServer
         #region Initialization String
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////hGCAAAEAAAABABcA" +
-           "AABPUENVQVNlcnZlclR5cGVJbnN0YW5jZQEB3DoBAdw6Af////8BAAAAhGDACgEAAAAJAAAASW5wdXRO" +
-           "b2RlAQAIAAAATXkgdGFncy4BAd06AC8BAZk63ToAAAH/////CwAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
-           "TnJJbgEB3joALwEAQAneOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB4joA" +
-           "LgBE4joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEB5DoALwEAQAnkOgAAAAv/" +
-           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB6DoALgBE6DoAAAEAdAP/////AQH/////" +
-           "AAAAABVgiQoCAAAAAQAFAAAAV2lkdGgBAeo6AC8BAEAJ6joAAAAL/////wMD/////wEAAAAVYIkKAgAA" +
-           "AAAABwAAAEVVUmFuZ2UBAe46AC4ARO46AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAERh" +
-           "dGVUaW1lAQHwOgAvAQBACfA6AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQH0" +
-           "OgAuAET0OgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEB9joALwEA" +
-           "QAn2OgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB+joALgBE+joAAAEAdAP/" +
-           "////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEB/DoALwEAQAn8OgAAAAv/////" +
-           "AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBADsALgBEADsAAAEAdAP/////AQH/////AAAA" +
-           "ABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQgEBAjsALwEAQAkCOwAAAAv/////AwP/////AQAAABVg" +
-           "iQoCAAAAAAAHAAAARVVSYW5nZQEBBjsALgBEBjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAN" +
-           "AAAATWVhc3VyZWREcm9wQwEBCDsALwEAQAkIOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
-           "RVVSYW5nZQEBDDsALgBEDDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9w" +
-           "AQEOOwAvAQBACQ47AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQESOwAuAEQS" +
-           "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQEUOwAvAQBACRQ7" +
-           "AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEYOwAuAEQYOwAAAQB0A/////8B" +
-           "Af////8AAAAAFWCJCgIAAAABAAgAAABBcHByb3ZlZAEBGjsALwEAQAkaOwAAAAH/////AwP/////AQAA" +
-           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBHjsALgBEHjsAAAEAdAP/////AQH/////AAAAAA==";
+           "AABPUENVQVNlcnZlclR5cGVJbnN0YW5jZQEBPDsBATw7Af////8BAAAAhGDACgEAAAAJAAAASW5wdXRO" +
+           "b2RlAQAIAAAAU3RhdGlvbjEBAT07AC8BAZk6PTsAAAH/////GwAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
+           "TnJJbgEBPjsALwEAQAk+OwAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBQjsA" +
+           "LgBEQjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEBRDsALwEAQAlEOwAAAAv/" +
+           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBSDsALgBESDsAAAEAdAP/////AQH/////" +
+           "AAAAABVgiQoCAAAAAQAFAAAAV2lkdGgBAUo7AC8BAEAJSjsAAAAL/////wMD/////wEAAAAVYIkKAgAA" +
+           "AAAABwAAAEVVUmFuZ2UBAU47AC4ARE47AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAERh" +
+           "dGVUaW1lAQFQOwAvAQBACVA7AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQFU" +
+           "OwAuAERUOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEBVjsALwEA" +
+           "QAlWOwAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBWjsALgBEWjsAAAEAdAP/" +
+           "////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEBXDsALwEAQAlcOwAAAAv/////" +
+           "AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBYDsALgBEYDsAAAEAdAP/////AQH/////AAAA" +
+           "ABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQgEBYjsALwEAQAliOwAAAAv/////AwP/////AQAAABVg" +
+           "iQoCAAAAAAAHAAAARVVSYW5nZQEBZjsALgBEZjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAN" +
+           "AAAATWVhc3VyZWREcm9wQwEBaDsALwEAQAloOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
+           "RVVSYW5nZQEBbDsALgBEbDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9w" +
+           "AQFuOwAvAQBACW47AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQFyOwAuAERy" +
+           "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQF0OwAvAQBACXQ7" +
+           "AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQF4OwAuAER4OwAAAQB0A/////8B" +
+           "Af////8AAAAAFWCJCgIAAAABAAgAAABBcHByb3ZlZAEBejsALwEAQAl6OwAAAAH/////AwP/////AQAA" +
+           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBfjsALgBEfjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAA" +
+           "AQAPAAAATW91bnRPZmZTZXRWZXJ0AQGAOwAvAQBACYA7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAA" +
+           "AAcAAABFVVJhbmdlAQGEOwAuAESEOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABPZmZz" +
+           "ZXRMYXNlck9uUHJvZAEBhjsALwEAQAmGOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVS" +
+           "YW5nZQEBijsALgBEijsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQASAAAAVG9sZXJhbmNlV2lk" +
+           "dGhQbHVzAQGMOwAvAQBACYw7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGQ" +
+           "OwAuAESQOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABUb2xlcmFuY2VEcm9wUGx1cwEB" +
+           "kjsALwEAQAmSOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBljsALgBEljsA" +
+           "AAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQATAAAAVG9sZXJhbmNlV2lkdGhNaW51cwEBmDsALwEA" +
+           "QAmYOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBnDsALgBEnDsAAAEAdAP/" +
+           "////AQH/////AAAAABVgiQoCAAAAAQASAAAAVG9sZXJhbmNlRHJvcE1pbnVzAQGeOwAvAQBACZ47AAAA" +
+           "C/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGiOwAuAESiOwAAAQB0A/////8BAf//" +
+           "//8AAAAAFWCJCgIAAAABABEAAABUb2xlcmFuY2VEcm9wRGlmZgEBpDsALwEAQAmkOwAAAAv/////AwP/" +
+           "////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBqDsALgBEqDsAAAEAdAP/////AQH/////AAAAABVg" +
+           "iQoCAAAAAQAPAAAAQm90dG9tQmFyUmFkaXVzAQGqOwAvAQBACao7AAAAC/////8DA/////8BAAAAFWCJ" +
+           "CgIAAAAAAAcAAABFVVJhbmdlAQGuOwAuAESuOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAwA" +
+           "AABQcmVmTWVhc0Rpc3QBAbA7AC8BAEAJsDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVV" +
+           "UmFuZ2UBAbQ7AC4ARLQ7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEgAAAEVuZGNhcGNvbXBl" +
+           "bnNhdGlvbgEBtjsALwEAQAm2OwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB" +
+           "ujsALgBEujsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQALAAAATWVhc3VyZURyb3ABAbw7AC8B" +
+           "AEAJvDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAcA7AC4ARMA7AAABAHQD" +
+           "/////wEB/////wAAAAAVYIkKAgAAAAEADAAAAE1lYXN1cmVXaWR0aAEBwjsALwEAQAnCOwAAAAv/////" +
+           "AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBxjsALgBExjsAAAEAdAP/////AQH/////AAAA" +
+           "ABVgiQoCAAAAAQARAAAATWVhc3VyZVNxdWFyZW5lc3MBAcg7AC8BAEAJyDsAAAAL/////wMD/////wEA" +
+           "AAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAcw7AC4ARMw7AAABAHQD/////wEB/////wAAAAAVYIkKAgAA" +
+           "AAEACAAAAEhhc0NvcmRzAQHOOwAvAQBACc47AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABF" +
+           "VVJhbmdlAQHSOwAuAETSOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlTWV0" +
+           "aG9kAQHUOwAvAQBACdQ7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHYOwAu" +
+           "AETYOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAwAAABTdGFydE1lYXN1cmUBAdo7AC8BAEAJ" +
+           "2jsAAAAI/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAd47AC4ARN47AAABAHQD////" +
+           "/wEB/////wAAAAA=";
         #endregion
         #endif
         #endregion
 
         #region Public Properties
         /// <summary>
-        /// A description for the My tags. Object.
+        /// A description for the Station1 Object.
         /// </summary>
         public InputState InputNode
         {
