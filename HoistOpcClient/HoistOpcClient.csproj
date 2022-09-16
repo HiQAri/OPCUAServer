@@ -212,11 +212,5 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClientControls.Net4\UA Client Controls.csproj">
-      <Project>{a247d2ee-14fc-463d-a9ba-6cff1ef22b7a}</Project>
-      <Name>UA Client Controls</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

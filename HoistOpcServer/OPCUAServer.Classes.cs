@@ -91,62 +91,64 @@ namespace OPCUAServer
         #region Initialization String
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////BGCAAAEAAAABAA0A" +
-           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////HwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
+           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////IAAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
            "LwEAQAmaOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBnjoALgBEnjoAAAEA" +
            "dAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEBoDoALwEAQAmgOgAAAAv/////AwP/////" +
            "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBpDoALgBEpDoAAAEAdAP/////AQH/////AAAAABVgiQoC" +
            "AAAAAQAFAAAAV2lkdGgBAaY6AC8BAEAJpjoAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVV" +
-           "UmFuZ2UBAao6AC4ARKo6AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAERhdGVUaW1lAQGs" +
-           "OgAvAQBACaw6AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGwOgAuAESwOgAA" +
-           "AQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEBsjoALwEAQAmyOgAAAAz/" +
-           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBtjoALgBEtjoAAAEAdAP/////AQH/////" +
-           "AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEBuDoALwEAQAm4OgAAAAv/////AwP/////AQAA" +
-           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBvDoALgBEvDoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAA" +
-           "AQANAAAATWVhc3VyZWREcm9wQgEBvjoALwEAQAm+OgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAH" +
-           "AAAARVVSYW5nZQEBwjoALgBEwjoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3Vy" +
-           "ZWREcm9wQwEBxDoALwEAQAnEOgAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB" +
-           "yDoALgBEyDoAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9wAQHKOgAvAQBA" +
-           "Cco6AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHOOgAuAETOOgAAAQB0A///" +
-           "//8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQHQOgAvAQBACdA6AAAAC/////8D" +
-           "A/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHUOgAuAETUOgAAAQB0A/////8BAf////8AAAAA" +
-           "FWCJCgIAAAABAAgAAABBcHByb3ZlZAEB1joALwEAQAnWOgAAAAH/////AwP/////AQAAABVgiQoCAAAA" +
-           "AAAHAAAARVVSYW5nZQEB2joALgBE2joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAFAAAAUmV0" +
-           "cnkBAYQ8AC8BAEAJhDwAAAAB/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAYg8AC4A" +
-           "RIg8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAFJlamVjdGVkAQGKPAAvAQBACYo8AAAA" +
-           "Af////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGOPAAuAESOPAAAAQB0A/////8BAf//" +
-           "//8AAAAAFWCJCgIAAAABAA8AAABNb3VudE9mZlNldFZlcnQBAWQ7AC8BAEAJZDsAAAAL/////wMD////" +
-           "/wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAWg7AC4ARGg7AAABAHQD/////wEB/////wAAAAAVYIkK" +
-           "AgAAAAEAEQAAAE9mZnNldExhc2VyT25Qcm9kAQFqOwAvAQBACWo7AAAAC/////8DA/////8BAAAAFWCJ" +
-           "CgIAAAAAAAcAAABFVVJhbmdlAQFuOwAuAERuOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIA" +
-           "AABUb2xlcmFuY2VXaWR0aFBsdXMBAXA7AC8BAEAJcDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAA" +
-           "BwAAAEVVUmFuZ2UBAXQ7AC4ARHQ7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEQAAAFRvbGVy" +
-           "YW5jZURyb3BQbHVzAQF2OwAvAQBACXY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJh" +
-           "bmdlAQF6OwAuAER6OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABMAAABUb2xlcmFuY2VXaWR0" +
-           "aE1pbnVzAQF8OwAvAQBACXw7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGA" +
-           "OwAuAESAOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIAAABUb2xlcmFuY2VEcm9wTWludXMB" +
-           "AYI7AC8BAEAJgjsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAYY7AC4ARIY7" +
-           "AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEQAAAFRvbGVyYW5jZURyb3BEaWZmAQGIOwAvAQBA" +
-           "CYg7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGMOwAuAESMOwAAAQB0A///" +
-           "//8BAf////8AAAAAFWCJCgIAAAABAA8AAABCb3R0b21CYXJSYWRpdXMBAY47AC8BAEAJjjsAAAAL////" +
-           "/wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAZI7AC4ARJI7AAABAHQD/////wEB/////wAA" +
-           "AAAVYIkKAgAAAAEADAAAAFByZWZNZWFzRGlzdAEBlDsALwEAQAmUOwAAAAv/////AwP/////AQAAABVg" +
-           "iQoCAAAAAAAHAAAARVVSYW5nZQEBmDsALgBEmDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAS" +
-           "AAAARW5kY2FwY29tcGVuc2F0aW9uAQGaOwAvAQBACZo7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAA" +
-           "AAcAAABFVVJhbmdlAQGeOwAuAESeOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABNZWFz" +
-           "dXJlRHJvcAEBoDsALwEAQAmgOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB" +
-           "pDsALgBEpDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAATWVhc3VyZVdpZHRoAQGmOwAv" +
-           "AQBACaY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGqOwAuAESqOwAAAQB0" +
-           "A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABNZWFzdXJlU3F1YXJlbmVzcwEBrDsALwEAQAmsOwAA" +
-           "AAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBsDsALgBEsDsAAAEAdAP/////AQH/" +
-           "////AAAAABVgiQoCAAAAAQAIAAAASGFzQ29yZHMBAbI7AC8BAEAJsjsAAAAL/////wMD/////wEAAAAV" +
-           "YIkKAgAAAAAABwAAAEVVUmFuZ2UBAbY7AC4ARLY7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEA" +
-           "DQAAAE1lYXN1cmVNZXRob2QBAbg7AC8BAEAJuDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAA" +
-           "AEVVUmFuZ2UBAbw7AC4ARLw7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADAAAAFN0YXJ0TWVh" +
-           "c3VyZQEBvjsALwEAQAm+OwAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBwjsA" +
-           "LgBEwjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RTdGF0ZQEBqDwALwEAQAmo" +
-           "PAAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBrDwALgBErDwAAAEAdAP/////" +
-           "AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RFcnJvcgEBrjwALwEAQAmuPAAAAAb/////AwP/////" +
-           "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBsjwALgBEsjwAAAEAdAP/////AQH/////AAAAAA==";
+           "UmFuZ2UBAao6AC4ARKo6AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEABAAAAERhdGUBAcw8AC8B" +
+           "AEAJzDwAAAAM/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAdA8AC4ARNA8AAABAHQD" +
+           "/////wEB/////wAAAAAVYIkKAgAAAAEABAAAAFRpbWUBAdI8AC8BAEAJ0jwAAAAM/////wMD/////wEA" +
+           "AAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAdY8AC4ARNY8AAABAHQD/////wEB/////wAAAAAVYIkKAgAA" +
+           "AAEACwAAAFNlcmlhbE5yT3V0AQGyOgAvAQBACbI6AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcA" +
+           "AABFVVJhbmdlAQG2OgAuAES2OgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJl" +
+           "ZERyb3BBAQG4OgAvAQBACbg6AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQG8" +
+           "OgAuAES8OgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZERyb3BCAQG+OgAv" +
+           "AQBACb46AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHCOgAuAETCOgAAAQB0" +
+           "A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZERyb3BDAQHEOgAvAQBACcQ6AAAAC///" +
+           "//8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHIOgAuAETIOgAAAQB0A/////8BAf////8A" +
+           "AAAAFWCJCgIAAAABAAkAAABEZWx0YURyb3ABAco6AC8BAEAJyjoAAAAL/////wMD/////wEAAAAVYIkK" +
+           "AgAAAAAABwAAAEVVUmFuZ2UBAc46AC4ARM46AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADQAA" +
+           "AE1lYXN1cmVkV2lkdGgBAdA6AC8BAEAJ0DoAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVV" +
+           "UmFuZ2UBAdQ6AC4ARNQ6AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAEFwcHJvdmVkAQHW" +
+           "OgAvAQBACdY6AAAAAf////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHaOgAuAETaOgAA" +
+           "AQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAUAAABSZXRyeQEBhDwALwEAQAmEPAAAAAH/////AwP/" +
+           "////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBiDwALgBEiDwAAAEAdAP/////AQH/////AAAAABVg" +
+           "iQoCAAAAAQAIAAAAUmVqZWN0ZWQBAYo8AC8BAEAJijwAAAAB/////wMD/////wEAAAAVYIkKAgAAAAAA" +
+           "BwAAAEVVUmFuZ2UBAY48AC4ARI48AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADwAAAE1vdW50" +
+           "T2ZmU2V0VmVydAEBZDsALwEAQAlkOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5n" +
+           "ZQEBaDsALgBEaDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQARAAAAT2Zmc2V0TGFzZXJPblBy" +
+           "b2QBAWo7AC8BAEAJajsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAW47AC4A" +
+           "RG47AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEgAAAFRvbGVyYW5jZVdpZHRoUGx1cwEBcDsA" +
+           "LwEAQAlwOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBdDsALgBEdDsAAAEA" +
+           "dAP/////AQH/////AAAAABVgiQoCAAAAAQARAAAAVG9sZXJhbmNlRHJvcFBsdXMBAXY7AC8BAEAJdjsA" +
+           "AAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAXo7AC4ARHo7AAABAHQD/////wEB" +
+           "/////wAAAAAVYIkKAgAAAAEAEwAAAFRvbGVyYW5jZVdpZHRoTWludXMBAXw7AC8BAEAJfDsAAAAL////" +
+           "/wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAYA7AC4ARIA7AAABAHQD/////wEB/////wAA" +
+           "AAAVYIkKAgAAAAEAEgAAAFRvbGVyYW5jZURyb3BNaW51cwEBgjsALwEAQAmCOwAAAAv/////AwP/////" +
+           "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBhjsALgBEhjsAAAEAdAP/////AQH/////AAAAABVgiQoC" +
+           "AAAAAQARAAAAVG9sZXJhbmNlRHJvcERpZmYBAYg7AC8BAEAJiDsAAAAL/////wMD/////wEAAAAVYIkK" +
+           "AgAAAAAABwAAAEVVUmFuZ2UBAYw7AC4ARIw7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADwAA" +
+           "AEJvdHRvbUJhclJhZGl1cwEBjjsALwEAQAmOOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
+           "RVVSYW5nZQEBkjsALgBEkjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAAUHJlZk1lYXNE" +
+           "aXN0AQGUOwAvAQBACZQ7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGYOwAu" +
+           "AESYOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIAAABFbmRjYXBjb21wZW5zYXRpb24BAZo7" +
+           "AC8BAEAJmjsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAZ47AC4ARJ47AAAB" +
+           "AHQD/////wEB/////wAAAAAVYIkKAgAAAAEACwAAAE1lYXN1cmVEcm9wAQGgOwAvAQBACaA7AAAABv//" +
+           "//8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGkOwAuAESkOwAAAQB0A/////8BAf////8A" +
+           "AAAAFWCJCgIAAAABAAwAAABNZWFzdXJlV2lkdGgBAaY7AC8BAEAJpjsAAAAG/////wMD/////wEAAAAV" +
+           "YIkKAgAAAAAABwAAAEVVUmFuZ2UBAao7AC4ARKo7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEA" +
+           "EQAAAE1lYXN1cmVTcXVhcmVuZXNzAQGsOwAvAQBACaw7AAAABv////8DA/////8BAAAAFWCJCgIAAAAA" +
+           "AAcAAABFVVJhbmdlAQGwOwAuAESwOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAgAAABIYXND" +
+           "b3JkcwEBsjsALwEAQAmyOwAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBtjsA" +
+           "LgBEtjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZU1ldGhvZAEBuDsALwEA" +
+           "QAm4OwAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBvDsALgBEvDsAAAEAdAP/" +
+           "////AQH/////AAAAABVgiQoCAAAAAQAMAAAAU3RhcnRNZWFzdXJlAQG+OwAvAQBACb47AAAABv////8D" +
+           "A/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHCOwAuAETCOwAAAQB0A/////8BAf////8AAAAA" +
+           "FWCJCgIAAAABAAoAAABIb2lzdFN0YXRlAQGoPAAvAQBACag8AAAADP////8DA/////8BAAAAFWCJCgIA" +
+           "AAAAAAcAAABFVVJhbmdlAQGsPAAuAESsPAAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAoAAABI" +
+           "b2lzdEVycm9yAQGuPAAvAQBACa48AAAABv////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdl" +
+           "AQGyPAAuAESyPAAAAQB0A/////8BAf////8AAAAA";
         #endregion
         #endif
         #endregion
@@ -216,23 +218,44 @@ namespace OPCUAServer
         }
 
         /// <summary>
-        /// A description for the DateTime Variable.
+        /// A description for the Date Variable.
         /// </summary>
-        public AnalogItemState<string> DateTime
+        public AnalogItemState<string> Date
         {
             get
             {
-                return m_dateTime;
+                return m_date;
             }
 
             set
             {
-                if (!Object.ReferenceEquals(m_dateTime, value))
+                if (!Object.ReferenceEquals(m_date, value))
                 {
                     ChangeMasks |= NodeStateChangeMasks.Children;
                 }
 
-                m_dateTime = value;
+                m_date = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the Time Variable.
+        /// </summary>
+        public AnalogItemState<string> Time
+        {
+            get
+            {
+                return m_time;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_time, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_time = value;
             }
         }
 
@@ -638,7 +661,7 @@ namespace OPCUAServer
         /// <summary>
         /// A description for the MeasureDrop Variable.
         /// </summary>
-        public AnalogItemState<double> MeasureDrop
+        public AnalogItemState<int> MeasureDrop
         {
             get
             {
@@ -659,7 +682,7 @@ namespace OPCUAServer
         /// <summary>
         /// A description for the MeasureWidth Variable.
         /// </summary>
-        public AnalogItemState<double> MeasureWidth
+        public AnalogItemState<int> MeasureWidth
         {
             get
             {
@@ -680,7 +703,7 @@ namespace OPCUAServer
         /// <summary>
         /// A description for the MeasureSquareness Variable.
         /// </summary>
-        public AnalogItemState<double> MeasureSquareness
+        public AnalogItemState<int> MeasureSquareness
         {
             get
             {
@@ -701,7 +724,7 @@ namespace OPCUAServer
         /// <summary>
         /// A description for the HasCords Variable.
         /// </summary>
-        public AnalogItemState<double> HasCords
+        public AnalogItemState<int> HasCords
         {
             get
             {
@@ -722,7 +745,7 @@ namespace OPCUAServer
         /// <summary>
         /// A description for the MeasureMethod Variable.
         /// </summary>
-        public AnalogItemState<double> MeasureMethod
+        public AnalogItemState<int> MeasureMethod
         {
             get
             {
@@ -829,9 +852,14 @@ namespace OPCUAServer
                 children.Add(m_width);
             }
 
-            if (m_dateTime != null)
+            if (m_date != null)
             {
-                children.Add(m_dateTime);
+                children.Add(m_date);
+            }
+
+            if (m_time != null)
+            {
+                children.Add(m_time);
             }
 
             if (m_serialNrOut != null)
@@ -1053,24 +1081,45 @@ namespace OPCUAServer
                     break;
                 }
 
-                case OPCUAServer.BrowseNames.DateTime:
+                case OPCUAServer.BrowseNames.Date:
                 {
                     if (createOrReplace)
                     {
-                        if (DateTime == null)
+                        if (Date == null)
                         {
                             if (replacement == null)
                             {
-                                DateTime = new AnalogItemState<string>(this);
+                                Date = new AnalogItemState<string>(this);
                             }
                             else
                             {
-                                DateTime = (AnalogItemState<string>)replacement;
+                                Date = (AnalogItemState<string>)replacement;
                             }
                         }
                     }
 
-                    instance = DateTime;
+                    instance = Date;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.Time:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Time == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Time = new AnalogItemState<string>(this);
+                            }
+                            else
+                            {
+                                Time = (AnalogItemState<string>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Time;
                     break;
                 }
 
@@ -1481,11 +1530,11 @@ namespace OPCUAServer
                         {
                             if (replacement == null)
                             {
-                                MeasureDrop = new AnalogItemState<double>(this);
+                                MeasureDrop = new AnalogItemState<int>(this);
                             }
                             else
                             {
-                                MeasureDrop = (AnalogItemState<double>)replacement;
+                                MeasureDrop = (AnalogItemState<int>)replacement;
                             }
                         }
                     }
@@ -1502,11 +1551,11 @@ namespace OPCUAServer
                         {
                             if (replacement == null)
                             {
-                                MeasureWidth = new AnalogItemState<double>(this);
+                                MeasureWidth = new AnalogItemState<int>(this);
                             }
                             else
                             {
-                                MeasureWidth = (AnalogItemState<double>)replacement;
+                                MeasureWidth = (AnalogItemState<int>)replacement;
                             }
                         }
                     }
@@ -1523,11 +1572,11 @@ namespace OPCUAServer
                         {
                             if (replacement == null)
                             {
-                                MeasureSquareness = new AnalogItemState<double>(this);
+                                MeasureSquareness = new AnalogItemState<int>(this);
                             }
                             else
                             {
-                                MeasureSquareness = (AnalogItemState<double>)replacement;
+                                MeasureSquareness = (AnalogItemState<int>)replacement;
                             }
                         }
                     }
@@ -1544,11 +1593,11 @@ namespace OPCUAServer
                         {
                             if (replacement == null)
                             {
-                                HasCords = new AnalogItemState<double>(this);
+                                HasCords = new AnalogItemState<int>(this);
                             }
                             else
                             {
-                                HasCords = (AnalogItemState<double>)replacement;
+                                HasCords = (AnalogItemState<int>)replacement;
                             }
                         }
                     }
@@ -1565,11 +1614,11 @@ namespace OPCUAServer
                         {
                             if (replacement == null)
                             {
-                                MeasureMethod = new AnalogItemState<double>(this);
+                                MeasureMethod = new AnalogItemState<int>(this);
                             }
                             else
                             {
-                                MeasureMethod = (AnalogItemState<double>)replacement;
+                                MeasureMethod = (AnalogItemState<int>)replacement;
                             }
                         }
                     }
@@ -1655,7 +1704,8 @@ namespace OPCUAServer
         private AnalogItemState<string> m_serialNrIn;
         private AnalogItemState<double> m_drop;
         private AnalogItemState<double> m_width;
-        private AnalogItemState<string> m_dateTime;
+        private AnalogItemState<string> m_date;
+        private AnalogItemState<string> m_time;
         private AnalogItemState<string> m_serialNrOut;
         private AnalogItemState<double> m_measuredDropA;
         private AnalogItemState<double> m_measuredDropB;
@@ -1675,11 +1725,11 @@ namespace OPCUAServer
         private AnalogItemState<double> m_bottomBarRadius;
         private AnalogItemState<double> m_prefMeasDist;
         private AnalogItemState<double> m_endcapcompensation;
-        private AnalogItemState<double> m_measureDrop;
-        private AnalogItemState<double> m_measureWidth;
-        private AnalogItemState<double> m_measureSquareness;
-        private AnalogItemState<double> m_hasCords;
-        private AnalogItemState<double> m_measureMethod;
+        private AnalogItemState<int> m_measureDrop;
+        private AnalogItemState<int> m_measureWidth;
+        private AnalogItemState<int> m_measureSquareness;
+        private AnalogItemState<int> m_hasCords;
+        private AnalogItemState<int> m_measureMethod;
         private AnalogItemState<int> m_startMeasure;
         private AnalogItemState<string> m_hoistState;
         private AnalogItemState<int> m_hoistError;
@@ -1744,63 +1794,64 @@ namespace OPCUAServer
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////hGCAAAEAAAABABcA" +
            "AABPUENVQVNlcnZlclR5cGVJbnN0YW5jZQEB3DoBAdw6Af////8BAAAAhGDACgEAAAAJAAAASW5wdXRO" +
-           "b2RlAQAIAAAAU3RhdGlvbjEBAd06AC8BAZk63ToAAAH/////HwAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
+           "b2RlAQAIAAAAU3RhdGlvbjEBAd06AC8BAZk63ToAAAH/////IAAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
            "TnJJbgEB3joALwEAQAneOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB4joA" +
            "LgBE4joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEB5DoALwEAQAnkOgAAAAv/" +
            "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB6DoALgBE6DoAAAEAdAP/////AQH/////" +
            "AAAAABVgiQoCAAAAAQAFAAAAV2lkdGgBAeo6AC8BAEAJ6joAAAAL/////wMD/////wEAAAAVYIkKAgAA" +
-           "AAAABwAAAEVVUmFuZ2UBAe46AC4ARO46AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAERh" +
-           "dGVUaW1lAQHwOgAvAQBACfA6AAAADP////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQH0" +
-           "OgAuAET0OgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABTZXJpYWxOck91dAEB9joALwEA" +
-           "QAn2OgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB+joALgBE+joAAAEAdAP/" +
-           "////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQQEB/DoALwEAQAn8OgAAAAv/////" +
-           "AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBADsALgBEADsAAAEAdAP/////AQH/////AAAA" +
-           "ABVgiQoCAAAAAQANAAAATWVhc3VyZWREcm9wQgEBAjsALwEAQAkCOwAAAAv/////AwP/////AQAAABVg" +
-           "iQoCAAAAAAAHAAAARVVSYW5nZQEBBjsALgBEBjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAN" +
-           "AAAATWVhc3VyZWREcm9wQwEBCDsALwEAQAkIOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
-           "RVVSYW5nZQEBDDsALgBEDDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAJAAAARGVsdGFEcm9w" +
-           "AQEOOwAvAQBACQ47AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQESOwAuAEQS" +
-           "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQEUOwAvAQBACRQ7" +
-           "AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEYOwAuAEQYOwAAAQB0A/////8B" +
-           "Af////8AAAAAFWCJCgIAAAABAAgAAABBcHByb3ZlZAEBGjsALwEAQAkaOwAAAAH/////AwP/////AQAA" +
-           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBHjsALgBEHjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAA" +
-           "AQAFAAAAUmV0cnkBAZA8AC8BAEAJkDwAAAAB/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFu" +
-           "Z2UBAZQ8AC4ARJQ8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAFJlamVjdGVkAQGWPAAv" +
-           "AQBACZY8AAAAAf////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGaPAAuAESaPAAAAQB0" +
-           "A/////8BAf////8AAAAAFWCJCgIAAAABAA8AAABNb3VudE9mZlNldFZlcnQBAcQ7AC8BAEAJxDsAAAAL" +
-           "/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAcg7AC4ARMg7AAABAHQD/////wEB////" +
-           "/wAAAAAVYIkKAgAAAAEAEQAAAE9mZnNldExhc2VyT25Qcm9kAQHKOwAvAQBACco7AAAAC/////8DA///" +
-           "//8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHOOwAuAETOOwAAAQB0A/////8BAf////8AAAAAFWCJ" +
-           "CgIAAAABABIAAABUb2xlcmFuY2VXaWR0aFBsdXMBAdA7AC8BAEAJ0DsAAAAL/////wMD/////wEAAAAV" +
-           "YIkKAgAAAAAABwAAAEVVUmFuZ2UBAdQ7AC4ARNQ7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEA" +
-           "EQAAAFRvbGVyYW5jZURyb3BQbHVzAQHWOwAvAQBACdY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAA" +
-           "AAcAAABFVVJhbmdlAQHaOwAuAETaOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABMAAABUb2xl" +
-           "cmFuY2VXaWR0aE1pbnVzAQHcOwAvAQBACdw7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABF" +
-           "VVJhbmdlAQHgOwAuAETgOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIAAABUb2xlcmFuY2VE" +
-           "cm9wTWludXMBAeI7AC8BAEAJ4jsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UB" +
-           "AeY7AC4AROY7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEQAAAFRvbGVyYW5jZURyb3BEaWZm" +
-           "AQHoOwAvAQBACeg7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHsOwAuAETs" +
-           "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA8AAABCb3R0b21CYXJSYWRpdXMBAe47AC8BAEAJ" +
-           "7jsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAfI7AC4ARPI7AAABAHQD////" +
-           "/wEB/////wAAAAAVYIkKAgAAAAEADAAAAFByZWZNZWFzRGlzdAEB9DsALwEAQAn0OwAAAAv/////AwP/" +
-           "////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB+DsALgBE+DsAAAEAdAP/////AQH/////AAAAABVg" +
-           "iQoCAAAAAQASAAAARW5kY2FwY29tcGVuc2F0aW9uAQH6OwAvAQBACfo7AAAAC/////8DA/////8BAAAA" +
-           "FWCJCgIAAAAAAAcAAABFVVJhbmdlAQH+OwAuAET+OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAAB" +
-           "AAsAAABNZWFzdXJlRHJvcAEBADwALwEAQAkAPAAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
-           "RVVSYW5nZQEBBDwALgBEBDwAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAATWVhc3VyZVdp" +
-           "ZHRoAQEGPAAvAQBACQY8AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEKPAAu" +
-           "AEQKPAAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABNZWFzdXJlU3F1YXJlbmVzcwEBDDwA" +
-           "LwEAQAkMPAAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBEDwALgBEEDwAAAEA" +
-           "dAP/////AQH/////AAAAABVgiQoCAAAAAQAIAAAASGFzQ29yZHMBARI8AC8BAEAJEjwAAAAL/////wMD" +
-           "/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBARY8AC4ARBY8AAABAHQD/////wEB/////wAAAAAV" +
-           "YIkKAgAAAAEADQAAAE1lYXN1cmVNZXRob2QBARg8AC8BAEAJGDwAAAAL/////wMD/////wEAAAAVYIkK" +
-           "AgAAAAAABwAAAEVVUmFuZ2UBARw8AC4ARBw8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADAAA" +
-           "AFN0YXJ0TWVhc3VyZQEBHjwALwEAQAkePAAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVS" +
-           "YW5nZQEBIjwALgBEIjwAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RTdGF0ZQEB" +
-           "tDwALwEAQAm0PAAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBuDwALgBEuDwA" +
-           "AAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RFcnJvcgEBujwALwEAQAm6PAAAAAb/" +
-           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBvjwALgBEvjwAAAEAdAP/////AQH/////" +
-           "AAAAAA==";
+           "AAAABwAAAEVVUmFuZ2UBAe46AC4ARO46AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEABAAAAERh" +
+           "dGUBAdg8AC8BAEAJ2DwAAAAM/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAdw8AC4A" +
+           "RNw8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEABAAAAFRpbWUBAd48AC8BAEAJ3jwAAAAM////" +
+           "/wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAeI8AC4AROI8AAABAHQD/////wEB/////wAA" +
+           "AAAVYIkKAgAAAAEACwAAAFNlcmlhbE5yT3V0AQH2OgAvAQBACfY6AAAADP////8DA/////8BAAAAFWCJ" +
+           "CgIAAAAAAAcAAABFVVJhbmdlAQH6OgAuAET6OgAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0A" +
+           "AABNZWFzdXJlZERyb3BBAQH8OgAvAQBACfw6AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABF" +
+           "VVJhbmdlAQEAOwAuAEQAOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZERy" +
+           "b3BCAQECOwAvAQBACQI7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEGOwAu" +
+           "AEQGOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZERyb3BDAQEIOwAvAQBA" +
+           "CQg7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEMOwAuAEQMOwAAAQB0A///" +
+           "//8BAf////8AAAAAFWCJCgIAAAABAAkAAABEZWx0YURyb3ABAQ47AC8BAEAJDjsAAAAL/////wMD////" +
+           "/wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBARI7AC4ARBI7AAABAHQD/////wEB/////wAAAAAVYIkK" +
+           "AgAAAAEADQAAAE1lYXN1cmVkV2lkdGgBARQ7AC8BAEAJFDsAAAAL/////wMD/////wEAAAAVYIkKAgAA" +
+           "AAAABwAAAEVVUmFuZ2UBARg7AC4ARBg7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAEFw" +
+           "cHJvdmVkAQEaOwAvAQBACRo7AAAAAf////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEe" +
+           "OwAuAEQeOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAUAAABSZXRyeQEBkDwALwEAQAmQPAAA" +
+           "AAH/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBlDwALgBElDwAAAEAdAP/////AQH/" +
+           "////AAAAABVgiQoCAAAAAQAIAAAAUmVqZWN0ZWQBAZY8AC8BAEAJljwAAAAB/////wMD/////wEAAAAV" +
+           "YIkKAgAAAAAABwAAAEVVUmFuZ2UBAZo8AC4ARJo8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEA" +
+           "DwAAAE1vdW50T2ZmU2V0VmVydAEBxDsALwEAQAnEOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAH" +
+           "AAAARVVSYW5nZQEByDsALgBEyDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQARAAAAT2Zmc2V0" +
+           "TGFzZXJPblByb2QBAco7AC8BAEAJyjsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFu" +
+           "Z2UBAc47AC4ARM47AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEgAAAFRvbGVyYW5jZVdpZHRo" +
+           "UGx1cwEB0DsALwEAQAnQOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB1DsA" +
+           "LgBE1DsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQARAAAAVG9sZXJhbmNlRHJvcFBsdXMBAdY7" +
+           "AC8BAEAJ1jsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAdo7AC4ARNo7AAAB" +
+           "AHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEwAAAFRvbGVyYW5jZVdpZHRoTWludXMBAdw7AC8BAEAJ" +
+           "3DsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAeA7AC4AROA7AAABAHQD////" +
+           "/wEB/////wAAAAAVYIkKAgAAAAEAEgAAAFRvbGVyYW5jZURyb3BNaW51cwEB4jsALwEAQAniOwAAAAv/" +
+           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB5jsALgBE5jsAAAEAdAP/////AQH/////" +
+           "AAAAABVgiQoCAAAAAQARAAAAVG9sZXJhbmNlRHJvcERpZmYBAeg7AC8BAEAJ6DsAAAAL/////wMD////" +
+           "/wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAew7AC4AROw7AAABAHQD/////wEB/////wAAAAAVYIkK" +
+           "AgAAAAEADwAAAEJvdHRvbUJhclJhZGl1cwEB7jsALwEAQAnuOwAAAAv/////AwP/////AQAAABVgiQoC" +
+           "AAAAAAAHAAAARVVSYW5nZQEB8jsALgBE8jsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAA" +
+           "UHJlZk1lYXNEaXN0AQH0OwAvAQBACfQ7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJh" +
+           "bmdlAQH4OwAuAET4OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIAAABFbmRjYXBjb21wZW5z" +
+           "YXRpb24BAfo7AC8BAEAJ+jsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAf47" +
+           "AC4ARP47AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACwAAAE1lYXN1cmVEcm9wAQEAPAAvAQBA" +
+           "CQA8AAAABv////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEEPAAuAEQEPAAAAQB0A///" +
+           "//8BAf////8AAAAAFWCJCgIAAAABAAwAAABNZWFzdXJlV2lkdGgBAQY8AC8BAEAJBjwAAAAG/////wMD" +
+           "/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAQo8AC4ARAo8AAABAHQD/////wEB/////wAAAAAV" +
+           "YIkKAgAAAAEAEQAAAE1lYXN1cmVTcXVhcmVuZXNzAQEMPAAvAQBACQw8AAAABv////8DA/////8BAAAA" +
+           "FWCJCgIAAAAAAAcAAABFVVJhbmdlAQEQPAAuAEQQPAAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAAB" +
+           "AAgAAABIYXNDb3JkcwEBEjwALwEAQAkSPAAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVS" +
+           "YW5nZQEBFjwALgBEFjwAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQANAAAATWVhc3VyZU1ldGhv" +
+           "ZAEBGDwALwEAQAkYPAAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBHDwALgBE" +
+           "HDwAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAAU3RhcnRNZWFzdXJlAQEePAAvAQBACR48" +
+           "AAAABv////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEiPAAuAEQiPAAAAQB0A/////8B" +
+           "Af////8AAAAAFWCJCgIAAAABAAoAAABIb2lzdFN0YXRlAQG0PAAvAQBACbQ8AAAADP////8DA/////8B" +
+           "AAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQG4PAAuAES4PAAAAQB0A/////8BAf////8AAAAAFWCJCgIA" +
+           "AAABAAoAAABIb2lzdEVycm9yAQG6PAAvAQBACbo8AAAABv////8DA/////8BAAAAFWCJCgIAAAAAAAcA" +
+           "AABFVVJhbmdlAQG+PAAuAES+PAAAAQB0A/////8BAf////8AAAAA";
         #endregion
         #endif
         #endregion

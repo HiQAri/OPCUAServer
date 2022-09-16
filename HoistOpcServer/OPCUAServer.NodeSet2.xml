@@ -52,7 +52,8 @@
       <Reference ReferenceType="HasComponent">ns=1;i=15002</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15008</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15014</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15020</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15564</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15570</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15026</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15032</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15038</Reference>
@@ -134,21 +135,38 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15014</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15020" BrowseName="1:DateTime" ParentNodeId="ns=1;i=15001" DataType="String" AccessLevel="3">
-    <DisplayName>DateTime</DisplayName>
+  <UAVariable NodeId="ns=1;i=15564" BrowseName="1:Date" ParentNodeId="ns=1;i=15001" DataType="String" AccessLevel="3">
+    <DisplayName>Date</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15024</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15568</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15001</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15024" BrowseName="EURange" ParentNodeId="ns=1;i=15020" DataType="i=884">
+  <UAVariable NodeId="ns=1;i=15568" BrowseName="EURange" ParentNodeId="ns=1;i=15564" DataType="i=884">
     <DisplayName>EURange</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15020</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15564</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15570" BrowseName="1:Time" ParentNodeId="ns=1;i=15001" DataType="String" AccessLevel="3">
+    <DisplayName>Time</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15574</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15001</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15574" BrowseName="EURange" ParentNodeId="ns=1;i=15570" DataType="i=884">
+    <DisplayName>EURange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15570</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=15026" BrowseName="1:SerialNrOut" ParentNodeId="ns=1;i=15001" DataType="String" AccessLevel="3">
@@ -474,7 +492,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15258</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15264" BrowseName="1:MeasureDrop" ParentNodeId="ns=1;i=15001" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15264" BrowseName="1:MeasureDrop" ParentNodeId="ns=1;i=15001" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureDrop</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15268</Reference>
@@ -491,7 +509,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15264</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15270" BrowseName="1:MeasureWidth" ParentNodeId="ns=1;i=15001" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15270" BrowseName="1:MeasureWidth" ParentNodeId="ns=1;i=15001" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureWidth</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15274</Reference>
@@ -508,7 +526,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15270</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15276" BrowseName="1:MeasureSquareness" ParentNodeId="ns=1;i=15001" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15276" BrowseName="1:MeasureSquareness" ParentNodeId="ns=1;i=15001" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureSquareness</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15280</Reference>
@@ -525,7 +543,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15276</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15282" BrowseName="1:HasCords" ParentNodeId="ns=1;i=15001" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15282" BrowseName="1:HasCords" ParentNodeId="ns=1;i=15001" DataType="Int32" AccessLevel="3">
     <DisplayName>HasCords</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15286</Reference>
@@ -542,7 +560,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15282</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15288" BrowseName="1:MeasureMethod" ParentNodeId="ns=1;i=15001" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15288" BrowseName="1:MeasureMethod" ParentNodeId="ns=1;i=15001" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureMethod</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15292</Reference>
@@ -624,7 +642,8 @@
       <Reference ReferenceType="HasComponent">ns=1;i=15070</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15076</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15082</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15088</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15576</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15582</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15094</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15100</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15106</Reference>
@@ -708,21 +727,38 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15082</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15088" BrowseName="1:DateTime" ParentNodeId="ns=1;i=15069" DataType="String" AccessLevel="3">
-    <DisplayName>DateTime</DisplayName>
+  <UAVariable NodeId="ns=1;i=15576" BrowseName="1:Date" ParentNodeId="ns=1;i=15069" DataType="String" AccessLevel="3">
+    <DisplayName>Date</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15092</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15580</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15069</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15092" BrowseName="EURange" ParentNodeId="ns=1;i=15088" DataType="i=884">
+  <UAVariable NodeId="ns=1;i=15580" BrowseName="EURange" ParentNodeId="ns=1;i=15576" DataType="i=884">
     <DisplayName>EURange</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasModellingRule">i=78</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15088</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15576</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15582" BrowseName="1:Time" ParentNodeId="ns=1;i=15069" DataType="String" AccessLevel="3">
+    <DisplayName>Time</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15586</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15069</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15586" BrowseName="EURange" ParentNodeId="ns=1;i=15582" DataType="i=884">
+    <DisplayName>EURange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15582</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=15094" BrowseName="1:SerialNrOut" ParentNodeId="ns=1;i=15069" DataType="String" AccessLevel="3">
@@ -1048,7 +1084,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15354</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15360" BrowseName="1:MeasureDrop" ParentNodeId="ns=1;i=15069" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15360" BrowseName="1:MeasureDrop" ParentNodeId="ns=1;i=15069" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureDrop</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15364</Reference>
@@ -1065,7 +1101,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15360</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15366" BrowseName="1:MeasureWidth" ParentNodeId="ns=1;i=15069" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15366" BrowseName="1:MeasureWidth" ParentNodeId="ns=1;i=15069" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureWidth</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15370</Reference>
@@ -1082,7 +1118,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15366</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15372" BrowseName="1:MeasureSquareness" ParentNodeId="ns=1;i=15069" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15372" BrowseName="1:MeasureSquareness" ParentNodeId="ns=1;i=15069" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureSquareness</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15376</Reference>
@@ -1099,7 +1135,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15372</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15378" BrowseName="1:HasCords" ParentNodeId="ns=1;i=15069" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15378" BrowseName="1:HasCords" ParentNodeId="ns=1;i=15069" DataType="Int32" AccessLevel="3">
     <DisplayName>HasCords</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15382</Reference>
@@ -1116,7 +1152,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15378</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15384" BrowseName="1:MeasureMethod" ParentNodeId="ns=1;i=15069" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15384" BrowseName="1:MeasureMethod" ParentNodeId="ns=1;i=15069" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureMethod</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15388</Reference>
@@ -1198,7 +1234,8 @@
       <Reference ReferenceType="HasComponent">ns=1;i=15138</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15144</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15150</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=15156</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15588</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=15594</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15162</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15168</Reference>
       <Reference ReferenceType="HasComponent">ns=1;i=15174</Reference>
@@ -1275,19 +1312,34 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15150</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15156" BrowseName="1:DateTime" ParentNodeId="ns=1;i=15137" DataType="String" AccessLevel="3">
-    <DisplayName>DateTime</DisplayName>
+  <UAVariable NodeId="ns=1;i=15588" BrowseName="1:Date" ParentNodeId="ns=1;i=15137" DataType="String" AccessLevel="3">
+    <DisplayName>Date</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=15160</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=15592</Reference>
       <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15137</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15160" BrowseName="EURange" ParentNodeId="ns=1;i=15156" DataType="i=884">
+  <UAVariable NodeId="ns=1;i=15592" BrowseName="EURange" ParentNodeId="ns=1;i=15588" DataType="i=884">
     <DisplayName>EURange</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15156</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15588</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15594" BrowseName="1:Time" ParentNodeId="ns=1;i=15137" DataType="String" AccessLevel="3">
+    <DisplayName>Time</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=15598</Reference>
+      <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=15137</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=15598" BrowseName="EURange" ParentNodeId="ns=1;i=15594" DataType="i=884">
+    <DisplayName>EURange</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15594</Reference>
     </References>
   </UAVariable>
   <UAVariable NodeId="ns=1;i=15162" BrowseName="1:SerialNrOut" ParentNodeId="ns=1;i=15137" DataType="String" AccessLevel="3">
@@ -1575,7 +1627,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15450</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15456" BrowseName="1:MeasureDrop" ParentNodeId="ns=1;i=15137" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15456" BrowseName="1:MeasureDrop" ParentNodeId="ns=1;i=15137" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureDrop</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15460</Reference>
@@ -1590,7 +1642,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15456</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15462" BrowseName="1:MeasureWidth" ParentNodeId="ns=1;i=15137" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15462" BrowseName="1:MeasureWidth" ParentNodeId="ns=1;i=15137" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureWidth</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15466</Reference>
@@ -1605,7 +1657,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15462</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15468" BrowseName="1:MeasureSquareness" ParentNodeId="ns=1;i=15137" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15468" BrowseName="1:MeasureSquareness" ParentNodeId="ns=1;i=15137" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureSquareness</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15472</Reference>
@@ -1620,7 +1672,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15468</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15474" BrowseName="1:HasCords" ParentNodeId="ns=1;i=15137" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15474" BrowseName="1:HasCords" ParentNodeId="ns=1;i=15137" DataType="Int32" AccessLevel="3">
     <DisplayName>HasCords</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15478</Reference>
@@ -1635,7 +1687,7 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=15474</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=15480" BrowseName="1:MeasureMethod" ParentNodeId="ns=1;i=15137" DataType="Double" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=15480" BrowseName="1:MeasureMethod" ParentNodeId="ns=1;i=15137" DataType="Int32" AccessLevel="3">
     <DisplayName>MeasureMethod</DisplayName>
     <References>
       <Reference ReferenceType="HasProperty">ns=1;i=15484</Reference>

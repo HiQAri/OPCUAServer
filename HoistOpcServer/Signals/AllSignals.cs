@@ -56,11 +56,33 @@ namespace HoistOpcServer
             Approved = false;
             Retry = false;
             Reject = false;
+
+#if DEBUG
+            SerialNumber = "HiQst";
+            Drop = 25.125;
+            Width = 42.125;
+            MountOffSetVert = 7.533;
+            OffsetLaserOnProd = 6.89;
+            ToleranceWidthPlus = 0.039;
+            ToleranceDropPlus = 0.039;
+            ToleranceWidthMinus = 0.394;
+            ToleranceDropMinus = 0.118;
+            ToleranceDropDiff = 0.079;
+            BottomBarRadius = 0.472;
+            PrefMeasDist = -0.511811;
+            Endcapcompensation = -0.217;
+            MeasureDrop = 1;
+            MeasureWidth = 1;
+            MeasureSquareness = 1;
+            HasCords = 1;
+            MeasureMethod = 2;
+#endif
         }
 
         public void SetOutputDefaults()
         {
-            DateTime = string.Empty;
+            Date = string.Empty;
+            Time = string.Empty;
             SerialNumberOut = string.Empty;
             MeasuredDropA = 0;
             MeasuredDropB = 0;
@@ -71,7 +93,7 @@ namespace HoistOpcServer
             HoistError = 0;
         }
 
-        #region Input to Hoist
+#region Input to Hoist
 
         public string SerialNumber { get => inputNode.SerialNrIn.Value; set => inputNode.SerialNrIn.Value = value; } 
 
@@ -99,15 +121,15 @@ namespace HoistOpcServer
 
         public double Endcapcompensation { get => inputNode.Endcapcompensation.Value; set => inputNode.Endcapcompensation.Value = value; }
 
-        public double MeasureDrop { get => inputNode.MeasureDrop.Value; set => inputNode.MeasureDrop.Value = value; }
+        public int MeasureDrop { get => inputNode.MeasureDrop.Value; set => inputNode.MeasureDrop.Value = value; }
 
-        public double MeasureWidth { get => inputNode.MeasureWidth.Value; set => inputNode.MeasureWidth.Value = value; }
+        public int MeasureWidth { get => inputNode.MeasureWidth.Value; set => inputNode.MeasureWidth.Value = value; }
 
-        public double MeasureSquareness { get => inputNode.MeasureSquareness.Value; set => inputNode.MeasureSquareness.Value = value; }
+        public int MeasureSquareness { get => inputNode.MeasureSquareness.Value; set => inputNode.MeasureSquareness.Value = value; }
 
-        public double HasCords { get => inputNode.HasCords.Value; set => inputNode.HasCords.Value = value; }
+        public int HasCords { get => inputNode.HasCords.Value; set => inputNode.HasCords.Value = value; }
 
-        public double MeasureMethod { get => inputNode.MeasureMethod.Value; set => inputNode.MeasureMethod.Value = value; }
+        public int MeasureMethod { get => inputNode.MeasureMethod.Value; set => inputNode.MeasureMethod.Value = value; }
 
         public int StartMeasure { get => inputNode.StartMeasure.Value; set => inputNode.StartMeasure.Value = value; }
 
@@ -117,11 +139,13 @@ namespace HoistOpcServer
 
         public bool Reject { get => inputNode.Rejected.Value; set => inputNode.Rejected.Value = value; }
 
-        #endregion
+#endregion
 
-        #region Output from Hoist
+#region Output from Hoist
 
-        public string DateTime { get => inputNode.DateTime.Value; set => inputNode.DateTime.Value = value; }
+        public string Date { get => inputNode.Date.Value; set => inputNode.Date.Value = value; }
+
+        public string Time { get => inputNode.Time.Value; set => inputNode.Time.Value = value; }
 
         public string SerialNumberOut { get => inputNode.SerialNrOut.Value; set => inputNode.SerialNrOut.Value = value; }
 
@@ -140,7 +164,7 @@ namespace HoistOpcServer
         public int HoistError { get => inputNode.HoistError.Value; set => inputNode.HoistError.Value = value; }
 
 
-        #endregion
+#endregion
 
     }
 }

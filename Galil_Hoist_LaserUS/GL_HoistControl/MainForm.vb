@@ -1,7 +1,14 @@
-﻿Imports HoistOpcServer
+﻿Imports GL_HoistControl
+Imports HoistOpcServer
 
 Public Class MainForm
     Public WithEvents galil As New Galil.Galil
+
+    Enum HoistStates
+        Idle = 0
+        ExecutingOrder = 1
+        WaitForApprovalCommand = 2
+    End Enum
 
 
     Dim ProductionType As Integer = 0   ' 0 is old production and no laser or us measurement
@@ -590,7 +597,8 @@ Public Class MainForm
     End Sub
 
     Public Sub ResultToOpc(ByVal DateStr As String, ByVal TimeStr As String, ByVal OrderNr As String, ByVal Theodrop As String, ByVal TheoWidth As String, ByVal DropA As String, ByVal DropB As String, ByVal DropC As String, ByVal Width As String, ByVal Skew As String)
-        OpcSignals.DateTime = DateStr + " - " + TimeStr
+        OpcSignals.Date = DateStr
+        OpcSignals.Time = TimeStr
         OpcSignals.SerialNumberOut = OrderNr
         OpcSignals.MeasuredDropA = Val(DropA)
         OpcSignals.MeasuredDropB = Val(DropB)
@@ -608,6 +616,8 @@ Public Class MainForm
 
             Case 0
                 'waiting for data to be entered
+                SetHoistState(HoistStates.Idle)
+
                 If Dropentered Then
                     If (Len(txtDrop.Text) > 0) And (Val(txtDrop.Text) > 0) Then
                         txtCLO.Text = Format(Val(txtDrop.Text) / 2, "####.000")
@@ -622,14 +632,6 @@ Public Class MainForm
                             TxtWidth.BackColor = Color.White
 
                             SetModelEntered()
-                            CheckHasCords()
-                            If (HasCords = 1) Then
-                                txtCLO.Visible = True
-                                LabelCordLength.Visible = True
-                            Else
-                                txtCLO.Visible = False
-                                LabelCordLength.Visible = False
-                            End If
 
                             lastinstruction = instructionLabel.Text
                             NextButton.Text = "START"
@@ -650,8 +652,9 @@ Public Class MainForm
 
 
             Case 1
+                SetHoistState(HoistStates.ExecutingOrder)
 
-                If (nextstep()) Then
+                If (nextstep()) Or OpcStart() = 1 Then
                     If homestatus = "complete" Then
                         BlockInputFields(True)
                         lastposition = txtPosition.Text
@@ -686,7 +689,7 @@ Public Class MainForm
 
             Case 3
                 If (Inspection.isloaded()) Then ' waiting for the inspection screen to be loaded 
-                    Inspection.SetDropWidthModel(txtDrop.Text, TxtWidth.Text, ComboBoxModel.SelectedItem.ToString(), TextBoxOrderNr.Text)
+                    Inspection.SetDropWidthModel(txtDrop.Text, TxtWidth.Text, ComboBoxModel.SelectedItem?.ToString(), TextBoxOrderNr.Text)
                     Inspection.DoContMeasurement()
                     lastinstruction = instructionLabel.Text
                     instructionLabel.Text = "SET DROP , THEN HIT NEXT"
@@ -728,7 +731,7 @@ Public Class MainForm
 
             Case 6
                 If (Inspection.isloaded()) Then ' waiting for the inspection screen to be loaded 
-                    Inspection.SetDropWidthModel(txtDrop.Text, TxtWidth.Text, ComboBoxModel.SelectedItem.ToString(), TextBoxOrderNr.Text)
+                    Inspection.SetDropWidthModel(txtDrop.Text, TxtWidth.Text, ComboBoxModel.SelectedItem?.ToString(), TextBoxOrderNr.Text)
                     Inspection.DofullMeasurement()
                     lastinstruction = instructionLabel.Text
                     instructionLabel.Text = "WAIT FOR THE FINAL MEASUREMENT "
@@ -753,8 +756,8 @@ Public Class MainForm
 
 
             Case 8
-
-                If (nextstep()) Then
+                SetHoistState(HoistStates.WaitForApprovalCommand)
+                If (nextstep() Or OpcApprovedCommand()) Then
                     lastposition = txtPosition.Text
                     txtPosition.Text = Val(GalilActVal_form.txtHomeoffset.Text)
                     GoToPosition()
@@ -774,7 +777,7 @@ Public Class MainForm
                     BlockInputFields(False)
                     SeqStep += 1
                 End If
-                If (DoGoBack) Then
+                If (DoGoBack Or OpcRetryCommand()) Then
                     PopUpInspection = True
                     lastinstruction = instructionLabel.Text
                     instructionLabel.Text = "SET DROP , THEN HIT NEXT"
@@ -938,7 +941,7 @@ Public Class MainForm
             Widthentered = False
             ok = False
         End If
-        If (ComboBoxModel.SelectedItem.ToString() <> "") Or (ManualEdit = 0) Then
+        If (ComboBoxModel.SelectedItem?.ToString() <> "") Or (ManualEdit = 0) Then
         Else
             Modelentered = False
             ok = False
@@ -971,6 +974,10 @@ Public Class MainForm
     End Sub
 
     Private Sub cmdResetSeq_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdResetSeq.Click
+        ConfirmReject()
+    End Sub
+
+    Private Sub ConfirmReject()
         Dim iResponse As Integer
         iResponse = MsgBox("Hoist will return to Eye Level", vbYesNo, "DELETE")
         If iResponse = vbYes Then ' They Clicked YES!
@@ -978,7 +985,6 @@ Public Class MainForm
             SeqStep = 30  ' resets the production cycle
         End If
     End Sub
-
 
 
 
@@ -1257,33 +1263,68 @@ Public Class MainForm
             TextBoxOrderNr.Text = OpcSignals.SerialNumber
             txtDrop.Text = Format(OpcSignals.Drop, "####.000")
             TxtWidth.Text = Format(OpcSignals.Width, "####.000")
-            If Modelentered = False Then
-                Modelentered = (OpcSignals.StartMeasure = 1)
+            Modelentered = (OpcSignals.Drop > 0) And (OpcSignals.Width > 0)
+
+            If (OpcSignals.Reject) Then
+                ConfirmReject()
+                OpcSignals.Reject = False
             End If
+
+            OpcSignals.HoistError += 1
 
         End If
     End Sub
 
+    Private Function OpcStart() As Integer
+        Dim start As Integer = 0
+
+        If (ManualEdit = 0) Then
+            start = OpcSignals.StartMeasure
+        End If
+
+        Return start
+    End Function
+
+    Private Function OpcApprovedCommand() As Boolean
+        Dim approved As Boolean = False
+
+        If (ManualEdit = 0) Then
+            approved = OpcSignals.Approved
+        End If
+
+        Return approved
+    End Function
+
+    Private Function OpcRetryCommand() As Boolean
+        Dim retry As Boolean = False
+
+        If (ManualEdit = 0) Then
+            retry = OpcSignals.Retry
+        End If
+
+        Return retry
+    End Function
+
+
+    Private Sub SetHoistState(idle As HoistStates)
+        If (ManualEdit = 0) Then
+            Select Case idle
+                Case HoistStates.Idle
+                    OpcSignals.HoistState = "Idle"
+                    OpcSignals.SetOutputDefaults()
+                Case HoistStates.ExecutingOrder
+                    OpcSignals.HoistState = "Executing order"
+                Case HoistStates.WaitForApprovalCommand
+                    OpcSignals.HoistState = "Wait for approval command"
+            End Select
+        End If
+
+    End Sub
+
+
     Private Sub ResetOpcSignals()
         If ManualEdit = 0 Then
-            OpcSignals.SerialNumber = ""
-            OpcSignals.Drop = 0
-            OpcSignals.Width = 0
-            OpcSignals.MountOffSetVert = 0
-            OpcSignals.OffsetLaserOnProd = 0
-            OpcSignals.ToleranceWidthPlus = 0
-            OpcSignals.ToleranceDropPlus = 0
-            OpcSignals.ToleranceWidthMinus = 0
-            OpcSignals.ToleranceDropMinus = 0
-            OpcSignals.ToleranceDropDiff = 0
-            OpcSignals.BottomBarRadius = 0
-            OpcSignals.PrefMeasDist = 0
-            OpcSignals.Endcapcompensation = 0
-            OpcSignals.MeasureDrop = 0
-            OpcSignals.MeasureWidth = 0
-            OpcSignals.MeasureSquareness = 0
-            OpcSignals.HasCords = 0
-            OpcSignals.MeasureMethod = 0
+            OpcSignals.SetInputDefaults()
         End If
     End Sub
 

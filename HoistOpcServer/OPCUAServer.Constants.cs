@@ -121,14 +121,24 @@ namespace OPCUAServer
         public const uint Input_Width_EURange = 15018;
 
         /// <summary>
-        /// The identifier for the Input_DateTime Variable.
+        /// The identifier for the Input_Date Variable.
         /// </summary>
-        public const uint Input_DateTime = 15020;
+        public const uint Input_Date = 15564;
 
         /// <summary>
-        /// The identifier for the Input_DateTime_EURange Variable.
+        /// The identifier for the Input_Date_EURange Variable.
         /// </summary>
-        public const uint Input_DateTime_EURange = 15024;
+        public const uint Input_Date_EURange = 15568;
+
+        /// <summary>
+        /// The identifier for the Input_Time Variable.
+        /// </summary>
+        public const uint Input_Time = 15570;
+
+        /// <summary>
+        /// The identifier for the Input_Time_EURange Variable.
+        /// </summary>
+        public const uint Input_Time_EURange = 15574;
 
         /// <summary>
         /// The identifier for the Input_SerialNrOut Variable.
@@ -431,14 +441,24 @@ namespace OPCUAServer
         public const uint OPCUAServerType_InputNode_Width_EURange = 15086;
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
+        /// The identifier for the OPCUAServerType_InputNode_Date Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_DateTime = 15088;
+        public const uint OPCUAServerType_InputNode_Date = 15576;
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
+        /// The identifier for the OPCUAServerType_InputNode_Date_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_DateTime_EURange = 15092;
+        public const uint OPCUAServerType_InputNode_Date_EURange = 15580;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Time Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_Time = 15582;
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Time_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServerType_InputNode_Time_EURange = 15586;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
@@ -741,14 +761,24 @@ namespace OPCUAServer
         public const uint OPCUAServer1_InputNode_Width_EURange = 15154;
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
+        /// The identifier for the OPCUAServer1_InputNode_Date Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_DateTime = 15156;
+        public const uint OPCUAServer1_InputNode_Date = 15588;
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
+        /// The identifier for the OPCUAServer1_InputNode_Date_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_DateTime_EURange = 15160;
+        public const uint OPCUAServer1_InputNode_Date_EURange = 15592;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Time Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_Time = 15594;
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Time_EURange Variable.
+        /// </summary>
+        public const uint OPCUAServer1_InputNode_Time_EURange = 15598;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
@@ -1106,14 +1136,24 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId Input_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Input_DateTime Variable.
+        /// The identifier for the Input_Date Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Input_DateTime = new ExpandedNodeId(OPCUAServer.Variables.Input_DateTime, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_Date = new ExpandedNodeId(OPCUAServer.Variables.Input_Date, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Input_DateTime_EURange Variable.
+        /// The identifier for the Input_Date_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Input_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_Date_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Date_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_Time Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_Time = new ExpandedNodeId(OPCUAServer.Variables.Input_Time, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the Input_Time_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId Input_Time_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Time_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the Input_SerialNrOut Variable.
@@ -1416,14 +1456,24 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServerType_InputNode_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
+        /// The identifier for the OPCUAServerType_InputNode_Date Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DateTime = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DateTime, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Date = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Date, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
+        /// The identifier for the OPCUAServerType_InputNode_Date_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Date_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Date_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Time Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Time = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Time, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServerType_InputNode_Time_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Time_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Time_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
@@ -1726,14 +1776,24 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
+        /// The identifier for the OPCUAServer1_InputNode_Date Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DateTime = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DateTime, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Date = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Date, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
+        /// The identifier for the OPCUAServer1_InputNode_Date_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Date_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Date_EURange, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Time Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Time = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Time, OPCUAServer.Namespaces.OPCUAServer);
+
+        /// <summary>
+        /// The identifier for the OPCUAServer1_InputNode_Time_EURange Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Time_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Time_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
@@ -2025,9 +2085,9 @@ namespace OPCUAServer
         public const string BottomBarRadius = "BottomBarRadius";
 
         /// <summary>
-        /// The BrowseName for the DateTime component.
+        /// The BrowseName for the Date component.
         /// </summary>
-        public const string DateTime = "DateTime";
+        public const string Date = "Date";
 
         /// <summary>
         /// The BrowseName for the DeltaDrop component.
@@ -2158,6 +2218,11 @@ namespace OPCUAServer
         /// The BrowseName for the StartMeasure component.
         /// </summary>
         public const string StartMeasure = "StartMeasure";
+
+        /// <summary>
+        /// The BrowseName for the Time component.
+        /// </summary>
+        public const string Time = "Time";
 
         /// <summary>
         /// The BrowseName for the ToleranceDropDiff component.

@@ -81,37 +81,12 @@ Public Class ModelFiles
 
     Public Function OpenReadModelFile(ByVal aName As String, ByRef aModelDatSet As tModelDat) As Boolean
         Dim Ok = True
-        If MainForm.ManualEdit = 1 Then
-            Ok = OpenReadModelAsFile(aName, aModelDatSet)
-        Else
-            Ok = ReadModelFromOpc(aModelDatSet)
-        End If
-        Return Ok
-    End Function
 
-    Private Function ReadModelFromOpc(ByRef aModelDatSet As tModelDat) As Boolean
-        Dim Ok = True
-        Dim signals As HoistOpcServer.AllSignals
-        signals = MainForm.OpcSignals
-
-        '/////////////////////
-        aModelDatSet.MountOffSetVert = signals.MountOffSetVert
-        aModelDatSet.OffsetLaserOnProd = signals.OffsetLaserOnProd
-        aModelDatSet.BottomBarRadius = signals.BottomBarRadius
-        aModelDatSet.ToleranceWidthPlus = signals.ToleranceWidthPlus
-        aModelDatSet.ToleranceWidthMinus = signals.ToleranceWidthMinus
-        aModelDatSet.ToleranceDropPlus = signals.ToleranceDropPlus
-        aModelDatSet.ToleranceDropMinus = signals.ToleranceDropMinus
-        aModelDatSet.PrefMeasDist = signals.PrefMeasDist
-        aModelDatSet.Endcapcompensation = signals.Endcapcompensation
-        aModelDatSet.ToleranceDropDiff = signals.ToleranceDropDiff
-        aModelDatSet.MeasureWidth = signals.MeasureWidth
-        aModelDatSet.MeasureDrop = signals.MeasureDrop
-        aModelDatSet.MeasureSquareness = signals.MeasureSquareness
-        aModelDatSet.HasCords = signals.HasCords
+        Ok = OpenReadModelAsFile(aName, aModelDatSet)
 
         Return Ok
     End Function
+
 
     Private Function OpenReadModelAsFile(ByVal aName As String, ByRef aModelDatSet As tModelDat) As Boolean
         Dim Ok = True

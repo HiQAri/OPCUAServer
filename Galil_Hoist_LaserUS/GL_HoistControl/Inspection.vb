@@ -53,10 +53,15 @@
     End Sub
 
     Private Sub Inspection_load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If (ComboBoxModel.Items.Count = 0) And (MainForm.ManualEdit = 1) Then
-            For Each foundFile As String In My.Computer.FileSystem.GetFiles("..\ModelFiles")
-                ComboBoxModel.Items.Add(My.Computer.FileSystem.GetName(foundFile))
-            Next
+
+        If MainForm.ManualEdit = 1 Then
+            If (ComboBoxModel.Items.Count = 0) Then
+                For Each foundFile As String In My.Computer.FileSystem.GetFiles("..\ModelFiles")
+                    ComboBoxModel.Items.Add(My.Computer.FileSystem.GetName(foundFile))
+                Next
+            End If
+        Else
+            ReadModelFromOpc(InspectionDat)
         End If
 
         UpDateInspectDatOnScreen()
@@ -110,7 +115,12 @@
         Double.TryParse(aWidth, tVal)
         InspectionDat.Width = tVal
 
-        ModelFiles.OpenReadModelFile("..\ModelFiles\" + aModel, InspectionDat)
+        If MainForm.ManualEdit = 1 Then
+            ModelFiles.OpenReadModelFile("..\ModelFiles\" + aModel, InspectionDat)
+        Else
+            ReadModelFromOpc(InspectionDat)
+        End If
+
         Modelfilename = aModel
         UpDateInspectDatOnScreen()
         ComboBoxModel.Visible = False
@@ -512,5 +522,29 @@
         CheckProdStat = 1
     End Sub
 
+
+    Private Function ReadModelFromOpc(ByRef aModelDatSet As ModelFiles.tModelDat) As Boolean
+        Dim Ok = True
+        Dim signals As HoistOpcServer.AllSignals
+        signals = MainForm.OpcSignals
+
+        '/////////////////////
+        aModelDatSet.MountOffSetVert = signals.MountOffSetVert
+        aModelDatSet.OffsetLaserOnProd = signals.OffsetLaserOnProd
+        aModelDatSet.BottomBarRadius = signals.BottomBarRadius
+        aModelDatSet.ToleranceWidthPlus = signals.ToleranceWidthPlus
+        aModelDatSet.ToleranceWidthMinus = signals.ToleranceWidthMinus
+        aModelDatSet.ToleranceDropPlus = signals.ToleranceDropPlus
+        aModelDatSet.ToleranceDropMinus = signals.ToleranceDropMinus
+        aModelDatSet.PrefMeasDist = signals.PrefMeasDist
+        aModelDatSet.Endcapcompensation = signals.Endcapcompensation
+        aModelDatSet.ToleranceDropDiff = signals.ToleranceDropDiff
+        aModelDatSet.MeasureWidth = signals.MeasureWidth
+        aModelDatSet.MeasureDrop = signals.MeasureDrop
+        aModelDatSet.MeasureSquareness = signals.MeasureSquareness
+        aModelDatSet.HasCords = signals.HasCords
+
+        Return Ok
+    End Function
 
 End Class

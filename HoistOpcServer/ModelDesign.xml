@@ -19,7 +19,8 @@ TargetNamespace="http://opcfoundation.org/OPCUAServer">
       <opc:Variable SymbolicName="SerialNrIn" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="Drop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="Width" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="DateTime" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Date" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Time" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="SerialNrOut" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MeasuredDropA" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MeasuredDropB" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
@@ -39,11 +40,11 @@ TargetNamespace="http://opcfoundation.org/OPCUAServer">
       <opc:Variable SymbolicName="BottomBarRadius" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="PrefMeasDist" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="Endcapcompensation" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="MeasureDrop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="MeasureWidth" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="MeasureSquareness" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="HasCords" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="MeasureMethod" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureDrop" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureWidth" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureSquareness" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="HasCords" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureMethod" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="StartMeasure" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="HoistState" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="HoistError" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
