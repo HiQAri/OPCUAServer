@@ -53,14 +53,18 @@
     End Sub
 
     Private Sub Inspection_load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        If (ComboBoxModel.Items.Count = 0) Then
+        If (ComboBoxModel.Items.Count = 0) And (MainForm.ManualEdit = 1) Then
             For Each foundFile As String In My.Computer.FileSystem.GetFiles("..\ModelFiles")
                 ComboBoxModel.Items.Add(My.Computer.FileSystem.GetName(foundFile))
             Next
         End If
 
         UpDateInspectDatOnScreen()
-        ButtonEditModels.Visible = True
+        ComboBoxModel.Visible = (MainForm.ManualEdit = 1)
+        ButtonEditModels.Visible = (MainForm.ManualEdit = 1)
+        TextBoxDrop.ReadOnly = (MainForm.ManualEdit = 0)
+        TextBoxWidth.ReadOnly = (MainForm.ManualEdit = 0)
+
         ' NButton.visible = True
         ButtonContDropMeasure.Visible = True
         ButtonExit.Visible = True
@@ -380,10 +384,10 @@
                 If NButton.NextStep() Then
 
                     CheckProdStat = 0
-                    TextBoxDrop.ReadOnly = False
-                    TextBoxWidth.ReadOnly = False
+                    TextBoxDrop.ReadOnly = (MainForm.ManualEdit = 0)
+                    TextBoxWidth.ReadOnly = (MainForm.ManualEdit = 0)
                     ComboBoxModel.Enabled = True
-                    ComboBoxModel.Visible = True
+                    ComboBoxModel.Visible = (MainForm.ManualEdit = 1)
                     TextBoxModel.Visible = False
                     Me.Close()
                 End If
@@ -440,10 +444,10 @@
 
                     CheckProdStat = 0
                     isloadedbool = False
-                    TextBoxDrop.ReadOnly = False
-                    TextBoxWidth.ReadOnly = False
+                    TextBoxDrop.ReadOnly = (MainForm.ManualEdit = 0)
+                    TextBoxWidth.ReadOnly = (MainForm.ManualEdit = 0)
                     ComboBoxModel.Enabled = True
-                    ComboBoxModel.Visible = True
+                    ComboBoxModel.Visible = (MainForm.ManualEdit = 1)
                     TextBoxModel.Visible = False
                     Me.Close()
                 End If

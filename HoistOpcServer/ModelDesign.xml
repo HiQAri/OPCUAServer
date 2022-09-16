@@ -8,45 +8,65 @@ xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
 xmlns="http://opcfoundation.org/OPCUAServer"
 TargetNamespace="http://opcfoundation.org/OPCUAServer">
 
-	<opc:Namespaces>
-		<opc:Namespace Name="OpcUa" Prefix="Opc.Ua" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd">http://opcfoundation.org/UA/</opc:Namespace>
-		<opc:Namespace Name="OPCUAServer" Prefix="OPCUAServer">http://opcfoundation.org/OPCUAServer</opc:Namespace>
-	</opc:Namespaces>
+  <opc:Namespaces>
+    <opc:Namespace Name="OpcUa" Prefix="Opc.Ua" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd">http://opcfoundation.org/UA/</opc:Namespace>
+    <opc:Namespace Name="OPCUAServer" Prefix="OPCUAServer">http://opcfoundation.org/OPCUAServer</opc:Namespace>
+  </opc:Namespaces>
 
-	<opc:ObjectType SymbolicName="Input" BaseType="ua:BaseObjectType">
-		<opc:Description>Input node</opc:Description>
-		<opc:Children>
-			<opc:Variable SymbolicName="SerialNrIn" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="Drop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="Width" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="DateTime" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="SerialNrOut" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="MeasuredDropA" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="MeasuredDropB" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="MeasuredDropC" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="DeltaDrop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="MeasuredWidth" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-			<opc:Variable SymbolicName="Approved" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-		</opc:Children>
-	</opc:ObjectType>
-	
-	<opc:ObjectType SymbolicName="OPCUAServerType" BaseType="ua:FolderType" SupportsEvents="true">
-		<opc:Description>My Site.</opc:Description>
-		<opc:Children>
-			<opc:Object SymbolicName="InputNode" TypeDefinition="Input" SupportsEvents="true">
-				<opc:BrowseName>My tags.</opc:BrowseName>
-			</opc:Object>
-		</opc:Children>
-	</opc:ObjectType>
-		
-	<opc:Object SymbolicName="OPCUAServer1" TypeDefinition="OPCUAServerType" SupportsEvents="true">
-		<opc:BrowseName>MySite</opc:BrowseName>
-		<opc:References>
-			<opc:Reference IsInverse="true">
-				<opc:ReferenceType>ua:Organizes</opc:ReferenceType>
-				<opc:TargetId>ua:ObjectsFolder</opc:TargetId>
-			</opc:Reference>
-		</opc:References>
-	</opc:Object>
-	
+  <opc:ObjectType SymbolicName="Input" BaseType="ua:BaseObjectType">
+    <opc:Description>Nodes</opc:Description>
+    <opc:Children>
+      <opc:Variable SymbolicName="SerialNrIn" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Drop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Width" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="DateTime" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="SerialNrOut" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasuredDropA" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasuredDropB" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasuredDropC" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="DeltaDrop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasuredWidth" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Approved" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Retry" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Rejected" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MountOffSetVert" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="OffsetLaserOnProd" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="ToleranceWidthPlus" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="ToleranceDropPlus" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="ToleranceWidthMinus" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="ToleranceDropMinus" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="ToleranceDropDiff" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="BottomBarRadius" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="PrefMeasDist" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="Endcapcompensation" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureDrop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureWidth" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureSquareness" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="HasCords" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="MeasureMethod" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="StartMeasure" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="HoistState" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="HoistError" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+    </opc:Children>
+  </opc:ObjectType>
+
+  <opc:ObjectType SymbolicName="OPCUAServerType" BaseType="ua:FolderType" SupportsEvents="true">
+    <opc:Description>Hoist</opc:Description>
+    <opc:Children>
+      <opc:Object SymbolicName="InputNode" TypeDefinition="Input" SupportsEvents="true">
+        <opc:BrowseName>Station1</opc:BrowseName>
+      </opc:Object>
+    </opc:Children>
+  </opc:ObjectType>
+
+  <opc:Object SymbolicName="OPCUAServer1" TypeDefinition="OPCUAServerType" SupportsEvents="true">
+    <opc:BrowseName>Hoist</opc:BrowseName>
+    <opc:References>
+      <opc:Reference IsInverse="true">
+        <opc:ReferenceType>ua:Organizes</opc:ReferenceType>
+        <opc:TargetId>ua:ObjectsFolder</opc:TargetId>
+      </opc:Reference>
+    </opc:References>
+  </opc:Object>
+
 </opc:ModelDesign>

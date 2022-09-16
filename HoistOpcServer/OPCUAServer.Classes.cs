@@ -91,7 +91,7 @@ namespace OPCUAServer
         #region Initialization String
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////BGCAAAEAAAABAA0A" +
-           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////CwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
+           "AABJbnB1dEluc3RhbmNlAQGZOgEBmTr/////HwAAABVgiQoCAAAAAQAKAAAAU2VyaWFsTnJJbgEBmjoA" +
            "LwEAQAmaOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBnjoALgBEnjoAAAEA" +
            "dAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEBoDoALwEAQAmgOgAAAAv/////AwP/////" +
            "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBpDoALgBEpDoAAAEAdAP/////AQH/////AAAAABVgiQoC" +
@@ -110,7 +110,43 @@ namespace OPCUAServer
            "//8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQHQOgAvAQBACdA6AAAAC/////8D" +
            "A/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHUOgAuAETUOgAAAQB0A/////8BAf////8AAAAA" +
            "FWCJCgIAAAABAAgAAABBcHByb3ZlZAEB1joALwEAQAnWOgAAAAH/////AwP/////AQAAABVgiQoCAAAA" +
-           "AAAHAAAARVVSYW5nZQEB2joALgBE2joAAAEAdAP/////AQH/////AAAAAA==";
+           "AAAHAAAARVVSYW5nZQEB2joALgBE2joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAFAAAAUmV0" +
+           "cnkBAYQ8AC8BAEAJhDwAAAAB/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAYg8AC4A" +
+           "RIg8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAFJlamVjdGVkAQGKPAAvAQBACYo8AAAA" +
+           "Af////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGOPAAuAESOPAAAAQB0A/////8BAf//" +
+           "//8AAAAAFWCJCgIAAAABAA8AAABNb3VudE9mZlNldFZlcnQBAWQ7AC8BAEAJZDsAAAAL/////wMD////" +
+           "/wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAWg7AC4ARGg7AAABAHQD/////wEB/////wAAAAAVYIkK" +
+           "AgAAAAEAEQAAAE9mZnNldExhc2VyT25Qcm9kAQFqOwAvAQBACWo7AAAAC/////8DA/////8BAAAAFWCJ" +
+           "CgIAAAAAAAcAAABFVVJhbmdlAQFuOwAuAERuOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIA" +
+           "AABUb2xlcmFuY2VXaWR0aFBsdXMBAXA7AC8BAEAJcDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAA" +
+           "BwAAAEVVUmFuZ2UBAXQ7AC4ARHQ7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEQAAAFRvbGVy" +
+           "YW5jZURyb3BQbHVzAQF2OwAvAQBACXY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJh" +
+           "bmdlAQF6OwAuAER6OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABMAAABUb2xlcmFuY2VXaWR0" +
+           "aE1pbnVzAQF8OwAvAQBACXw7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGA" +
+           "OwAuAESAOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIAAABUb2xlcmFuY2VEcm9wTWludXMB" +
+           "AYI7AC8BAEAJgjsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAYY7AC4ARIY7" +
+           "AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEQAAAFRvbGVyYW5jZURyb3BEaWZmAQGIOwAvAQBA" +
+           "CYg7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGMOwAuAESMOwAAAQB0A///" +
+           "//8BAf////8AAAAAFWCJCgIAAAABAA8AAABCb3R0b21CYXJSYWRpdXMBAY47AC8BAEAJjjsAAAAL////" +
+           "/wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAZI7AC4ARJI7AAABAHQD/////wEB/////wAA" +
+           "AAAVYIkKAgAAAAEADAAAAFByZWZNZWFzRGlzdAEBlDsALwEAQAmUOwAAAAv/////AwP/////AQAAABVg" +
+           "iQoCAAAAAAAHAAAARVVSYW5nZQEBmDsALgBEmDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAS" +
+           "AAAARW5kY2FwY29tcGVuc2F0aW9uAQGaOwAvAQBACZo7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAA" +
+           "AAcAAABFVVJhbmdlAQGeOwAuAESeOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAAsAAABNZWFz" +
+           "dXJlRHJvcAEBoDsALwEAQAmgOwAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB" +
+           "pDsALgBEpDsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAATWVhc3VyZVdpZHRoAQGmOwAv" +
+           "AQBACaY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGqOwAuAESqOwAAAQB0" +
+           "A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABNZWFzdXJlU3F1YXJlbmVzcwEBrDsALwEAQAmsOwAA" +
+           "AAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBsDsALgBEsDsAAAEAdAP/////AQH/" +
+           "////AAAAABVgiQoCAAAAAQAIAAAASGFzQ29yZHMBAbI7AC8BAEAJsjsAAAAL/////wMD/////wEAAAAV" +
+           "YIkKAgAAAAAABwAAAEVVUmFuZ2UBAbY7AC4ARLY7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEA" +
+           "DQAAAE1lYXN1cmVNZXRob2QBAbg7AC8BAEAJuDsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAA" +
+           "AEVVUmFuZ2UBAbw7AC4ARLw7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADAAAAFN0YXJ0TWVh" +
+           "c3VyZQEBvjsALwEAQAm+OwAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBwjsA" +
+           "LgBEwjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RTdGF0ZQEBqDwALwEAQAmo" +
+           "PAAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBrDwALgBErDwAAAEAdAP/////" +
+           "AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RFcnJvcgEBrjwALwEAQAmuPAAAAAb/////AwP/////" +
+           "AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBsjwALgBEsjwAAAEAdAP/////AQH/////AAAAAA==";
         #endregion
         #endif
         #endregion
@@ -346,6 +382,426 @@ namespace OPCUAServer
                 m_approved = value;
             }
         }
+
+        /// <summary>
+        /// A description for the Retry Variable.
+        /// </summary>
+        public AnalogItemState<bool> Retry
+        {
+            get
+            {
+                return m_retry;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_retry, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_retry = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the Rejected Variable.
+        /// </summary>
+        public AnalogItemState<bool> Rejected
+        {
+            get
+            {
+                return m_rejected;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_rejected, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_rejected = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MountOffSetVert Variable.
+        /// </summary>
+        public AnalogItemState<double> MountOffSetVert
+        {
+            get
+            {
+                return m_mountOffSetVert;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_mountOffSetVert, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_mountOffSetVert = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the OffsetLaserOnProd Variable.
+        /// </summary>
+        public AnalogItemState<double> OffsetLaserOnProd
+        {
+            get
+            {
+                return m_offsetLaserOnProd;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_offsetLaserOnProd, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_offsetLaserOnProd = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceWidthPlus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceWidthPlus
+        {
+            get
+            {
+                return m_toleranceWidthPlus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceWidthPlus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceWidthPlus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceDropPlus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceDropPlus
+        {
+            get
+            {
+                return m_toleranceDropPlus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceDropPlus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceDropPlus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceWidthMinus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceWidthMinus
+        {
+            get
+            {
+                return m_toleranceWidthMinus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceWidthMinus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceWidthMinus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceDropMinus Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceDropMinus
+        {
+            get
+            {
+                return m_toleranceDropMinus;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceDropMinus, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceDropMinus = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the ToleranceDropDiff Variable.
+        /// </summary>
+        public AnalogItemState<double> ToleranceDropDiff
+        {
+            get
+            {
+                return m_toleranceDropDiff;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_toleranceDropDiff, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_toleranceDropDiff = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the BottomBarRadius Variable.
+        /// </summary>
+        public AnalogItemState<double> BottomBarRadius
+        {
+            get
+            {
+                return m_bottomBarRadius;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_bottomBarRadius, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_bottomBarRadius = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the PrefMeasDist Variable.
+        /// </summary>
+        public AnalogItemState<double> PrefMeasDist
+        {
+            get
+            {
+                return m_prefMeasDist;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_prefMeasDist, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_prefMeasDist = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the Endcapcompensation Variable.
+        /// </summary>
+        public AnalogItemState<double> Endcapcompensation
+        {
+            get
+            {
+                return m_endcapcompensation;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_endcapcompensation, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_endcapcompensation = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureDrop Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureDrop
+        {
+            get
+            {
+                return m_measureDrop;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureDrop, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureDrop = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureWidth Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureWidth
+        {
+            get
+            {
+                return m_measureWidth;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureWidth, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureWidth = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureSquareness Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureSquareness
+        {
+            get
+            {
+                return m_measureSquareness;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureSquareness, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureSquareness = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the HasCords Variable.
+        /// </summary>
+        public AnalogItemState<double> HasCords
+        {
+            get
+            {
+                return m_hasCords;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_hasCords, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_hasCords = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the MeasureMethod Variable.
+        /// </summary>
+        public AnalogItemState<double> MeasureMethod
+        {
+            get
+            {
+                return m_measureMethod;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_measureMethod, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_measureMethod = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the StartMeasure Variable.
+        /// </summary>
+        public AnalogItemState<int> StartMeasure
+        {
+            get
+            {
+                return m_startMeasure;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_startMeasure, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_startMeasure = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the HoistState Variable.
+        /// </summary>
+        public AnalogItemState<string> HoistState
+        {
+            get
+            {
+                return m_hoistState;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_hoistState, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_hoistState = value;
+            }
+        }
+
+        /// <summary>
+        /// A description for the HoistError Variable.
+        /// </summary>
+        public AnalogItemState<int> HoistError
+        {
+            get
+            {
+                return m_hoistError;
+            }
+
+            set
+            {
+                if (!Object.ReferenceEquals(m_hoistError, value))
+                {
+                    ChangeMasks |= NodeStateChangeMasks.Children;
+                }
+
+                m_hoistError = value;
+            }
+        }
         #endregion
 
         #region Overridden Methods
@@ -411,6 +867,106 @@ namespace OPCUAServer
             if (m_approved != null)
             {
                 children.Add(m_approved);
+            }
+
+            if (m_retry != null)
+            {
+                children.Add(m_retry);
+            }
+
+            if (m_rejected != null)
+            {
+                children.Add(m_rejected);
+            }
+
+            if (m_mountOffSetVert != null)
+            {
+                children.Add(m_mountOffSetVert);
+            }
+
+            if (m_offsetLaserOnProd != null)
+            {
+                children.Add(m_offsetLaserOnProd);
+            }
+
+            if (m_toleranceWidthPlus != null)
+            {
+                children.Add(m_toleranceWidthPlus);
+            }
+
+            if (m_toleranceDropPlus != null)
+            {
+                children.Add(m_toleranceDropPlus);
+            }
+
+            if (m_toleranceWidthMinus != null)
+            {
+                children.Add(m_toleranceWidthMinus);
+            }
+
+            if (m_toleranceDropMinus != null)
+            {
+                children.Add(m_toleranceDropMinus);
+            }
+
+            if (m_toleranceDropDiff != null)
+            {
+                children.Add(m_toleranceDropDiff);
+            }
+
+            if (m_bottomBarRadius != null)
+            {
+                children.Add(m_bottomBarRadius);
+            }
+
+            if (m_prefMeasDist != null)
+            {
+                children.Add(m_prefMeasDist);
+            }
+
+            if (m_endcapcompensation != null)
+            {
+                children.Add(m_endcapcompensation);
+            }
+
+            if (m_measureDrop != null)
+            {
+                children.Add(m_measureDrop);
+            }
+
+            if (m_measureWidth != null)
+            {
+                children.Add(m_measureWidth);
+            }
+
+            if (m_measureSquareness != null)
+            {
+                children.Add(m_measureSquareness);
+            }
+
+            if (m_hasCords != null)
+            {
+                children.Add(m_hasCords);
+            }
+
+            if (m_measureMethod != null)
+            {
+                children.Add(m_measureMethod);
+            }
+
+            if (m_startMeasure != null)
+            {
+                children.Add(m_startMeasure);
+            }
+
+            if (m_hoistState != null)
+            {
+                children.Add(m_hoistState);
+            }
+
+            if (m_hoistError != null)
+            {
+                children.Add(m_hoistError);
             }
 
             base.GetChildren(context, children);
@@ -664,6 +1220,426 @@ namespace OPCUAServer
                     instance = Approved;
                     break;
                 }
+
+                case OPCUAServer.BrowseNames.Retry:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Retry == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Retry = new AnalogItemState<bool>(this);
+                            }
+                            else
+                            {
+                                Retry = (AnalogItemState<bool>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Retry;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.Rejected:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Rejected == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Rejected = new AnalogItemState<bool>(this);
+                            }
+                            else
+                            {
+                                Rejected = (AnalogItemState<bool>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Rejected;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MountOffSetVert:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MountOffSetVert == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MountOffSetVert = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MountOffSetVert = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MountOffSetVert;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.OffsetLaserOnProd:
+                {
+                    if (createOrReplace)
+                    {
+                        if (OffsetLaserOnProd == null)
+                        {
+                            if (replacement == null)
+                            {
+                                OffsetLaserOnProd = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                OffsetLaserOnProd = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = OffsetLaserOnProd;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceWidthPlus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceWidthPlus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceWidthPlus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceWidthPlus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceWidthPlus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceDropPlus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceDropPlus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceDropPlus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceDropPlus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceDropPlus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceWidthMinus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceWidthMinus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceWidthMinus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceWidthMinus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceWidthMinus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceDropMinus:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceDropMinus == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceDropMinus = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceDropMinus = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceDropMinus;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.ToleranceDropDiff:
+                {
+                    if (createOrReplace)
+                    {
+                        if (ToleranceDropDiff == null)
+                        {
+                            if (replacement == null)
+                            {
+                                ToleranceDropDiff = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                ToleranceDropDiff = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = ToleranceDropDiff;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.BottomBarRadius:
+                {
+                    if (createOrReplace)
+                    {
+                        if (BottomBarRadius == null)
+                        {
+                            if (replacement == null)
+                            {
+                                BottomBarRadius = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                BottomBarRadius = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = BottomBarRadius;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.PrefMeasDist:
+                {
+                    if (createOrReplace)
+                    {
+                        if (PrefMeasDist == null)
+                        {
+                            if (replacement == null)
+                            {
+                                PrefMeasDist = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                PrefMeasDist = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = PrefMeasDist;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.Endcapcompensation:
+                {
+                    if (createOrReplace)
+                    {
+                        if (Endcapcompensation == null)
+                        {
+                            if (replacement == null)
+                            {
+                                Endcapcompensation = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                Endcapcompensation = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = Endcapcompensation;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureDrop:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureDrop == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureDrop = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureDrop = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureDrop;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureWidth:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureWidth == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureWidth = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureWidth = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureWidth;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureSquareness:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureSquareness == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureSquareness = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureSquareness = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureSquareness;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.HasCords:
+                {
+                    if (createOrReplace)
+                    {
+                        if (HasCords == null)
+                        {
+                            if (replacement == null)
+                            {
+                                HasCords = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                HasCords = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = HasCords;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.MeasureMethod:
+                {
+                    if (createOrReplace)
+                    {
+                        if (MeasureMethod == null)
+                        {
+                            if (replacement == null)
+                            {
+                                MeasureMethod = new AnalogItemState<double>(this);
+                            }
+                            else
+                            {
+                                MeasureMethod = (AnalogItemState<double>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = MeasureMethod;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.StartMeasure:
+                {
+                    if (createOrReplace)
+                    {
+                        if (StartMeasure == null)
+                        {
+                            if (replacement == null)
+                            {
+                                StartMeasure = new AnalogItemState<int>(this);
+                            }
+                            else
+                            {
+                                StartMeasure = (AnalogItemState<int>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = StartMeasure;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.HoistState:
+                {
+                    if (createOrReplace)
+                    {
+                        if (HoistState == null)
+                        {
+                            if (replacement == null)
+                            {
+                                HoistState = new AnalogItemState<string>(this);
+                            }
+                            else
+                            {
+                                HoistState = (AnalogItemState<string>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = HoistState;
+                    break;
+                }
+
+                case OPCUAServer.BrowseNames.HoistError:
+                {
+                    if (createOrReplace)
+                    {
+                        if (HoistError == null)
+                        {
+                            if (replacement == null)
+                            {
+                                HoistError = new AnalogItemState<int>(this);
+                            }
+                            else
+                            {
+                                HoistError = (AnalogItemState<int>)replacement;
+                            }
+                        }
+                    }
+
+                    instance = HoistError;
+                    break;
+                }
             }
 
             if (instance != null)
@@ -687,6 +1663,26 @@ namespace OPCUAServer
         private AnalogItemState<double> m_deltaDrop;
         private AnalogItemState<double> m_measuredWidth;
         private AnalogItemState<bool> m_approved;
+        private AnalogItemState<bool> m_retry;
+        private AnalogItemState<bool> m_rejected;
+        private AnalogItemState<double> m_mountOffSetVert;
+        private AnalogItemState<double> m_offsetLaserOnProd;
+        private AnalogItemState<double> m_toleranceWidthPlus;
+        private AnalogItemState<double> m_toleranceDropPlus;
+        private AnalogItemState<double> m_toleranceWidthMinus;
+        private AnalogItemState<double> m_toleranceDropMinus;
+        private AnalogItemState<double> m_toleranceDropDiff;
+        private AnalogItemState<double> m_bottomBarRadius;
+        private AnalogItemState<double> m_prefMeasDist;
+        private AnalogItemState<double> m_endcapcompensation;
+        private AnalogItemState<double> m_measureDrop;
+        private AnalogItemState<double> m_measureWidth;
+        private AnalogItemState<double> m_measureSquareness;
+        private AnalogItemState<double> m_hasCords;
+        private AnalogItemState<double> m_measureMethod;
+        private AnalogItemState<int> m_startMeasure;
+        private AnalogItemState<string> m_hoistState;
+        private AnalogItemState<int> m_hoistError;
         #endregion
     }
     #endif
@@ -748,7 +1744,7 @@ namespace OPCUAServer
         private const string InitializationString =
            "AQAAACQAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvT1BDVUFTZXJ2ZXL/////hGCAAAEAAAABABcA" +
            "AABPUENVQVNlcnZlclR5cGVJbnN0YW5jZQEB3DoBAdw6Af////8BAAAAhGDACgEAAAAJAAAASW5wdXRO" +
-           "b2RlAQAIAAAATXkgdGFncy4BAd06AC8BAZk63ToAAAH/////CwAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
+           "b2RlAQAIAAAAU3RhdGlvbjEBAd06AC8BAZk63ToAAAH/////HwAAABVgiQoCAAAAAQAKAAAAU2VyaWFs" +
            "TnJJbgEB3joALwEAQAneOgAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB4joA" +
            "LgBE4joAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAEAAAARHJvcAEB5DoALwEAQAnkOgAAAAv/" +
            "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB6DoALgBE6DoAAAEAdAP/////AQH/////" +
@@ -767,14 +1763,51 @@ namespace OPCUAServer
            "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA0AAABNZWFzdXJlZFdpZHRoAQEUOwAvAQBACRQ7" +
            "AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEYOwAuAEQYOwAAAQB0A/////8B" +
            "Af////8AAAAAFWCJCgIAAAABAAgAAABBcHByb3ZlZAEBGjsALwEAQAkaOwAAAAH/////AwP/////AQAA" +
-           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBHjsALgBEHjsAAAEAdAP/////AQH/////AAAAAA==";
+           "ABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBHjsALgBEHjsAAAEAdAP/////AQH/////AAAAABVgiQoCAAAA" +
+           "AQAFAAAAUmV0cnkBAZA8AC8BAEAJkDwAAAAB/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFu" +
+           "Z2UBAZQ8AC4ARJQ8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEACAAAAFJlamVjdGVkAQGWPAAv" +
+           "AQBACZY8AAAAAf////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQGaPAAuAESaPAAAAQB0" +
+           "A/////8BAf////8AAAAAFWCJCgIAAAABAA8AAABNb3VudE9mZlNldFZlcnQBAcQ7AC8BAEAJxDsAAAAL" +
+           "/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAcg7AC4ARMg7AAABAHQD/////wEB////" +
+           "/wAAAAAVYIkKAgAAAAEAEQAAAE9mZnNldExhc2VyT25Qcm9kAQHKOwAvAQBACco7AAAAC/////8DA///" +
+           "//8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHOOwAuAETOOwAAAQB0A/////8BAf////8AAAAAFWCJ" +
+           "CgIAAAABABIAAABUb2xlcmFuY2VXaWR0aFBsdXMBAdA7AC8BAEAJ0DsAAAAL/////wMD/////wEAAAAV" +
+           "YIkKAgAAAAAABwAAAEVVUmFuZ2UBAdQ7AC4ARNQ7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEA" +
+           "EQAAAFRvbGVyYW5jZURyb3BQbHVzAQHWOwAvAQBACdY7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAA" +
+           "AAcAAABFVVJhbmdlAQHaOwAuAETaOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABMAAABUb2xl" +
+           "cmFuY2VXaWR0aE1pbnVzAQHcOwAvAQBACdw7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABF" +
+           "VVJhbmdlAQHgOwAuAETgOwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABIAAABUb2xlcmFuY2VE" +
+           "cm9wTWludXMBAeI7AC8BAEAJ4jsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UB" +
+           "AeY7AC4AROY7AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEAEQAAAFRvbGVyYW5jZURyb3BEaWZm" +
+           "AQHoOwAvAQBACeg7AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQHsOwAuAETs" +
+           "OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABAA8AAABCb3R0b21CYXJSYWRpdXMBAe47AC8BAEAJ" +
+           "7jsAAAAL/////wMD/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBAfI7AC4ARPI7AAABAHQD////" +
+           "/wEB/////wAAAAAVYIkKAgAAAAEADAAAAFByZWZNZWFzRGlzdAEB9DsALwEAQAn0OwAAAAv/////AwP/" +
+           "////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEB+DsALgBE+DsAAAEAdAP/////AQH/////AAAAABVg" +
+           "iQoCAAAAAQASAAAARW5kY2FwY29tcGVuc2F0aW9uAQH6OwAvAQBACfo7AAAAC/////8DA/////8BAAAA" +
+           "FWCJCgIAAAAAAAcAAABFVVJhbmdlAQH+OwAuAET+OwAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAAB" +
+           "AAsAAABNZWFzdXJlRHJvcAEBADwALwEAQAkAPAAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAA" +
+           "RVVSYW5nZQEBBDwALgBEBDwAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAMAAAATWVhc3VyZVdp" +
+           "ZHRoAQEGPAAvAQBACQY8AAAAC/////8DA/////8BAAAAFWCJCgIAAAAAAAcAAABFVVJhbmdlAQEKPAAu" +
+           "AEQKPAAAAQB0A/////8BAf////8AAAAAFWCJCgIAAAABABEAAABNZWFzdXJlU3F1YXJlbmVzcwEBDDwA" +
+           "LwEAQAkMPAAAAAv/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBEDwALgBEEDwAAAEA" +
+           "dAP/////AQH/////AAAAABVgiQoCAAAAAQAIAAAASGFzQ29yZHMBARI8AC8BAEAJEjwAAAAL/////wMD" +
+           "/////wEAAAAVYIkKAgAAAAAABwAAAEVVUmFuZ2UBARY8AC4ARBY8AAABAHQD/////wEB/////wAAAAAV" +
+           "YIkKAgAAAAEADQAAAE1lYXN1cmVNZXRob2QBARg8AC8BAEAJGDwAAAAL/////wMD/////wEAAAAVYIkK" +
+           "AgAAAAAABwAAAEVVUmFuZ2UBARw8AC4ARBw8AAABAHQD/////wEB/////wAAAAAVYIkKAgAAAAEADAAA" +
+           "AFN0YXJ0TWVhc3VyZQEBHjwALwEAQAkePAAAAAb/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVS" +
+           "YW5nZQEBIjwALgBEIjwAAAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RTdGF0ZQEB" +
+           "tDwALwEAQAm0PAAAAAz/////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBuDwALgBEuDwA" +
+           "AAEAdAP/////AQH/////AAAAABVgiQoCAAAAAQAKAAAASG9pc3RFcnJvcgEBujwALwEAQAm6PAAAAAb/" +
+           "////AwP/////AQAAABVgiQoCAAAAAAAHAAAARVVSYW5nZQEBvjwALgBEvjwAAAEAdAP/////AQH/////" +
+           "AAAAAA==";
         #endregion
         #endif
         #endregion
 
         #region Public Properties
         /// <summary>
-        /// A description for the My tags. Object.
+        /// A description for the Station1 Object.
         /// </summary>
         public InputState InputNode
         {

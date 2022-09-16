@@ -479,11 +479,13 @@ Public Class MainForm
             TxtWidth.Visible = True
             txtCLO.Visible = True
             LabelModel.Visible = True
-            ComboBoxModel.Visible = True
-            ComboBoxModel.Items.Clear()
-            For Each foundFile As String In My.Computer.FileSystem.GetFiles("..\ModelFiles")
-                ComboBoxModel.Items.Add(My.Computer.FileSystem.GetName(foundFile))
-            Next
+            ComboBoxModel.Visible = (ManualEdit = 1)
+            If (ManualEdit = 1) Then
+                ComboBoxModel.Items.Clear()
+                For Each foundFile As String In My.Computer.FileSystem.GetFiles("..\ModelFiles")
+                    ComboBoxModel.Items.Add(My.Computer.FileSystem.GetName(foundFile))
+                Next
+            End If
 
         Else
             Me.RollUpDistTableAdapter.Fill(Me.GalilHoistDataSet1.RollUpDist)
@@ -619,6 +621,7 @@ Public Class MainForm
                             txtDrop.BackColor = Color.White
                             TxtWidth.BackColor = Color.White
 
+                            SetModelEntered()
                             CheckHasCords()
                             If (HasCords = 1) Then
                                 txtCLO.Visible = True
@@ -627,6 +630,7 @@ Public Class MainForm
                                 txtCLO.Visible = False
                                 LabelCordLength.Visible = False
                             End If
+
                             lastinstruction = instructionLabel.Text
                             NextButton.Text = "START"
                             instructionLabel.Text = "MOUNT THE SHADE, THEN HIT START"
@@ -790,6 +794,7 @@ Public Class MainForm
                 txtPosition.Text = Val(GalilActVal_form.txtHomeoffset.Text)
                 lastposition = txtPosition.Text ' also set lastpositon to this position
                 Call GoToPosition()
+                ResetOpcSignals()
                 txtDrop.BackColor = Color.FromArgb(100, 100, 100) ' RGB(100, 100, 100)
                 txtDrop.Text = ""
                 TxtWidth.Text = ""
@@ -813,6 +818,7 @@ Public Class MainForm
 
         DoGoBack = False
     End Sub
+
 
     Private Sub ProductionCycleOrg()         ' original production cycle without measurements in it
 
@@ -932,7 +938,7 @@ Public Class MainForm
             Widthentered = False
             ok = False
         End If
-        If (ComboBoxModel.SelectedItem.ToString() <> "") Then
+        If (ComboBoxModel.SelectedItem.ToString() <> "") Or (ManualEdit = 0) Then
         Else
             Modelentered = False
             ok = False
@@ -1171,23 +1177,19 @@ Public Class MainForm
             If IsDBNull(value) Then
                 TxtWidth.Text = "" ' blank if dbnull values
             Else
-                Dim itemind As Integer = ComboBoxModel.FindString(CType(value, String) + ".xlsx")
+                If (ManualEdit = 1) Then
+                    Dim itemind As Integer = ComboBoxModel.FindString(CType(value, String) + ".xlsx")
 
-                ComboBoxModel.SelectedIndex = -1
-                If itemind > -1 Then
-                    ComboBoxModel.SelectedIndex = itemind
-                    ComboBoxModel.Refresh()
-                    Modelentered = True
-                    CheckHasCords()
-                    If (HasCords = 1) Then
-                        txtCLO.Visible = True
-                        LabelCordLength.Visible = True
+                    ComboBoxModel.SelectedIndex = -1
+                    If itemind > -1 Then
+                        ComboBoxModel.SelectedIndex = itemind
+                        ComboBoxModel.Refresh()
+                        SetModelEntered()
                     Else
-                        txtCLO.Visible = False
-                        LabelCordLength.Visible = False
+                        MsgBox("Modelfile not found")
                     End If
                 Else
-                    MsgBox("Modelfile not found")
+                    SetModelEntered()
                 End If
 
             End If
@@ -1237,13 +1239,52 @@ Public Class MainForm
 
     End Function
 
+    Private Sub SetModelEntered()
+        Modelentered = True
+        CheckHasCords()
+        If (HasCords = 1) Then
+            txtCLO.Visible = True
+            LabelCordLength.Visible = True
+        Else
+            txtCLO.Visible = False
+            LabelCordLength.Visible = False
+        End If
+    End Sub
+
 
     Private Sub UpdateOpcTags()
         If ManualEdit = 0 Then
             TextBoxOrderNr.Text = OpcSignals.SerialNumber
             txtDrop.Text = Format(OpcSignals.Drop, "####.000")
             TxtWidth.Text = Format(OpcSignals.Width, "####.000")
-            OpcSignals.MeasuredDropA = OpcSignals.MeasuredDropA + 1
+            If Modelentered = False Then
+                Modelentered = (OpcSignals.StartMeasure = 1)
+            End If
+
         End If
     End Sub
+
+    Private Sub ResetOpcSignals()
+        If ManualEdit = 0 Then
+            OpcSignals.SerialNumber = ""
+            OpcSignals.Drop = 0
+            OpcSignals.Width = 0
+            OpcSignals.MountOffSetVert = 0
+            OpcSignals.OffsetLaserOnProd = 0
+            OpcSignals.ToleranceWidthPlus = 0
+            OpcSignals.ToleranceDropPlus = 0
+            OpcSignals.ToleranceWidthMinus = 0
+            OpcSignals.ToleranceDropMinus = 0
+            OpcSignals.ToleranceDropDiff = 0
+            OpcSignals.BottomBarRadius = 0
+            OpcSignals.PrefMeasDist = 0
+            OpcSignals.Endcapcompensation = 0
+            OpcSignals.MeasureDrop = 0
+            OpcSignals.MeasureWidth = 0
+            OpcSignals.MeasureSquareness = 0
+            OpcSignals.HasCords = 0
+            OpcSignals.MeasureMethod = 0
+        End If
+    End Sub
+
 End Class

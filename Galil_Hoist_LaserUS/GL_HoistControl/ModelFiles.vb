@@ -113,7 +113,7 @@ Public Class ModelFiles
         Return Ok
     End Function
 
-    Public Function OpenReadModelAsFile(ByVal aName As String, ByRef aModelDatSet As tModelDat) As Boolean
+    Private Function OpenReadModelAsFile(ByVal aName As String, ByRef aModelDatSet As tModelDat) As Boolean
         Dim Ok = True
         ModelFileName = aName
         connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;" & "Data Source= " & ModelFileName & " ;" & "Extended Properties=Excel 12.0;"

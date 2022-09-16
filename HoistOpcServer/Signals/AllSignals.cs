@@ -16,7 +16,10 @@ namespace HoistOpcServer
         public AllSignals(StandardServer server)
         {
             FindNodes(server);
+            SetInputDefaults();
+            SetOutputDefaults();
         }
+
 
         private void FindNodes(StandardServer server)
         {
@@ -27,85 +30,117 @@ namespace HoistOpcServer
             inputNode = (BaseObjectState)manager
                 .FindPredefinedNode(new NodeId(OPCUAServer.Objects.OPCUAServer1_InputNode, manager.NamespaceIndexes[0]), typeof(BaseObjectState))
                 as InputState;
+        }
 
-            inputNode.SerialNrIn.Value = "HiQst";
-            inputNode.Drop.Value = 25.125;
-            inputNode.Width.Value = 42.125;
-            inputNode.MeasuredDropA.Value = 0;
+        public void SetInputDefaults()
+        {
+            SerialNumber = string.Empty;
+            Drop = 0;
+            Width = 0;
+            MountOffSetVert = 0;
+            OffsetLaserOnProd = 0;
+            ToleranceWidthPlus = 0;
+            ToleranceDropPlus = 0;
+            ToleranceWidthMinus = 0;
+            ToleranceDropMinus = 0;
+            ToleranceDropDiff = 0;
+            BottomBarRadius = 0;
+            PrefMeasDist = 0;
+            Endcapcompensation = 0;
+            MeasureDrop = 0;
+            MeasureWidth = 0;
+            MeasureSquareness = 0;
+            HasCords = 0;
+            MeasureMethod = 0;
+            StartMeasure = 0;
+            Approved = false;
+            Retry = false;
+            Reject = false;
+        }
 
-            //foreach (var m in server.CurrentInstance.NodeManager.NodeManagers)
-            //{
-            //    if (m is MySiteNodeManager ms)
-            //    {
-            //        manager = ms;
-            //        break;
-            //    }
-            //}
-
-            //var input = (BaseObjectState)manager.FindPredefinedNode(new NodeId(OPCUAServer.Objects.OPCUAServer1_InputNode, manager.NamespaceIndexes[0]), typeof(BaseObjectState));
-            //if (input is InputState s)
-            //{
-            //    inputNode = s;
-            //}
+        public void SetOutputDefaults()
+        {
+            DateTime = string.Empty;
+            SerialNumberOut = string.Empty;
+            MeasuredDropA = 0;
+            MeasuredDropB = 0;
+            MeasuredDropC = 0;
+            DeltaDrop = 0;
+            MeasuredWidth = 0;
+            HoistState = "Idle";
+            HoistError = 0;
         }
 
         #region Input to Hoist
 
-        public string SerialNumber { get => inputNode.SerialNrIn.Value; private set => inputNode.SerialNrIn.Value = value; }
+        public string SerialNumber { get => inputNode.SerialNrIn.Value; set => inputNode.SerialNrIn.Value = value; } 
 
-        public double Drop { get => inputNode.Drop.Value ; private set => inputNode.Drop.Value = value; }
+        public double Drop { get => inputNode.Drop.Value ; set => inputNode.Drop.Value = value; }
 
-        public double Width { get => inputNode.Width.Value; private set => inputNode.Width.Value = value; }
+        public double Width { get => inputNode.Width.Value; set => inputNode.Width.Value = value; }
 
-        public double MountOffSetVert { get; private set; }
+        public double MountOffSetVert { get => inputNode.MountOffSetVert.Value; set => inputNode.MountOffSetVert.Value = value; }
 
-        public double OffsetLaserOnProd { get; private set; }
+        public double OffsetLaserOnProd { get => inputNode.OffsetLaserOnProd.Value; set => inputNode.OffsetLaserOnProd.Value = value; }
 
-        public double ToleranceWidthPlus { get; private set; }
+        public double ToleranceWidthPlus { get => inputNode.ToleranceWidthPlus.Value; set => inputNode.ToleranceWidthPlus.Value = value; }
 
-        public double ToleranceDropPlus { get; private set; }
+        public double ToleranceDropPlus { get => inputNode.ToleranceDropPlus.Value; set => inputNode.ToleranceDropPlus.Value = value; }
 
-        public double ToleranceWidthMinus { get; private set; }
+        public double ToleranceWidthMinus { get => inputNode.ToleranceWidthMinus.Value; set => inputNode.ToleranceWidthMinus.Value = value; }
 
-        public double ToleranceDropMinus { get; private set; }
+        public double ToleranceDropMinus { get => inputNode.ToleranceDropMinus.Value; set => inputNode.ToleranceDropMinus.Value = value; }
 
-        public double ToleranceDropDiff { get; private set; }
+        public double ToleranceDropDiff { get => inputNode.ToleranceDropDiff.Value; set => inputNode.ToleranceDropDiff.Value = value; }
 
-        public double BottomBarRadius { get; private set; }
+        public double BottomBarRadius { get => inputNode.BottomBarRadius.Value; set => inputNode.BottomBarRadius.Value = value; }
 
-        public double PrefMeasDist { get; private set; }
+        public double PrefMeasDist { get => inputNode.PrefMeasDist.Value; set => inputNode.PrefMeasDist.Value = value; }
 
-        public double Endcapcompensation { get; private set; }
+        public double Endcapcompensation { get => inputNode.Endcapcompensation.Value; set => inputNode.Endcapcompensation.Value = value; }
 
-        public double MeasureDrop { get; private set; }
+        public double MeasureDrop { get => inputNode.MeasureDrop.Value; set => inputNode.MeasureDrop.Value = value; }
 
-        public double MeasureWidth { get; private set; }
+        public double MeasureWidth { get => inputNode.MeasureWidth.Value; set => inputNode.MeasureWidth.Value = value; }
 
-        public double MeasureSquareness { get; private set; }
+        public double MeasureSquareness { get => inputNode.MeasureSquareness.Value; set => inputNode.MeasureSquareness.Value = value; }
 
-        public double HasCords { get; private set; }
+        public double HasCords { get => inputNode.HasCords.Value; set => inputNode.HasCords.Value = value; }
 
-        public double MeasureMethod { get; private set; }
+        public double MeasureMethod { get => inputNode.MeasureMethod.Value; set => inputNode.MeasureMethod.Value = value; }
 
-        public int StartMeasure { get; set; }
+        public int StartMeasure { get => inputNode.StartMeasure.Value; set => inputNode.StartMeasure.Value = value; }
+
+        public bool Approved { get => inputNode.Approved.Value; set => inputNode.Approved.Value = value; }
+
+        public bool Retry { get => inputNode.Retry.Value; set => inputNode.Retry.Value = value; }
+
+        public bool Reject { get => inputNode.Rejected.Value; set => inputNode.Rejected.Value = value; }
 
         #endregion
 
         #region Output from Hoist
 
         public string DateTime { get => inputNode.DateTime.Value; set => inputNode.DateTime.Value = value; }
+
         public string SerialNumberOut { get => inputNode.SerialNrOut.Value; set => inputNode.SerialNrOut.Value = value; }
 
         public double MeasuredDropA { get => inputNode.MeasuredDropA.Value; set => inputNode.MeasuredDropA.Value = value; }
+
         public double MeasuredDropB { get => inputNode.MeasuredDropB.Value; set => inputNode.MeasuredDropB.Value = value; }
+
         public double MeasuredDropC { get => inputNode.MeasuredDropC.Value; set => inputNode.MeasuredDropC.Value = value; }
 
         public double DeltaDrop { get => inputNode.DeltaDrop.Value; set => inputNode.DeltaDrop.Value = value; }
+
         public double MeasuredWidth { get => inputNode.MeasuredWidth.Value; set => inputNode.MeasuredWidth.Value = value; }
+
+        public string HoistState { get => inputNode.HoistState.Value; set => inputNode.HoistState.Value = value; }
+
+        public int HoistError { get => inputNode.HoistError.Value; set => inputNode.HoistError.Value = value; }
+
 
         #endregion
 
-        // IN OR OUT?
-        public bool Approved { get => inputNode.Approved.Value; set => inputNode.Approved.Value = value; }
     }
 }
