@@ -1,15 +1,13 @@
 ﻿using Opc.Ua;
 using Opc.Ua.Server;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
 namespace OPCUAServer
 {
+    /// <summary>
+    /// NodeManager to handle the different nodes in the server
+    /// </summary>
     class MySiteNodeManager : CustomNodeManager2
     {
         private MySiteServerConfiguration mysite_configuration;
@@ -18,8 +16,7 @@ namespace OPCUAServer
         private InputState inputstate;
 
         public MySiteNodeManager(IServerInternal server, ApplicationConfiguration configuration)
-        :
-        base(server, configuration)
+            : base(server, configuration)
         {
             SystemContext.NodeIdFactory = this;
             string[] namespaceUrls = new string[2];
@@ -32,6 +29,7 @@ namespace OPCUAServer
                 mysite_configuration = new MySiteServerConfiguration();
             }
         }
+
         protected override NodeStateCollection LoadPredefinedNodes(ISystemContext context)
         {
             NodeStateCollection predefinedNodes = new NodeStateCollection();
@@ -42,8 +40,6 @@ namespace OPCUAServer
             return predefinedNodes;
         }
 
-        InputState inputNode;
-
         public override void CreateAddressSpace(IDictionary<NodeId, IList<IReference>> externalReferences)
         {
             lock (Lock)
@@ -53,22 +49,7 @@ namespace OPCUAServer
                 mysite_OPCUAServer1 = new OPCUAServerState(null);
                 mysite_OPCUAServer1.Create(SystemContext, passiveNode);
                 AddPredefinedNode(SystemContext, mysite_OPCUAServer1);
-                //For simulation only
-                var input = (BaseObjectState)FindPredefinedNode(new NodeId(OPCUAServer.Objects.OPCUAServer1_InputNode, NamespaceIndexes[0]), typeof(BaseObjectState));
-                if (input is InputState s)
-                {
-                    inputNode = s;
-                }
-                // simulationTimer = new Timer(DoSimulationWork, null, 100, 5000);
             }
-        }
-        public void DoSimulationWork(object state)
-        {
-            if (inputNode != null)
-            {
-                inputNode.Drop.Value = new Random().NextDouble() * 100;
-            }
-            //mysite_opcuaserver1.inputnode.datetime.value = "2022-09-12 13:12:10";
         }
     }
 }

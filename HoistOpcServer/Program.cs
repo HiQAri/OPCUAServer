@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Opc.Ua;
+﻿using Opc.Ua;
 using Opc.Ua.Configuration;
 using OPCUAServer;
+using System;
+using System.Windows.Forms;
 
 namespace HoistOpcServer
 {
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// The main entry point for the application if started as a standalone application.
         /// </summary>
         [STAThread]
         static void Main()

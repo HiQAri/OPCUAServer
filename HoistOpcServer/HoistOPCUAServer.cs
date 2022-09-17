@@ -4,12 +4,13 @@ using Opc.Ua.Configuration;
 using Opc.Ua.Server;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OPCUAServer
 {
+    /// <summary>
+    /// <c>HoistOPCUAServer</c> is intended to be used as entry point when this assembly is loaded as a dll.
+    /// The server is started in <see cref="Initialize"/>
+    /// </summary>
     public class HoistOPCUAServer : IDisposable
     {
         private bool isDisposed;
@@ -19,6 +20,9 @@ namespace OPCUAServer
 
         private List<string> endpoints = new List<string>();
 
+        /// <summary>
+        /// Initializes and start the server
+        /// </summary>
         public void Initialize()
         {
             application = new ApplicationInstance();
@@ -45,6 +49,9 @@ namespace OPCUAServer
             Signals = new AllSignals(server);
         }
 
+        /// <summary>
+        /// Access to all exposed Tags in the server for easy use by calling assembly
+        /// </summary>
         public AllSignals Signals { get; set; }
 
         public void Dispose()
@@ -64,6 +71,5 @@ namespace OPCUAServer
 
             isDisposed = true;
         }
-
     }
 }
