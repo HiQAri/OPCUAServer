@@ -764,6 +764,7 @@ Public Class MainForm
                     lastinstruction = instructionLabel.Text
                     instructionLabel.Text = "REMOVE THE SHADE"
                     txtDrop.BackColor = Color.FromArgb(100, 100, 100) ' RGB(100, 100, 100)
+                    ResetOpcSignals()
                     txtDrop.Text = ""
 
                     txtDrop.Focus() 'SetFocus()

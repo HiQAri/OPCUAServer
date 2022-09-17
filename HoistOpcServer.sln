@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.2092
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPCUAServer", "OPCUAServer\OPCUAServer.csproj", "{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HoistOpcServer", "HoistOpcServer\HoistOpcServer.csproj", "{544B319B-2A2A-4D37-98E2-3FB79F961B83}"
 EndProject
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "GL_HoistMeasurement", "Galil_Hoist_LaserUS\GL_HoistControl\GL_HoistMeasurement.vbproj", "{5FFC9974-F87A-4BA4-951B-CD3EE8F15521}"
@@ -19,18 +17,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Debug|x86.Build.0 = Debug|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Release|x86.ActiveCfg = Release|Any CPU
-		{AAFCB281-13A3-43E9-B230-C1B2BCACF8F2}.Release|x86.Build.0 = Release|Any CPU
 		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{544B319B-2A2A-4D37-98E2-3FB79F961B83}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU

@@ -93,7 +93,7 @@ namespace HoistOpcServer
             HoistError = 0;
         }
 
-#region Input to Hoist
+        #region Input to Hoist
 
         public string SerialNumber { get => inputNode.SerialNrIn.Value; set => inputNode.SerialNrIn.Value = value; } 
 
@@ -139,9 +139,9 @@ namespace HoistOpcServer
 
         public bool Reject { get => inputNode.Rejected.Value; set => inputNode.Rejected.Value = value; }
 
-#endregion
+        #endregion
 
-#region Output from Hoist
+        #region Output from Hoist
 
         public string Date { get => inputNode.Date.Value; set => inputNode.Date.Value = value; }
 
@@ -164,7 +164,7 @@ namespace HoistOpcServer
         public int HoistError { get => inputNode.HoistError.Value; set => inputNode.HoistError.Value = value; }
 
 
-#endregion
+        #endregion
 
     }
 }
