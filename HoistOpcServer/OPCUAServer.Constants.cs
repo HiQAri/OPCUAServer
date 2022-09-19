@@ -121,24 +121,14 @@ namespace OPCUAServer
         public const uint Input_Width_EURange = 15018;
 
         /// <summary>
-        /// The identifier for the Input_Date Variable.
+        /// The identifier for the Input_DateTime Variable.
         /// </summary>
-        public const uint Input_Date = 15564;
+        public const uint Input_DateTime = 15062;
 
         /// <summary>
-        /// The identifier for the Input_Date_EURange Variable.
+        /// The identifier for the Input_DateTime_EURange Variable.
         /// </summary>
-        public const uint Input_Date_EURange = 15568;
-
-        /// <summary>
-        /// The identifier for the Input_Time Variable.
-        /// </summary>
-        public const uint Input_Time = 15570;
-
-        /// <summary>
-        /// The identifier for the Input_Time_EURange Variable.
-        /// </summary>
-        public const uint Input_Time_EURange = 15574;
+        public const uint Input_DateTime_EURange = 15066;
 
         /// <summary>
         /// The identifier for the Input_SerialNrOut Variable.
@@ -201,34 +191,14 @@ namespace OPCUAServer
         public const uint Input_MeasuredWidth_EURange = 15060;
 
         /// <summary>
-        /// The identifier for the Input_Approved Variable.
+        /// The identifier for the Input_ResultFeedback Variable.
         /// </summary>
-        public const uint Input_Approved = 15062;
+        public const uint Input_ResultFeedback = 15020;
 
         /// <summary>
-        /// The identifier for the Input_Approved_EURange Variable.
+        /// The identifier for the Input_ResultFeedback_EURange Variable.
         /// </summary>
-        public const uint Input_Approved_EURange = 15066;
-
-        /// <summary>
-        /// The identifier for the Input_Retry Variable.
-        /// </summary>
-        public const uint Input_Retry = 15492;
-
-        /// <summary>
-        /// The identifier for the Input_Retry_EURange Variable.
-        /// </summary>
-        public const uint Input_Retry_EURange = 15496;
-
-        /// <summary>
-        /// The identifier for the Input_Rejected Variable.
-        /// </summary>
-        public const uint Input_Rejected = 15498;
-
-        /// <summary>
-        /// The identifier for the Input_Rejected_EURange Variable.
-        /// </summary>
-        public const uint Input_Rejected_EURange = 15502;
+        public const uint Input_ResultFeedback_EURange = 15024;
 
         /// <summary>
         /// The identifier for the Input_MountOffSetVert Variable.
@@ -441,24 +411,14 @@ namespace OPCUAServer
         public const uint OPCUAServerType_InputNode_Width_EURange = 15086;
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Date Variable.
+        /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Date = 15576;
+        public const uint OPCUAServerType_InputNode_DateTime = 15130;
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Date_EURange Variable.
+        /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Date_EURange = 15580;
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Time Variable.
-        /// </summary>
-        public const uint OPCUAServerType_InputNode_Time = 15582;
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Time_EURange Variable.
-        /// </summary>
-        public const uint OPCUAServerType_InputNode_Time_EURange = 15586;
+        public const uint OPCUAServerType_InputNode_DateTime_EURange = 15134;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
@@ -521,34 +481,14 @@ namespace OPCUAServer
         public const uint OPCUAServerType_InputNode_MeasuredWidth_EURange = 15128;
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Approved Variable.
+        /// The identifier for the OPCUAServerType_InputNode_ResultFeedback Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Approved = 15130;
+        public const uint OPCUAServerType_InputNode_ResultFeedback = 15088;
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Approved_EURange Variable.
+        /// The identifier for the OPCUAServerType_InputNode_ResultFeedback_EURange Variable.
         /// </summary>
-        public const uint OPCUAServerType_InputNode_Approved_EURange = 15134;
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Retry Variable.
-        /// </summary>
-        public const uint OPCUAServerType_InputNode_Retry = 15504;
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Retry_EURange Variable.
-        /// </summary>
-        public const uint OPCUAServerType_InputNode_Retry_EURange = 15508;
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Rejected Variable.
-        /// </summary>
-        public const uint OPCUAServerType_InputNode_Rejected = 15510;
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Rejected_EURange Variable.
-        /// </summary>
-        public const uint OPCUAServerType_InputNode_Rejected_EURange = 15514;
+        public const uint OPCUAServerType_InputNode_ResultFeedback_EURange = 15092;
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MountOffSetVert Variable.
@@ -761,24 +701,14 @@ namespace OPCUAServer
         public const uint OPCUAServer1_InputNode_Width_EURange = 15154;
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Date Variable.
+        /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Date = 15588;
+        public const uint OPCUAServer1_InputNode_DateTime = 15198;
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Date_EURange Variable.
+        /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Date_EURange = 15592;
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Time Variable.
-        /// </summary>
-        public const uint OPCUAServer1_InputNode_Time = 15594;
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Time_EURange Variable.
-        /// </summary>
-        public const uint OPCUAServer1_InputNode_Time_EURange = 15598;
+        public const uint OPCUAServer1_InputNode_DateTime_EURange = 15202;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
@@ -841,34 +771,14 @@ namespace OPCUAServer
         public const uint OPCUAServer1_InputNode_MeasuredWidth_EURange = 15196;
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Approved Variable.
+        /// The identifier for the OPCUAServer1_InputNode_ResultFeedback Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Approved = 15198;
+        public const uint OPCUAServer1_InputNode_ResultFeedback = 15156;
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Approved_EURange Variable.
+        /// The identifier for the OPCUAServer1_InputNode_ResultFeedback_EURange Variable.
         /// </summary>
-        public const uint OPCUAServer1_InputNode_Approved_EURange = 15202;
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Retry Variable.
-        /// </summary>
-        public const uint OPCUAServer1_InputNode_Retry = 15516;
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Retry_EURange Variable.
-        /// </summary>
-        public const uint OPCUAServer1_InputNode_Retry_EURange = 15520;
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Rejected Variable.
-        /// </summary>
-        public const uint OPCUAServer1_InputNode_Rejected = 15522;
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Rejected_EURange Variable.
-        /// </summary>
-        public const uint OPCUAServer1_InputNode_Rejected_EURange = 15526;
+        public const uint OPCUAServer1_InputNode_ResultFeedback_EURange = 15160;
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MountOffSetVert Variable.
@@ -1136,24 +1046,14 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId Input_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Input_Date Variable.
+        /// The identifier for the Input_DateTime Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Input_Date = new ExpandedNodeId(OPCUAServer.Variables.Input_Date, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_DateTime = new ExpandedNodeId(OPCUAServer.Variables.Input_DateTime, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Input_Date_EURange Variable.
+        /// The identifier for the Input_DateTime_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Input_Date_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Date_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Input_Time Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId Input_Time = new ExpandedNodeId(OPCUAServer.Variables.Input_Time, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Input_Time_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId Input_Time_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Time_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the Input_SerialNrOut Variable.
@@ -1216,34 +1116,14 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId Input_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Input_Approved Variable.
+        /// The identifier for the Input_ResultFeedback Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Input_Approved = new ExpandedNodeId(OPCUAServer.Variables.Input_Approved, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_ResultFeedback = new ExpandedNodeId(OPCUAServer.Variables.Input_ResultFeedback, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the Input_Approved_EURange Variable.
+        /// The identifier for the Input_ResultFeedback_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Input_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Input_Retry Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId Input_Retry = new ExpandedNodeId(OPCUAServer.Variables.Input_Retry, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Input_Retry_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId Input_Retry_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Retry_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Input_Rejected Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId Input_Rejected = new ExpandedNodeId(OPCUAServer.Variables.Input_Rejected, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the Input_Rejected_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId Input_Rejected_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_Rejected_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId Input_ResultFeedback_EURange = new ExpandedNodeId(OPCUAServer.Variables.Input_ResultFeedback_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the Input_MountOffSetVert Variable.
@@ -1456,24 +1336,14 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServerType_InputNode_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Date Variable.
+        /// The identifier for the OPCUAServerType_InputNode_DateTime Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Date = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Date, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DateTime = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DateTime, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Date_EURange Variable.
+        /// The identifier for the OPCUAServerType_InputNode_DateTime_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Date_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Date_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Time Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Time = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Time, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Time_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Time_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Time_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_SerialNrOut Variable.
@@ -1536,34 +1406,14 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServerType_InputNode_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Approved Variable.
+        /// The identifier for the OPCUAServerType_InputNode_ResultFeedback Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Approved = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Approved, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ResultFeedback = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ResultFeedback, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Approved_EURange Variable.
+        /// The identifier for the OPCUAServerType_InputNode_ResultFeedback_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Retry Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Retry = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Retry, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Retry_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Retry_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Retry_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Rejected Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Rejected = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Rejected, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServerType_InputNode_Rejected_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServerType_InputNode_Rejected_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_Rejected_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServerType_InputNode_ResultFeedback_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServerType_InputNode_ResultFeedback_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServerType_InputNode_MountOffSetVert Variable.
@@ -1776,24 +1626,14 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_Width_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Width_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Date Variable.
+        /// The identifier for the OPCUAServer1_InputNode_DateTime Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Date = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Date, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DateTime = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DateTime, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Date_EURange Variable.
+        /// The identifier for the OPCUAServer1_InputNode_DateTime_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Date_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Date_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Time Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Time = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Time, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Time_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Time_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Time_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_DateTime_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_DateTime_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_SerialNrOut Variable.
@@ -1856,34 +1696,14 @@ namespace OPCUAServer
         public static readonly ExpandedNodeId OPCUAServer1_InputNode_MeasuredWidth_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_MeasuredWidth_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Approved Variable.
+        /// The identifier for the OPCUAServer1_InputNode_ResultFeedback Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Approved = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Approved, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ResultFeedback = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ResultFeedback, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Approved_EURange Variable.
+        /// The identifier for the OPCUAServer1_InputNode_ResultFeedback_EURange Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Approved_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Approved_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Retry Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Retry = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Retry, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Retry_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Retry_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Retry_EURange, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Rejected Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Rejected = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Rejected, OPCUAServer.Namespaces.OPCUAServer);
-
-        /// <summary>
-        /// The identifier for the OPCUAServer1_InputNode_Rejected_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OPCUAServer1_InputNode_Rejected_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_Rejected_EURange, OPCUAServer.Namespaces.OPCUAServer);
+        public static readonly ExpandedNodeId OPCUAServer1_InputNode_ResultFeedback_EURange = new ExpandedNodeId(OPCUAServer.Variables.OPCUAServer1_InputNode_ResultFeedback_EURange, OPCUAServer.Namespaces.OPCUAServer);
 
         /// <summary>
         /// The identifier for the OPCUAServer1_InputNode_MountOffSetVert Variable.
@@ -2075,19 +1895,14 @@ namespace OPCUAServer
     public static partial class BrowseNames
     {
         /// <summary>
-        /// The BrowseName for the Approved component.
-        /// </summary>
-        public const string Approved = "Approved";
-
-        /// <summary>
         /// The BrowseName for the BottomBarRadius component.
         /// </summary>
         public const string BottomBarRadius = "BottomBarRadius";
 
         /// <summary>
-        /// The BrowseName for the Date component.
+        /// The BrowseName for the DateTime component.
         /// </summary>
-        public const string Date = "Date";
+        public const string DateTime = "DateTime";
 
         /// <summary>
         /// The BrowseName for the DeltaDrop component.
@@ -2195,14 +2010,9 @@ namespace OPCUAServer
         public const string PrefMeasDist = "PrefMeasDist";
 
         /// <summary>
-        /// The BrowseName for the Rejected component.
+        /// The BrowseName for the ResultFeedback component.
         /// </summary>
-        public const string Rejected = "Rejected";
-
-        /// <summary>
-        /// The BrowseName for the Retry component.
-        /// </summary>
-        public const string Retry = "Retry";
+        public const string ResultFeedback = "ResultFeedback";
 
         /// <summary>
         /// The BrowseName for the SerialNrIn component.
@@ -2218,11 +2028,6 @@ namespace OPCUAServer
         /// The BrowseName for the StartMeasure component.
         /// </summary>
         public const string StartMeasure = "StartMeasure";
-
-        /// <summary>
-        /// The BrowseName for the Time component.
-        /// </summary>
-        public const string Time = "Time";
 
         /// <summary>
         /// The BrowseName for the ToleranceDropDiff component.

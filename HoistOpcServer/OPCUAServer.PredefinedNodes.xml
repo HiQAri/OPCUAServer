@@ -175,14 +175,14 @@
         <uax:UserAccessLevel>1</uax:UserAccessLevel>
       </EURange>
     </Width>
-    <Date>
+    <DateTime>
       <uax:NodeClass>Variable_2</uax:NodeClass>
       <uax:NodeId>
-        <uax:Identifier>ns=1;i=15564</uax:Identifier>
+        <uax:Identifier>ns=1;i=15062</uax:Identifier>
       </uax:NodeId>
       <uax:BrowseName>
         <uax:NamespaceIndex>1</uax:NamespaceIndex>
-        <uax:Name>Date</uax:Name>
+        <uax:Name>DateTime</uax:Name>
       </uax:BrowseName>
       <uax:ReferenceTypeId>
         <uax:Identifier>i=47</uax:Identifier>
@@ -193,7 +193,7 @@
       <uax:ModellingRuleId>
         <uax:Identifier>i=78</uax:Identifier>
       </uax:ModellingRuleId>
-      <uax:NumericId>15564</uax:NumericId>
+      <uax:NumericId>15062</uax:NumericId>
       <uax:DataType>
         <uax:Identifier>i=12</uax:Identifier>
       </uax:DataType>
@@ -203,7 +203,7 @@
       <EURange xmlns="http://opcfoundation.org/UA/">
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
-          <uax:Identifier>ns=1;i=15568</uax:Identifier>
+          <uax:Identifier>ns=1;i=15066</uax:Identifier>
         </uax:NodeId>
         <uax:BrowseName>
           <uax:NamespaceIndex>0</uax:NamespaceIndex>
@@ -218,7 +218,7 @@
         <uax:ModellingRuleId>
           <uax:Identifier>i=78</uax:Identifier>
         </uax:ModellingRuleId>
-        <uax:NumericId>15568</uax:NumericId>
+        <uax:NumericId>15066</uax:NumericId>
         <uax:DataType>
           <uax:Identifier>i=884</uax:Identifier>
         </uax:DataType>
@@ -226,59 +226,7 @@
         <uax:AccessLevel>1</uax:AccessLevel>
         <uax:UserAccessLevel>1</uax:UserAccessLevel>
       </EURange>
-    </Date>
-    <Time>
-      <uax:NodeClass>Variable_2</uax:NodeClass>
-      <uax:NodeId>
-        <uax:Identifier>ns=1;i=15570</uax:Identifier>
-      </uax:NodeId>
-      <uax:BrowseName>
-        <uax:NamespaceIndex>1</uax:NamespaceIndex>
-        <uax:Name>Time</uax:Name>
-      </uax:BrowseName>
-      <uax:ReferenceTypeId>
-        <uax:Identifier>i=47</uax:Identifier>
-      </uax:ReferenceTypeId>
-      <uax:TypeDefinitionId>
-        <uax:Identifier>i=2368</uax:Identifier>
-      </uax:TypeDefinitionId>
-      <uax:ModellingRuleId>
-        <uax:Identifier>i=78</uax:Identifier>
-      </uax:ModellingRuleId>
-      <uax:NumericId>15570</uax:NumericId>
-      <uax:DataType>
-        <uax:Identifier>i=12</uax:Identifier>
-      </uax:DataType>
-      <uax:ValueRank>-1</uax:ValueRank>
-      <uax:AccessLevel>3</uax:AccessLevel>
-      <uax:UserAccessLevel>3</uax:UserAccessLevel>
-      <EURange xmlns="http://opcfoundation.org/UA/">
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15574</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>0</uax:NamespaceIndex>
-          <uax:Name>EURange</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=46</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=68</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:ModellingRuleId>
-          <uax:Identifier>i=78</uax:Identifier>
-        </uax:ModellingRuleId>
-        <uax:NumericId>15574</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=884</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>1</uax:AccessLevel>
-        <uax:UserAccessLevel>1</uax:UserAccessLevel>
-      </EURange>
-    </Time>
+    </DateTime>
     <SerialNrOut>
       <uax:NodeClass>Variable_2</uax:NodeClass>
       <uax:NodeId>
@@ -591,14 +539,14 @@
         <uax:UserAccessLevel>1</uax:UserAccessLevel>
       </EURange>
     </MeasuredWidth>
-    <Approved>
+    <ResultFeedback>
       <uax:NodeClass>Variable_2</uax:NodeClass>
       <uax:NodeId>
-        <uax:Identifier>ns=1;i=15062</uax:Identifier>
+        <uax:Identifier>ns=1;i=15020</uax:Identifier>
       </uax:NodeId>
       <uax:BrowseName>
         <uax:NamespaceIndex>1</uax:NamespaceIndex>
-        <uax:Name>Approved</uax:Name>
+        <uax:Name>ResultFeedback</uax:Name>
       </uax:BrowseName>
       <uax:ReferenceTypeId>
         <uax:Identifier>i=47</uax:Identifier>
@@ -609,9 +557,9 @@
       <uax:ModellingRuleId>
         <uax:Identifier>i=78</uax:Identifier>
       </uax:ModellingRuleId>
-      <uax:NumericId>15062</uax:NumericId>
+      <uax:NumericId>15020</uax:NumericId>
       <uax:DataType>
-        <uax:Identifier>i=1</uax:Identifier>
+        <uax:Identifier>i=6</uax:Identifier>
       </uax:DataType>
       <uax:ValueRank>-1</uax:ValueRank>
       <uax:AccessLevel>3</uax:AccessLevel>
@@ -619,7 +567,7 @@
       <EURange xmlns="http://opcfoundation.org/UA/">
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
-          <uax:Identifier>ns=1;i=15066</uax:Identifier>
+          <uax:Identifier>ns=1;i=15024</uax:Identifier>
         </uax:NodeId>
         <uax:BrowseName>
           <uax:NamespaceIndex>0</uax:NamespaceIndex>
@@ -634,7 +582,7 @@
         <uax:ModellingRuleId>
           <uax:Identifier>i=78</uax:Identifier>
         </uax:ModellingRuleId>
-        <uax:NumericId>15066</uax:NumericId>
+        <uax:NumericId>15024</uax:NumericId>
         <uax:DataType>
           <uax:Identifier>i=884</uax:Identifier>
         </uax:DataType>
@@ -642,111 +590,7 @@
         <uax:AccessLevel>1</uax:AccessLevel>
         <uax:UserAccessLevel>1</uax:UserAccessLevel>
       </EURange>
-    </Approved>
-    <Retry>
-      <uax:NodeClass>Variable_2</uax:NodeClass>
-      <uax:NodeId>
-        <uax:Identifier>ns=1;i=15492</uax:Identifier>
-      </uax:NodeId>
-      <uax:BrowseName>
-        <uax:NamespaceIndex>1</uax:NamespaceIndex>
-        <uax:Name>Retry</uax:Name>
-      </uax:BrowseName>
-      <uax:ReferenceTypeId>
-        <uax:Identifier>i=47</uax:Identifier>
-      </uax:ReferenceTypeId>
-      <uax:TypeDefinitionId>
-        <uax:Identifier>i=2368</uax:Identifier>
-      </uax:TypeDefinitionId>
-      <uax:ModellingRuleId>
-        <uax:Identifier>i=78</uax:Identifier>
-      </uax:ModellingRuleId>
-      <uax:NumericId>15492</uax:NumericId>
-      <uax:DataType>
-        <uax:Identifier>i=1</uax:Identifier>
-      </uax:DataType>
-      <uax:ValueRank>-1</uax:ValueRank>
-      <uax:AccessLevel>3</uax:AccessLevel>
-      <uax:UserAccessLevel>3</uax:UserAccessLevel>
-      <EURange xmlns="http://opcfoundation.org/UA/">
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15496</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>0</uax:NamespaceIndex>
-          <uax:Name>EURange</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=46</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=68</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:ModellingRuleId>
-          <uax:Identifier>i=78</uax:Identifier>
-        </uax:ModellingRuleId>
-        <uax:NumericId>15496</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=884</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>1</uax:AccessLevel>
-        <uax:UserAccessLevel>1</uax:UserAccessLevel>
-      </EURange>
-    </Retry>
-    <Rejected>
-      <uax:NodeClass>Variable_2</uax:NodeClass>
-      <uax:NodeId>
-        <uax:Identifier>ns=1;i=15498</uax:Identifier>
-      </uax:NodeId>
-      <uax:BrowseName>
-        <uax:NamespaceIndex>1</uax:NamespaceIndex>
-        <uax:Name>Rejected</uax:Name>
-      </uax:BrowseName>
-      <uax:ReferenceTypeId>
-        <uax:Identifier>i=47</uax:Identifier>
-      </uax:ReferenceTypeId>
-      <uax:TypeDefinitionId>
-        <uax:Identifier>i=2368</uax:Identifier>
-      </uax:TypeDefinitionId>
-      <uax:ModellingRuleId>
-        <uax:Identifier>i=78</uax:Identifier>
-      </uax:ModellingRuleId>
-      <uax:NumericId>15498</uax:NumericId>
-      <uax:DataType>
-        <uax:Identifier>i=1</uax:Identifier>
-      </uax:DataType>
-      <uax:ValueRank>-1</uax:ValueRank>
-      <uax:AccessLevel>3</uax:AccessLevel>
-      <uax:UserAccessLevel>3</uax:UserAccessLevel>
-      <EURange xmlns="http://opcfoundation.org/UA/">
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15502</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>0</uax:NamespaceIndex>
-          <uax:Name>EURange</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=46</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=68</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:ModellingRuleId>
-          <uax:Identifier>i=78</uax:Identifier>
-        </uax:ModellingRuleId>
-        <uax:NumericId>15502</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=884</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>1</uax:AccessLevel>
-        <uax:UserAccessLevel>1</uax:UserAccessLevel>
-      </EURange>
-    </Rejected>
+    </ResultFeedback>
     <MountOffSetVert>
       <uax:NodeClass>Variable_2</uax:NodeClass>
       <uax:NodeId>
@@ -1876,14 +1720,14 @@
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
       </Width>
-      <Date>
+      <DateTime>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
-          <uax:Identifier>ns=1;i=15576</uax:Identifier>
+          <uax:Identifier>ns=1;i=15130</uax:Identifier>
         </uax:NodeId>
         <uax:BrowseName>
           <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Date</uax:Name>
+          <uax:Name>DateTime</uax:Name>
         </uax:BrowseName>
         <uax:ReferenceTypeId>
           <uax:Identifier>i=47</uax:Identifier>
@@ -1894,7 +1738,7 @@
         <uax:ModellingRuleId>
           <uax:Identifier>i=78</uax:Identifier>
         </uax:ModellingRuleId>
-        <uax:NumericId>15576</uax:NumericId>
+        <uax:NumericId>15130</uax:NumericId>
         <uax:DataType>
           <uax:Identifier>i=12</uax:Identifier>
         </uax:DataType>
@@ -1904,7 +1748,7 @@
         <EURange xmlns="http://opcfoundation.org/UA/">
           <uax:NodeClass>Variable_2</uax:NodeClass>
           <uax:NodeId>
-            <uax:Identifier>ns=1;i=15580</uax:Identifier>
+            <uax:Identifier>ns=1;i=15134</uax:Identifier>
           </uax:NodeId>
           <uax:BrowseName>
             <uax:NamespaceIndex>0</uax:NamespaceIndex>
@@ -1919,7 +1763,7 @@
           <uax:ModellingRuleId>
             <uax:Identifier>i=78</uax:Identifier>
           </uax:ModellingRuleId>
-          <uax:NumericId>15580</uax:NumericId>
+          <uax:NumericId>15134</uax:NumericId>
           <uax:DataType>
             <uax:Identifier>i=884</uax:Identifier>
           </uax:DataType>
@@ -1927,59 +1771,7 @@
           <uax:AccessLevel>1</uax:AccessLevel>
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
-      </Date>
-      <Time>
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15582</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Time</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=47</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=2368</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:ModellingRuleId>
-          <uax:Identifier>i=78</uax:Identifier>
-        </uax:ModellingRuleId>
-        <uax:NumericId>15582</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=12</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>3</uax:AccessLevel>
-        <uax:UserAccessLevel>3</uax:UserAccessLevel>
-        <EURange xmlns="http://opcfoundation.org/UA/">
-          <uax:NodeClass>Variable_2</uax:NodeClass>
-          <uax:NodeId>
-            <uax:Identifier>ns=1;i=15586</uax:Identifier>
-          </uax:NodeId>
-          <uax:BrowseName>
-            <uax:NamespaceIndex>0</uax:NamespaceIndex>
-            <uax:Name>EURange</uax:Name>
-          </uax:BrowseName>
-          <uax:ReferenceTypeId>
-            <uax:Identifier>i=46</uax:Identifier>
-          </uax:ReferenceTypeId>
-          <uax:TypeDefinitionId>
-            <uax:Identifier>i=68</uax:Identifier>
-          </uax:TypeDefinitionId>
-          <uax:ModellingRuleId>
-            <uax:Identifier>i=78</uax:Identifier>
-          </uax:ModellingRuleId>
-          <uax:NumericId>15586</uax:NumericId>
-          <uax:DataType>
-            <uax:Identifier>i=884</uax:Identifier>
-          </uax:DataType>
-          <uax:ValueRank>-1</uax:ValueRank>
-          <uax:AccessLevel>1</uax:AccessLevel>
-          <uax:UserAccessLevel>1</uax:UserAccessLevel>
-        </EURange>
-      </Time>
+      </DateTime>
       <SerialNrOut>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
@@ -2292,14 +2084,14 @@
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
       </MeasuredWidth>
-      <Approved>
+      <ResultFeedback>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
-          <uax:Identifier>ns=1;i=15130</uax:Identifier>
+          <uax:Identifier>ns=1;i=15088</uax:Identifier>
         </uax:NodeId>
         <uax:BrowseName>
           <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Approved</uax:Name>
+          <uax:Name>ResultFeedback</uax:Name>
         </uax:BrowseName>
         <uax:ReferenceTypeId>
           <uax:Identifier>i=47</uax:Identifier>
@@ -2310,9 +2102,9 @@
         <uax:ModellingRuleId>
           <uax:Identifier>i=78</uax:Identifier>
         </uax:ModellingRuleId>
-        <uax:NumericId>15130</uax:NumericId>
+        <uax:NumericId>15088</uax:NumericId>
         <uax:DataType>
-          <uax:Identifier>i=1</uax:Identifier>
+          <uax:Identifier>i=6</uax:Identifier>
         </uax:DataType>
         <uax:ValueRank>-1</uax:ValueRank>
         <uax:AccessLevel>3</uax:AccessLevel>
@@ -2320,7 +2112,7 @@
         <EURange xmlns="http://opcfoundation.org/UA/">
           <uax:NodeClass>Variable_2</uax:NodeClass>
           <uax:NodeId>
-            <uax:Identifier>ns=1;i=15134</uax:Identifier>
+            <uax:Identifier>ns=1;i=15092</uax:Identifier>
           </uax:NodeId>
           <uax:BrowseName>
             <uax:NamespaceIndex>0</uax:NamespaceIndex>
@@ -2335,7 +2127,7 @@
           <uax:ModellingRuleId>
             <uax:Identifier>i=78</uax:Identifier>
           </uax:ModellingRuleId>
-          <uax:NumericId>15134</uax:NumericId>
+          <uax:NumericId>15092</uax:NumericId>
           <uax:DataType>
             <uax:Identifier>i=884</uax:Identifier>
           </uax:DataType>
@@ -2343,111 +2135,7 @@
           <uax:AccessLevel>1</uax:AccessLevel>
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
-      </Approved>
-      <Retry>
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15504</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Retry</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=47</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=2368</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:ModellingRuleId>
-          <uax:Identifier>i=78</uax:Identifier>
-        </uax:ModellingRuleId>
-        <uax:NumericId>15504</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=1</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>3</uax:AccessLevel>
-        <uax:UserAccessLevel>3</uax:UserAccessLevel>
-        <EURange xmlns="http://opcfoundation.org/UA/">
-          <uax:NodeClass>Variable_2</uax:NodeClass>
-          <uax:NodeId>
-            <uax:Identifier>ns=1;i=15508</uax:Identifier>
-          </uax:NodeId>
-          <uax:BrowseName>
-            <uax:NamespaceIndex>0</uax:NamespaceIndex>
-            <uax:Name>EURange</uax:Name>
-          </uax:BrowseName>
-          <uax:ReferenceTypeId>
-            <uax:Identifier>i=46</uax:Identifier>
-          </uax:ReferenceTypeId>
-          <uax:TypeDefinitionId>
-            <uax:Identifier>i=68</uax:Identifier>
-          </uax:TypeDefinitionId>
-          <uax:ModellingRuleId>
-            <uax:Identifier>i=78</uax:Identifier>
-          </uax:ModellingRuleId>
-          <uax:NumericId>15508</uax:NumericId>
-          <uax:DataType>
-            <uax:Identifier>i=884</uax:Identifier>
-          </uax:DataType>
-          <uax:ValueRank>-1</uax:ValueRank>
-          <uax:AccessLevel>1</uax:AccessLevel>
-          <uax:UserAccessLevel>1</uax:UserAccessLevel>
-        </EURange>
-      </Retry>
-      <Rejected>
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15510</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Rejected</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=47</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=2368</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:ModellingRuleId>
-          <uax:Identifier>i=78</uax:Identifier>
-        </uax:ModellingRuleId>
-        <uax:NumericId>15510</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=1</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>3</uax:AccessLevel>
-        <uax:UserAccessLevel>3</uax:UserAccessLevel>
-        <EURange xmlns="http://opcfoundation.org/UA/">
-          <uax:NodeClass>Variable_2</uax:NodeClass>
-          <uax:NodeId>
-            <uax:Identifier>ns=1;i=15514</uax:Identifier>
-          </uax:NodeId>
-          <uax:BrowseName>
-            <uax:NamespaceIndex>0</uax:NamespaceIndex>
-            <uax:Name>EURange</uax:Name>
-          </uax:BrowseName>
-          <uax:ReferenceTypeId>
-            <uax:Identifier>i=46</uax:Identifier>
-          </uax:ReferenceTypeId>
-          <uax:TypeDefinitionId>
-            <uax:Identifier>i=68</uax:Identifier>
-          </uax:TypeDefinitionId>
-          <uax:ModellingRuleId>
-            <uax:Identifier>i=78</uax:Identifier>
-          </uax:ModellingRuleId>
-          <uax:NumericId>15514</uax:NumericId>
-          <uax:DataType>
-            <uax:Identifier>i=884</uax:Identifier>
-          </uax:DataType>
-          <uax:ValueRank>-1</uax:ValueRank>
-          <uax:AccessLevel>1</uax:AccessLevel>
-          <uax:UserAccessLevel>1</uax:UserAccessLevel>
-        </EURange>
-      </Rejected>
+      </ResultFeedback>
       <MountOffSetVert>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
@@ -3569,14 +3257,14 @@
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
       </Width>
-      <Date>
+      <DateTime>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
-          <uax:Identifier>ns=1;i=15588</uax:Identifier>
+          <uax:Identifier>ns=1;i=15198</uax:Identifier>
         </uax:NodeId>
         <uax:BrowseName>
           <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Date</uax:Name>
+          <uax:Name>DateTime</uax:Name>
         </uax:BrowseName>
         <uax:ReferenceTypeId>
           <uax:Identifier>i=47</uax:Identifier>
@@ -3584,7 +3272,7 @@
         <uax:TypeDefinitionId>
           <uax:Identifier>i=2368</uax:Identifier>
         </uax:TypeDefinitionId>
-        <uax:NumericId>15588</uax:NumericId>
+        <uax:NumericId>15198</uax:NumericId>
         <uax:DataType>
           <uax:Identifier>i=12</uax:Identifier>
         </uax:DataType>
@@ -3594,7 +3282,7 @@
         <EURange xmlns="http://opcfoundation.org/UA/">
           <uax:NodeClass>Variable_2</uax:NodeClass>
           <uax:NodeId>
-            <uax:Identifier>ns=1;i=15592</uax:Identifier>
+            <uax:Identifier>ns=1;i=15202</uax:Identifier>
           </uax:NodeId>
           <uax:BrowseName>
             <uax:NamespaceIndex>0</uax:NamespaceIndex>
@@ -3606,7 +3294,7 @@
           <uax:TypeDefinitionId>
             <uax:Identifier>i=68</uax:Identifier>
           </uax:TypeDefinitionId>
-          <uax:NumericId>15592</uax:NumericId>
+          <uax:NumericId>15202</uax:NumericId>
           <uax:DataType>
             <uax:Identifier>i=884</uax:Identifier>
           </uax:DataType>
@@ -3614,53 +3302,7 @@
           <uax:AccessLevel>1</uax:AccessLevel>
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
-      </Date>
-      <Time>
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15594</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Time</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=47</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=2368</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:NumericId>15594</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=12</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>3</uax:AccessLevel>
-        <uax:UserAccessLevel>3</uax:UserAccessLevel>
-        <EURange xmlns="http://opcfoundation.org/UA/">
-          <uax:NodeClass>Variable_2</uax:NodeClass>
-          <uax:NodeId>
-            <uax:Identifier>ns=1;i=15598</uax:Identifier>
-          </uax:NodeId>
-          <uax:BrowseName>
-            <uax:NamespaceIndex>0</uax:NamespaceIndex>
-            <uax:Name>EURange</uax:Name>
-          </uax:BrowseName>
-          <uax:ReferenceTypeId>
-            <uax:Identifier>i=46</uax:Identifier>
-          </uax:ReferenceTypeId>
-          <uax:TypeDefinitionId>
-            <uax:Identifier>i=68</uax:Identifier>
-          </uax:TypeDefinitionId>
-          <uax:NumericId>15598</uax:NumericId>
-          <uax:DataType>
-            <uax:Identifier>i=884</uax:Identifier>
-          </uax:DataType>
-          <uax:ValueRank>-1</uax:ValueRank>
-          <uax:AccessLevel>1</uax:AccessLevel>
-          <uax:UserAccessLevel>1</uax:UserAccessLevel>
-        </EURange>
-      </Time>
+      </DateTime>
       <SerialNrOut>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
@@ -3937,14 +3579,14 @@
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
       </MeasuredWidth>
-      <Approved>
+      <ResultFeedback>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>
-          <uax:Identifier>ns=1;i=15198</uax:Identifier>
+          <uax:Identifier>ns=1;i=15156</uax:Identifier>
         </uax:NodeId>
         <uax:BrowseName>
           <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Approved</uax:Name>
+          <uax:Name>ResultFeedback</uax:Name>
         </uax:BrowseName>
         <uax:ReferenceTypeId>
           <uax:Identifier>i=47</uax:Identifier>
@@ -3952,9 +3594,9 @@
         <uax:TypeDefinitionId>
           <uax:Identifier>i=2368</uax:Identifier>
         </uax:TypeDefinitionId>
-        <uax:NumericId>15198</uax:NumericId>
+        <uax:NumericId>15156</uax:NumericId>
         <uax:DataType>
-          <uax:Identifier>i=1</uax:Identifier>
+          <uax:Identifier>i=6</uax:Identifier>
         </uax:DataType>
         <uax:ValueRank>-1</uax:ValueRank>
         <uax:AccessLevel>3</uax:AccessLevel>
@@ -3962,7 +3604,7 @@
         <EURange xmlns="http://opcfoundation.org/UA/">
           <uax:NodeClass>Variable_2</uax:NodeClass>
           <uax:NodeId>
-            <uax:Identifier>ns=1;i=15202</uax:Identifier>
+            <uax:Identifier>ns=1;i=15160</uax:Identifier>
           </uax:NodeId>
           <uax:BrowseName>
             <uax:NamespaceIndex>0</uax:NamespaceIndex>
@@ -3974,7 +3616,7 @@
           <uax:TypeDefinitionId>
             <uax:Identifier>i=68</uax:Identifier>
           </uax:TypeDefinitionId>
-          <uax:NumericId>15202</uax:NumericId>
+          <uax:NumericId>15160</uax:NumericId>
           <uax:DataType>
             <uax:Identifier>i=884</uax:Identifier>
           </uax:DataType>
@@ -3982,99 +3624,7 @@
           <uax:AccessLevel>1</uax:AccessLevel>
           <uax:UserAccessLevel>1</uax:UserAccessLevel>
         </EURange>
-      </Approved>
-      <Retry>
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15516</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Retry</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=47</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=2368</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:NumericId>15516</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=1</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>3</uax:AccessLevel>
-        <uax:UserAccessLevel>3</uax:UserAccessLevel>
-        <EURange xmlns="http://opcfoundation.org/UA/">
-          <uax:NodeClass>Variable_2</uax:NodeClass>
-          <uax:NodeId>
-            <uax:Identifier>ns=1;i=15520</uax:Identifier>
-          </uax:NodeId>
-          <uax:BrowseName>
-            <uax:NamespaceIndex>0</uax:NamespaceIndex>
-            <uax:Name>EURange</uax:Name>
-          </uax:BrowseName>
-          <uax:ReferenceTypeId>
-            <uax:Identifier>i=46</uax:Identifier>
-          </uax:ReferenceTypeId>
-          <uax:TypeDefinitionId>
-            <uax:Identifier>i=68</uax:Identifier>
-          </uax:TypeDefinitionId>
-          <uax:NumericId>15520</uax:NumericId>
-          <uax:DataType>
-            <uax:Identifier>i=884</uax:Identifier>
-          </uax:DataType>
-          <uax:ValueRank>-1</uax:ValueRank>
-          <uax:AccessLevel>1</uax:AccessLevel>
-          <uax:UserAccessLevel>1</uax:UserAccessLevel>
-        </EURange>
-      </Retry>
-      <Rejected>
-        <uax:NodeClass>Variable_2</uax:NodeClass>
-        <uax:NodeId>
-          <uax:Identifier>ns=1;i=15522</uax:Identifier>
-        </uax:NodeId>
-        <uax:BrowseName>
-          <uax:NamespaceIndex>1</uax:NamespaceIndex>
-          <uax:Name>Rejected</uax:Name>
-        </uax:BrowseName>
-        <uax:ReferenceTypeId>
-          <uax:Identifier>i=47</uax:Identifier>
-        </uax:ReferenceTypeId>
-        <uax:TypeDefinitionId>
-          <uax:Identifier>i=2368</uax:Identifier>
-        </uax:TypeDefinitionId>
-        <uax:NumericId>15522</uax:NumericId>
-        <uax:DataType>
-          <uax:Identifier>i=1</uax:Identifier>
-        </uax:DataType>
-        <uax:ValueRank>-1</uax:ValueRank>
-        <uax:AccessLevel>3</uax:AccessLevel>
-        <uax:UserAccessLevel>3</uax:UserAccessLevel>
-        <EURange xmlns="http://opcfoundation.org/UA/">
-          <uax:NodeClass>Variable_2</uax:NodeClass>
-          <uax:NodeId>
-            <uax:Identifier>ns=1;i=15526</uax:Identifier>
-          </uax:NodeId>
-          <uax:BrowseName>
-            <uax:NamespaceIndex>0</uax:NamespaceIndex>
-            <uax:Name>EURange</uax:Name>
-          </uax:BrowseName>
-          <uax:ReferenceTypeId>
-            <uax:Identifier>i=46</uax:Identifier>
-          </uax:ReferenceTypeId>
-          <uax:TypeDefinitionId>
-            <uax:Identifier>i=68</uax:Identifier>
-          </uax:TypeDefinitionId>
-          <uax:NumericId>15526</uax:NumericId>
-          <uax:DataType>
-            <uax:Identifier>i=884</uax:Identifier>
-          </uax:DataType>
-          <uax:ValueRank>-1</uax:ValueRank>
-          <uax:AccessLevel>1</uax:AccessLevel>
-          <uax:UserAccessLevel>1</uax:UserAccessLevel>
-        </EURange>
-      </Rejected>
+      </ResultFeedback>
       <MountOffSetVert>
         <uax:NodeClass>Variable_2</uax:NodeClass>
         <uax:NodeId>

@@ -210,7 +210,7 @@ Public Class Measurement
             ButtonSend.Enabled = True
             ComportOpen = True
         Catch
-            MsgBox("laser comport not available")
+            MainForm.ShowErrorInMessageBox("laser comport not available")
         End Try
 
     End Sub
@@ -224,7 +224,7 @@ Public Class Measurement
             SerialPort1.Open()
             ButtonSend.Enabled = True
         Catch e As Exception
-            MsgBox("error opening comport") ' + e.ToString())
+            MainForm.ShowErrorInMessageBox("error opening comport") ' + e.ToString())
             Return (False)
         End Try
         Return (True)
@@ -276,7 +276,7 @@ Public Class Measurement
             SerialPort1.Write(SendStr)
             TextBoxLog.AppendText(SendStr)
         Catch
-            MsgBox("serial port not open")
+            MainForm.ShowErrorInMessageBox("serial port not open")
         End Try
 
     End Sub

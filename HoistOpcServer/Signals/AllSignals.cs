@@ -49,9 +49,7 @@ namespace HoistOpcServer
             HasCords = 0;
             MeasureMethod = 0;
             StartMeasure = 0;
-            Approved = false;
-            Retry = false;
-            Reject = false;
+            ResultFeedback = 0;
 
 #if DEBUG
             SerialNumber = "HiQst";
@@ -77,8 +75,7 @@ namespace HoistOpcServer
 
         public void SetOutputDefaults()
         {
-            Date = string.Empty;
-            Time = string.Empty;
+            DateTime = string.Empty;
             SerialNumberOut = string.Empty;
             MeasuredDropA = 0;
             MeasuredDropB = 0;
@@ -129,19 +126,13 @@ namespace HoistOpcServer
 
         public int StartMeasure { get => inputNode.StartMeasure.Value; set => inputNode.StartMeasure.Value = value; }
 
-        public bool Approved { get => inputNode.Approved.Value; set => inputNode.Approved.Value = value; }
-
-        public bool Retry { get => inputNode.Retry.Value; set => inputNode.Retry.Value = value; }
-
-        public bool Reject { get => inputNode.Rejected.Value; set => inputNode.Rejected.Value = value; }
+        public int ResultFeedback { get => inputNode.ResultFeedback.Value; set => inputNode.ResultFeedback.Value = value; }
 
         #endregion
 
         #region Output from Hoist
 
-        public string Date { get => inputNode.Date.Value; set => inputNode.Date.Value = value; }
-
-        public string Time { get => inputNode.Time.Value; set => inputNode.Time.Value = value; }
+        public string DateTime { get => inputNode.DateTime.Value; set => inputNode.DateTime.Value = value; }
 
         public string SerialNumberOut { get => inputNode.SerialNrOut.Value; set => inputNode.SerialNrOut.Value = value; }
 

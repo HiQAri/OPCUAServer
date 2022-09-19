@@ -4,6 +4,13 @@ Imports HoistOpcServer
 Public Class MainForm
     Public WithEvents galil As New Galil.Galil
 
+    Enum ApprovedStates
+        NotSet = 0
+        Approved = 1
+        Repeat = 2
+        Reject = 3
+    End Enum
+
     Enum HoistStates
         Idle = 0
         ExecutingOrder = 1
@@ -124,7 +131,7 @@ Public Class MainForm
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Galil Error occurred: " + exception.Message) 'special processing for command errors
+                ShowErrorInMessageBox("Galil Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
 
@@ -280,13 +287,13 @@ Public Class MainForm
                 Catch exception As System.Runtime.InteropServices.COMException
                     Console.WriteLine(exception) 'print error message
                     If exception.Message.Contains("COMMAND ERROR") Then
-                        MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                        ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
                     End If
                 End Try
 
-            Else : MsgBox("Zero Speed or Servo Not Ready Error")
+            Else : ShowErrorInMessageBox("Zero Speed or Servo Not Ready Error")
             End If
-        Else : MsgBox("Home Servo First")
+        Else : ShowErrorInMessageBox("Home Servo First")
         End If
     End Sub
     Public Sub Servo_ON()
@@ -321,16 +328,16 @@ Public Class MainForm
                 Catch exception As System.Runtime.InteropServices.COMException
                     Console.WriteLine(exception) 'print error message
                     If exception.Message.Contains("COMMAND ERROR") Then
-                        MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                        ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
                     End If
                 End Try
                 System.Threading.Thread.Sleep(200) 'Sleep(200)
 
             Else
-                MsgBox("Servo Not Ready Error")
+                ShowErrorInMessageBox("Servo Not Ready Error")
             End If
         Else
-            MsgBox("Zero Speed error  JS=" + jog_speed.ToString + "   SC" + scalefact.ToString)
+            ShowErrorInMessageBox("Zero Speed error  JS=" + jog_speed.ToString + "   SC" + scalefact.ToString)
         End If
     End Sub
 
@@ -342,7 +349,7 @@ Public Class MainForm
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Galil Error occurred: " + exception.Message) 'special processing for command errors
+                ShowErrorInMessageBox("Galil Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
         System.Threading.Thread.Sleep(200)
@@ -393,7 +400,7 @@ Public Class MainForm
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
         System.Threading.Thread.Sleep(200) 'Sleep 200
@@ -423,7 +430,7 @@ Public Class MainForm
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
         System.Threading.Thread.Sleep(200) 'Sleep(200)
@@ -443,7 +450,7 @@ Public Class MainForm
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
         homestatus = "offset"
@@ -597,8 +604,7 @@ Public Class MainForm
     End Sub
 
     Public Sub ResultToOpc(ByVal DateStr As String, ByVal TimeStr As String, ByVal OrderNr As String, ByVal Theodrop As String, ByVal TheoWidth As String, ByVal DropA As String, ByVal DropB As String, ByVal DropC As String, ByVal Width As String, ByVal Skew As String)
-        OpcSignals.Date = DateStr
-        OpcSignals.Time = TimeStr
+        OpcSignals.DateTime = DateStr + " - " + TimeStr
         OpcSignals.SerialNumberOut = OrderNr
         OpcSignals.MeasuredDropA = Val(DropA)
         OpcSignals.MeasuredDropB = Val(DropB)
@@ -639,14 +645,14 @@ Public Class MainForm
                             SeqStep += 1
                         End If
                     Else
-                        MsgBox(" fill in correct drop, width and model")
+                        ShowErrorInMessageBox(" fill in correct drop, width and model")
 
                     End If
 
                 End If
 
                 If (nextstep()) Then
-                    MsgBox("Enter Shade Info, then hit START")
+                    ShowErrorInMessageBox("Enter Shade Info, then hit START")
                     SeqStep += 1
                 End If
 
@@ -665,7 +671,7 @@ Public Class MainForm
                         NextButton.Text = "NEXT"
                         SeqStep += 1
                     Else
-                        MsgBox("Home servo first")
+                        ShowErrorInMessageBox("Home servo first")
                     End If
                 End If
 
@@ -842,7 +848,7 @@ Public Class MainForm
                     End If
                 End If
                 If (nextstep()) Then
-                    MsgBox("Enter Shade Info, then hit START")
+                    ShowErrorInMessageBox("Enter Shade Info, then hit START")
                 End If
 
             Case 1 'data entered: check it 
@@ -1193,7 +1199,7 @@ Public Class MainForm
                         ComboBoxModel.Refresh()
                         SetModelEntered()
                     Else
-                        MsgBox("Modelfile not found")
+                        ShowErrorInMessageBox("Modelfile not found")
                     End If
                 Else
                     SetModelEntered()
@@ -1266,9 +1272,9 @@ Public Class MainForm
             TxtWidth.Text = Format(OpcSignals.Width, "####.000")
             Modelentered = (OpcSignals.Drop > 0) And (OpcSignals.Width > 0)
 
-            If (OpcSignals.Reject) Then
+            If (OpcSignals.ResultFeedback = ApprovedStates.Reject) Then
                 ConfirmReject()
-                OpcSignals.Reject = False
+                OpcSignals.ResultFeedback = 0
             End If
 
             OpcSignals.HoistError += 1
@@ -1290,7 +1296,7 @@ Public Class MainForm
         Dim approved As Boolean = False
 
         If (ManualEdit = 0) Then
-            approved = OpcSignals.Approved
+            approved = (OpcSignals.ResultFeedback = ApprovedStates.Approved)
         End If
 
         Return approved
@@ -1300,7 +1306,7 @@ Public Class MainForm
         Dim retry As Boolean = False
 
         If (ManualEdit = 0) Then
-            retry = OpcSignals.Retry
+            retry = (OpcSignals.ResultFeedback = ApprovedStates.Repeat)
         End If
 
         Return retry
@@ -1326,6 +1332,19 @@ Public Class MainForm
     Private Sub ResetOpcSignals()
         If ManualEdit = 0 Then
             OpcSignals.SetInputDefaults()
+        End If
+    End Sub
+
+    Public Sub ShowErrorInMessageBox(errorText As String)
+
+        If (ManualEdit = 0) Then
+            OpcSignals.HoistError = 1
+        End If
+
+        MessageBox.Show(errorText)
+
+        If (ManualEdit = 0) Then
+            OpcSignals.HoistError = 0
         End If
     End Sub
 

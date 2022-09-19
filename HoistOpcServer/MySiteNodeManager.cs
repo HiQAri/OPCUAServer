@@ -12,8 +12,6 @@ namespace OPCUAServer
     {
         private MySiteServerConfiguration mysite_configuration;
         private static OPCUAServerState mysite_OPCUAServer1;
-        private System.Threading.Timer simulationTimer;
-        private InputState inputstate;
 
         public MySiteNodeManager(IServerInternal server, ApplicationConfiguration configuration)
             : base(server, configuration)

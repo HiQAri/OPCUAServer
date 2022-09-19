@@ -18,7 +18,7 @@
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                MainForm.ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
         System.Threading.Thread.Sleep(200) 'Sleep 200
@@ -39,12 +39,12 @@
             Catch exception As System.Runtime.InteropServices.COMException
                 Console.WriteLine(exception) 'print error message
                 If exception.Message.Contains("COMMAND ERROR") Then
-                    MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                    MainForm.ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
                 End If
             End Try
             System.Threading.Thread.Sleep(200) 'Sleep(200)
 
-        Else : MsgBox("Zero Speed Error" + vbCrLf + " Please check speed and scale" + vbCrLf + " in service screen")
+        Else : MainForm.ShowErrorInMessageBox("Zero Speed Error" + vbCrLf + " Please check speed and scale" + vbCrLf + " in service screen")
         End If
     End Sub
 
@@ -63,13 +63,13 @@
             Catch exception As System.Runtime.InteropServices.COMException
                 Console.WriteLine(exception) 'print error message
                 If exception.Message.Contains("COMMAND ERROR") Then
-                    MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                    MainForm.ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
                 End If
             End Try
             System.Threading.Thread.Sleep(200) 'Sleep(200)
 
 
-        Else : MsgBox("Zero Speed Error" + vbCrLf + " Please check speed and scale" + vbCrLf + " in service screen")
+        Else : MainForm.ShowErrorInMessageBox("Zero Speed Error" + vbCrLf + " Please check speed and scale" + vbCrLf + " in service screen")
 
         End If
     End Sub
@@ -106,18 +106,18 @@
 
     Private Sub StartCycle_Btn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StartCycle_Btn.Click
         If Not IsNumeric(TargetPos.Text) Or Not IsNumeric(HomePos.Text) Or Not IsNumeric(NrOfCycles.Text) Then
-            MsgBox("Target position, home postion and #Cycles" + vbCrLf + "All must contain numeric values!")
+            MainForm.ShowErrorInMessageBox("Target position, home postion and #Cycles" + vbCrLf + "All must contain numeric values!")
             Exit Sub
         End If
         If (Val(TargetPos.Text) > HighLimit) Then
-            MsgBox("Target position > Upper Soft Limit!" + vbCrLf + "Check parameters!")
+            MainForm.ShowErrorInMessageBox("Target position > Upper Soft Limit!" + vbCrLf + "Check parameters!")
             Exit Sub
         End If
         'homestatus = "complete"
         If homestatus = "complete" Then
             position = TargetPos.Text
             If position <= 0 Then
-                MsgBox("Target position is not valid")
+                MainForm.ShowErrorInMessageBox("Target position is not valid")
                 Exit Sub
             End If
             scaled_position = position * scalefact
@@ -138,16 +138,16 @@
                 Catch exception As System.Runtime.InteropServices.COMException
                     Console.WriteLine(exception) 'print error message
                     If exception.Message.Contains("COMMAND ERROR") Then
-                        MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                        MainForm.ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
 
                     End If
                 End Try
 
-            Else : MsgBox("Zero Speed or Servo Not Ready Error")
-                : Exit Sub
+            Else : MainForm.ShowErrorInMessageBox("Zero Speed or Servo Not Ready Error")
+                Exit Sub
             End If
-        Else : MsgBox("Home Servo First")
-            : Exit Sub
+        Else : MainForm.ShowErrorInMessageBox("Home Servo First")
+            Exit Sub
         End If
         HomePos.Enabled = False
         TargetPos.Enabled = False
@@ -200,14 +200,14 @@
                 Catch exception As System.Runtime.InteropServices.COMException
                     Console.WriteLine(exception) 'print error message
                     If exception.Message.Contains("COMMAND ERROR") Then
-                        MessageBox.Show("Controller Error occurred: " + exception.Message) 'special processing for command errors
+                        MainForm.ShowErrorInMessageBox("Controller Error occurred: " + exception.Message) 'special processing for command errors
 
                     End If
                 End Try
 
-            Else : MsgBox("Zero Speed or Servo Not Ready Error")
+            Else : MainForm.ShowErrorInMessageBox("Zero Speed or Servo Not Ready Error")
             End If
-        Else : MsgBox("Home Servo First")
+        Else : MainForm.ShowErrorInMessageBox("Home Servo First")
         End If
     End Sub
 
@@ -254,7 +254,7 @@
         Catch exception As System.Runtime.InteropServices.COMException
             Console.WriteLine(exception) 'print error message
             If exception.Message.Contains("COMMAND ERROR") Then
-                MessageBox.Show("Galil Error occurred: " + exception.Message) 'special processing for command errors
+                MainForm.ShowErrorInMessageBox("Galil Error occurred: " + exception.Message) 'special processing for command errors
             End If
         End Try
         System.Threading.Thread.Sleep(500)

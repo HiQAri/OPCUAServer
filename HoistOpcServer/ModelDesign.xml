@@ -19,17 +19,14 @@ TargetNamespace="http://opcfoundation.org/OPCUAServer">
       <opc:Variable SymbolicName="SerialNrIn" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="Drop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="Width" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="Date" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="Time" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="DateTime" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="SerialNrOut" DataType="ua:String" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MeasuredDropA" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MeasuredDropB" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MeasuredDropC" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="DeltaDrop" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MeasuredWidth" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="Approved" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="Retry" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
-      <opc:Variable SymbolicName="Rejected" DataType="ua:Boolean" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
+      <opc:Variable SymbolicName="ResultFeedback" DataType="ua:Int32" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="MountOffSetVert" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="OffsetLaserOnProd" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
       <opc:Variable SymbolicName="ToleranceWidthPlus" DataType="ua:Double" ValueRank="Scalar" TypeDefinition="ua:AnalogItemType" AccessLevel="ReadWrite" />
