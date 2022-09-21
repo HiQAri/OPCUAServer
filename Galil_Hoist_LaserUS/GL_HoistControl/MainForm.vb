@@ -572,6 +572,8 @@ Public Class MainForm
 
             System.Diagnostics.Process.Start("ShutDown", "/s /t 00")
             End
+        Else
+            Me.Close()
         End If
     End Sub
 
@@ -603,14 +605,14 @@ Public Class MainForm
         Me.OrdersResultTableAdapter1.Update(Me.HoistOrdersResultDataSet1)
     End Sub
 
-    Public Sub ResultToOpc(ByVal DateStr As String, ByVal TimeStr As String, ByVal OrderNr As String, ByVal Theodrop As String, ByVal TheoWidth As String, ByVal DropA As String, ByVal DropB As String, ByVal DropC As String, ByVal Width As String, ByVal Skew As String)
-        OpcSignals.DateTime = DateStr + " - " + TimeStr
+    Public Sub ResultToOpc(ByVal DateStr As String, ByVal TimeStr As String, ByVal OrderNr As String, ByVal DropA As Double, ByVal DropB As Double, ByVal DropC As Double, ByVal Width As Double, ByVal Skew As Double)
+        OpcSignals.DateTime = DateStr + " " + TimeStr
         OpcSignals.SerialNumberOut = OrderNr
-        OpcSignals.MeasuredDropA = Val(DropA)
-        OpcSignals.MeasuredDropB = Val(DropB)
-        OpcSignals.MeasuredDropC = Val(DropC)
-        OpcSignals.DeltaDrop = Val(Skew)
-        OpcSignals.MeasuredWidth = Val(Width)
+        OpcSignals.MeasuredDropA = Val(FormatNumber(DropA, 5).Replace(",", "."))
+        OpcSignals.MeasuredDropB = Val(FormatNumber(DropB, 5).Replace(",", "."))
+        OpcSignals.MeasuredDropC = Val(FormatNumber(DropC, 5).Replace(",", "."))
+        OpcSignals.DeltaDrop = Val(FormatNumber(Skew, 5).Replace(",", "."))
+        OpcSignals.MeasuredWidth = Val(FormatNumber(Width, 5).Replace(",", "."))
     End Sub
 
 
@@ -1238,7 +1240,7 @@ Public Class MainForm
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         ResultTodatabase(dt.ToShortDateString, TimeOfDay.ToShortTimeString, "12345", "20", "40", "202", "203", "204", "205", "300")
-        ResultToOpc(dt.ToShortDateString, TimeOfDay.ToShortTimeString, "12345", "20", "40", "202", "203", "204", "205", "300")
+        ResultToOpc(dt.ToShortDateString, TimeOfDay.ToShortTimeString, "12345", 202, 203, 204, 205, 300)
     End Sub
 
     Private Function CheckHasCords() As Boolean
@@ -1277,7 +1279,7 @@ Public Class MainForm
                 OpcSignals.ResultFeedback = 0
             End If
 
-            OpcSignals.HoistError += 1
+            'OpcSignals.HoistError += 1
 
         End If
     End Sub

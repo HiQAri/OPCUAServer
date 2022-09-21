@@ -380,8 +380,8 @@
                 TextBoxLog.AppendText("DropE   " + MeasuredDrop(3).ToString("####.000") + vbCrLf)
                 TextBoxLog.AppendText("width   " + MeasuredWidth.ToString("####.000") + vbCrLf)
                 myLogFile.Setfilename("Inspect" + TextBoxCnt.Text + ".txt ")
-                MainForm.ResultTodatabase(TimeOfDay.ToShortDateString, TimeOfDay.ToShortTimeString, OrderNrStr, InspectionDat.Drop.ToString("####.000"), InspectionDat.Width.ToString("####.000"), MeasuredDrop(0).ToString("####.000"), MeasuredDrop(1).ToString("####.000"), MeasuredDrop(2).ToString("####.000"), MeasuredWidth.ToString("####.000"), MeasuredDrop(0).ToString("####.000"))
-                MainForm.ResultToOpc(TimeOfDay.ToShortDateString, TimeOfDay.ToShortTimeString, OrderNrStr, InspectionDat.Drop.ToString("####.000"), InspectionDat.Width.ToString("####.000"), MeasuredDrop(0).ToString("####.000"), MeasuredDrop(1).ToString("####.000"), MeasuredDrop(2).ToString("####.000"), MeasuredWidth.ToString("####.000"), MeasuredDrop(0).ToString("####.000"))
+                MainForm.ResultTodatabase(Now.ToShortDateString, TimeOfDay.ToShortTimeString, OrderNrStr, InspectionDat.Drop.ToString("####.000"), InspectionDat.Width.ToString("####.000"), MeasuredDrop(0).ToString("####.000"), MeasuredDrop(1).ToString("####.000"), MeasuredDrop(2).ToString("####.000"), MeasuredWidth.ToString("####.000"), MeasuredDrop(3).ToString("####.000"))
+                MainForm.ResultToOpc(Now.ToShortDateString, TimeOfDay.ToShortTimeString, OrderNrStr, MeasuredDrop(0), MeasuredDrop(1), MeasuredDrop(2), MeasuredWidth, MeasuredDrop(3))
 
                 Integer.TryParse(TextBoxCnt.Text, cnt)
                 cnt += 1
