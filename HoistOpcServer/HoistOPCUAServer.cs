@@ -47,12 +47,14 @@ namespace OPCUAServer
             }
 
             Signals = new AllSignals(server);
+            Methods = new HoistOpcServer.Methods(server);
         }
 
-        /// <summary>
-        /// Access to all exposed Tags in the server for easy use by calling assembly
-        /// </summary>
+        /// <summary> Access to all exposed Tags in the server for easy use by calling assembly </summary>
         public AllSignals Signals { get; set; }
+
+        /// <summary> Access to all exposed method events </summary>
+        public HoistOpcServer.Methods Methods { get; set; }
 
         public void Dispose()
         {

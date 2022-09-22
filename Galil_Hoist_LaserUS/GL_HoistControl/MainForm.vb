@@ -380,6 +380,11 @@ Public Class MainForm
         HomeServo()
     End Sub
 
+    Private Sub OpcHomingRequest()
+        HomeServo()
+    End Sub
+
+
     '//// home sequence 
 
     Private Sub HomeServo()
@@ -558,6 +563,9 @@ Public Class MainForm
             OpcServer = New OPCUAServer.HoistOPCUAServer()
             OpcServer.Initialize()
             OpcSignals = OpcServer.Signals
+
+            AddHandler OpcServer.Methods.HomingRequest, AddressOf Me.OpcHomingRequest
+
             BlockInputFields(True)
         End If
     End Sub

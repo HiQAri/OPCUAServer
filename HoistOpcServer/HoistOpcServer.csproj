@@ -210,12 +210,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Event\OpcEventArgs.cs" />
+    <Compile Include="Event\OpcEventHandler.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Methods\Methods.cs" />
     <Compile Include="MySiteNodeManager.cs" />
     <Compile Include="MySiteServer.cs" />
     <Compile Include="MySiteServerConfiguration.cs" />
